@@ -24,8 +24,8 @@ class Request extends Model
     //связи
 
     public $belongsTo = [
-        'project' => 'itpro\projects\models\project',
+        'project' => 'itpro\projects\models\Project',
         'status' => 'itpro\projects\models\RequestStatus',
-        'client' => 'itpro\projects\models\client',
+        'client' => 'itpro\projects\models\Client',
     ];
 }

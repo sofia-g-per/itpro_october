@@ -23,9 +23,9 @@ class Order extends Model
 
     //связи
     public $belongsTo = [
-        'technology' => 'itpro\projects\models\technology',
-        'status' => 'itpro\projects\models\orderStatus',
-        'client' => 'itpro\projects\models\client',
+        'technology' => 'itpro\projects\models\Technology',
+        'status' => 'itpro\projects\models\OrderStatus',
+        'client' => 'itpro\projects\models\Client',
     ];
 
     public $attachOne = [

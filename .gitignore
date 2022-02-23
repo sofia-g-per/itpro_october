@@ -4,7 +4,6 @@ composer.phar
 composer.lock
 
 # Framework ignores
-
 .env.*.php
 .env.php
 selenium.php

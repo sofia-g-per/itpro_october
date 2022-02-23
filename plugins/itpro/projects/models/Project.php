@@ -29,12 +29,12 @@ class Project extends Model
 
     // связи
     public $belongsTo = [
-        'technology' => 'itpro\projects\models\technology'
+        'technology' => 'itpro\projects\models\Technology'
     ];
 
     public $belongsToMany = [
         'platforms' => [
-            'itpro\projects\models\platform',
+            'itpro\projects\models\Platform',
             'table' => 'itpro_projects_platforms_projects',
             'order' => 'title'
         ]
@@ -49,6 +49,6 @@ class Project extends Model
     ];
 
     public $hasMany = [
-        'requests' => 'itpro\projects\models\request'
+        'requests' => 'itpro\Projects\Models\Request'
     ];
 }
