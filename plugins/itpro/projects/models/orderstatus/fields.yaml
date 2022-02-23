@@ -1,0 +1,5 @@
+fields:
+    title:
+        label: Статус
+        span: full
+        type: text

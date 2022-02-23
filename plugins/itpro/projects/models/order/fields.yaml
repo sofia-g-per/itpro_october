@@ -1,0 +1,27 @@
+tabs:
+    fields:
+        title:
+            label: Название
+            span: left
+            type: text
+            tab: 'Информация о проекте'
+        technology:
+            label: Технология
+            nameFrom: title
+            descriptionFrom: description
+            span: right
+            type: relation
+            tab: 'Информация о проекте'
+        description:
+            label: Описание
+            size: ''
+            span: full
+            type: textarea
+            tab: 'Информация о проекте'
+        status:
+            label: Статус
+            nameFrom: title
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: 'Информация о проекте'

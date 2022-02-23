@@ -1,0 +1,59 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table itpro_projects_technologies'
+    - builder_table_create_itpro_projects_technologies.php
+1.0.3:
+    - 'Created table itpro_projects_platforms'
+    - builder_table_create_itpro_projects_platforms.php
+1.0.4:
+    - 'Updated table itpro_projects_platforms'
+    - builder_table_update_itpro_projects_platforms.php
+1.0.5:
+    - 'Updated table itpro_projects_technologies'
+    - builder_table_update_itpro_projects_technologies.php
+1.0.6:
+    - 'Created table itpro_projects_'
+    - builder_table_create_itpro_projects_.php
+1.0.7:
+    - 'Created table itpro_projects_platforms_projects'
+    - builder_table_create_itpro_projects_platforms_projects.php
+1.0.8:
+    - 'Created table itpro_projects_orders_statuses'
+    - builder_table_create_itpro_projects_orders_statuses.php
+1.0.9:
+    - 'Created table itpro_projects_requests_statuses'
+    - builder_table_create_itpro_projects_requests_statuses.php
+1.0.10:
+    - 'Created table itpro_projects_orders'
+    - builder_table_create_itpro_projects_orders.php
+1.0.11:
+    - 'Updated table itpro_projects_orders'
+    - builder_table_update_itpro_projects_orders.php
+1.0.12:
+    - 'Created table itpro_projects_requests'
+    - builder_table_create_itpro_projects_requests.php
+1.0.13:
+    - 'Updated table itpro_projects_orders'
+    - builder_table_update_itpro_projects_orders_2.php
+1.0.14:
+    - 'Created table itpro_projects_clients'
+    - builder_table_create_itpro_projects_clients.php
+1.0.15:
+    - 'Updated table itpro_projects_technologies'
+    - builder_table_update_itpro_projects_technologies_2.php
+1.0.16:
+    - 'Updated table itpro_projects_technologies'
+    - builder_table_update_itpro_projects_technologies_3.php
+1.0.17:
+    - 'Updated table itpro_projects_'
+    - builder_table_update_itpro_projects_.php
+1.0.18:
+    - 'Updated table itpro_projects_requests'
+    - builder_table_update_itpro_projects_requests.php
+1.0.19:
+    - 'Updated table itpro_projects_orders'
+    - builder_table_update_itpro_projects_orders_3.php
+1.0.20:
+    - 'Updated table itpro_projects_orders'
+    - builder_table_update_itpro_projects_orders_4.php

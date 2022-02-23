@@ -1,0 +1,10 @@
+name: Platforms
+form: $/itpro/projects/models/platform/fields.yaml
+modelClass: Itpro\Projects\Models\Platform
+defaultRedirect: itpro/projects/platforms
+create:
+    redirect: 'itpro/projects/platforms/update/:id'
+    redirectClose: itpro/projects/platforms
+update:
+    redirect: itpro/projects/platforms
+    redirectClose: itpro/projects/platforms

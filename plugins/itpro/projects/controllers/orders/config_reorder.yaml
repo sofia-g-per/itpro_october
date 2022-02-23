@@ -1,0 +1,4 @@
+title: Orders
+modelClass: Itpro\Projects\Models\Order
+toolbar:
+    buttons: reorder_toolbar

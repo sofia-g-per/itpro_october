@@ -1,0 +1,4 @@
+title: Technologies
+modelClass: Itpro\Projects\Models\Technology
+toolbar:
+    buttons: reorder_toolbar

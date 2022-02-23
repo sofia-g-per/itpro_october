@@ -1,0 +1,15 @@
+tabs:
+    fields:
+        project:
+            label: Проект
+            nameFrom: title
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: 'Информация о проекте'
+        status:
+            label: Статус
+            nameFrom: title
+            span: auto
+            type: relation
+            tab: 'Информация о проекте'

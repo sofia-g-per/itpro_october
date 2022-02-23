@@ -1,0 +1,10 @@
+name: RequestStatuses
+form: $/itpro/projects/models/requeststatus/fields.yaml
+modelClass: Itpro\Projects\Models\RequestStatus
+defaultRedirect: itpro/projects/requeststatuses
+create:
+    redirect: 'itpro/projects/requeststatuses/update/:id'
+    redirectClose: itpro/projects/requeststatuses
+update:
+    redirect: itpro/projects/requeststatuses
+    redirectClose: itpro/projects/requeststatuses

@@ -1,0 +1,4 @@
+title: Platforms
+modelClass: Itpro\Projects\Models\Platform
+toolbar:
+    buttons: reorder_toolbar

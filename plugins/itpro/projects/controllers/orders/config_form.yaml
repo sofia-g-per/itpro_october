@@ -1,0 +1,10 @@
+name: Orders
+form: $/itpro/projects/models/order/fields.yaml
+modelClass: Itpro\Projects\Models\Order
+defaultRedirect: itpro/projects/orders
+create:
+    redirect: 'itpro/projects/orders/update/:id'
+    redirectClose: itpro/projects/orders
+update:
+    redirect: itpro/projects/orders
+    redirectClose: itpro/projects/orders

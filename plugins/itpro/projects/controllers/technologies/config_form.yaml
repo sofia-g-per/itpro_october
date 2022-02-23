@@ -1,0 +1,10 @@
+name: Technologies
+form: $/itpro/projects/models/technology/fields.yaml
+modelClass: Itpro\Projects\Models\Technology
+defaultRedirect: itpro/projects/technologies
+create:
+    redirect: 'itpro/projects/technologies/update/:id'
+    redirectClose: itpro/projects/technologies
+update:
+    redirect: itpro/projects/technologies
+    redirectClose: itpro/projects/technologies

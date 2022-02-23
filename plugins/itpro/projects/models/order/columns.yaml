@@ -1,0 +1,33 @@
+columns:
+    title:
+        label: Название
+        type: text
+        searchable: true
+        sortable: true
+    technology:
+        label: Технология
+        type: text
+        sortable: true
+        select: title
+        relation: technology
+    description:
+        label: Описание
+        type: text
+    status:
+        label: Статус
+        type: text
+        sortable: true
+        select: title
+        relation: status
+    created_at:
+        label: 'Дата подачи заявки'
+        type: datetime
+        sortable: true
+    manager_defined_at:
+        label: 'Дата назначения менеджера'
+        type: datetime
+        sortable: true
+    completed_at:
+        label: 'Дата завершения проекта'
+        type: datetime
+        sortable: true

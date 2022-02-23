@@ -1,0 +1,27 @@
+columns:
+    title:
+        label: 'Название проекта'
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Описание
+        type: text
+    project_icon:
+        label: Иконка
+        type: partial
+        path: ~plugins/itpro/projects/models/project/project_icon.htm/
+    technology:
+        label: Технология
+        type: text
+        searchable: true
+        sortable: true
+        select: title
+        relation: technology
+    platforms:
+        label: Платформы
+        type: text
+        searchable: true
+        sortable: true
+        select: title
+        relation: platforms

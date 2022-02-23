@@ -1,0 +1,43 @@
+fields:
+    title:
+        label: 'Название проекта'
+        span: left
+        type: text
+    project_icon:
+        label: 'Иконка проекта'
+        mode: image
+        imageWidth: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload
+    description:
+        label: 'Описание проекта'
+        size: small
+        span: full
+        type: textarea
+    technology:
+        label: Технология
+        nameFrom: technology_title
+        descriptionFrom: description
+        span: left
+        type: relation
+    platforms:
+        label: Платформы
+        nameFrom: platform_title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    project_images:
+        label: 'Изображения проекта'
+        mode: image
+        imageWidth: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+        comment: 'Для выбора нескольких изображений, зажмите shift'

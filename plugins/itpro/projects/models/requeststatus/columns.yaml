@@ -1,0 +1,6 @@
+columns:
+    title:
+        label: 'Название статуса'
+        type: switch
+        searchable: true
+        sortable: true

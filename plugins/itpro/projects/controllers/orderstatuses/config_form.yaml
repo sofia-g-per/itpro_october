@@ -1,0 +1,10 @@
+name: OrderStatuses
+form: $/itpro/projects/models/orderstatus/fields.yaml
+modelClass: Itpro\Projects\Models\OrderStatus
+defaultRedirect: itpro/projects/orderstatuses
+create:
+    redirect: 'itpro/projects/orderstatuses/update/:id'
+    redirectClose: itpro/projects/orderstatuses
+update:
+    redirect: itpro/projects/orderstatuses
+    redirectClose: itpro/projects/orderstatuses

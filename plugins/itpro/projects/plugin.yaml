@@ -1,0 +1,50 @@
+plugin:
+    name: 'itpro.projects::lang.plugin.name'
+    description: 'itpro.projects::lang.plugin.description'
+    author: Itpro
+    icon: oc-icon-desktop
+    homepage: ''
+navigation:
+    projects:
+        label: Портфолио
+        url: itpro/projects/projects
+        icon: icon-desktop
+        sideMenu:
+            projects:
+                label: Проекты
+                url: itpro/projects/projects
+                icon: icon-desktop
+            technologies:
+                label: Технологии
+                url: itpro/projects/technologies
+                icon: icon-gears
+            platforms:
+                label: Платформы
+                url: itpro/projects/platforms
+                icon: icon-android
+    orders:
+        label: Заказы
+        url: itpro/projects/orders
+        icon: icon-archive
+        sideMenu:
+            orders:
+                label: Заказы
+                url: itpro/projects/orders
+                icon: icon-archive
+            order-status:
+                label: Статусы
+                url: itpro/projects/orderstatuses
+                icon: icon-asterisk
+    requests:
+        label: 'Заявки на тестирование'
+        url: itpro/projects/requests
+        icon: icon-send-o
+        sideMenu:
+            requests:
+                label: 'Заявки на тестирование'
+                url: itpro/projects/requests
+                icon: icon-send-o
+            request-statuses:
+                label: Статусы
+                url: itpro/projects/requeststatuses
+                icon: icon-asterisk

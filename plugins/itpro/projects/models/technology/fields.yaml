@@ -1,0 +1,15 @@
+fields:
+    title:
+        label: Название
+        span: full
+        type: text
+    technology_icon:
+        label: Иконка
+        mode: image
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload

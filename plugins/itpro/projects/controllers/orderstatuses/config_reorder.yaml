@@ -1,0 +1,4 @@
+title: OrderStatuses
+modelClass: Itpro\Projects\Models\OrderStatus
+toolbar:
+    buttons: reorder_toolbar

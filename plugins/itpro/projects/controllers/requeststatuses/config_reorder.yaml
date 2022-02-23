@@ -1,0 +1,4 @@
+title: RequestStatuses
+modelClass: Itpro\Projects\Models\RequestStatus
+toolbar:
+    buttons: reorder_toolbar

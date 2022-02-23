@@ -1,0 +1,22 @@
+fields:
+    title:
+        label: Название
+        span: full
+        type: text
+    platform_icon:
+        label: 'Иконка платформы'
+        mode: image
+        imageWidth: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+tabs:
+    fields:
+        text1:
+            label: Text
+            span: auto
+            type: text
+            tab: 'Tab 1'
