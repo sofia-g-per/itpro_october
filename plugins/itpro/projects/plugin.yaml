@@ -9,6 +9,8 @@ navigation:
         label: Портфолио
         url: itpro/projects/projects
         icon: icon-desktop
+        permissions:
+            - manage_portfolio
         sideMenu:
             projects:
                 label: Проекты
@@ -35,6 +37,8 @@ navigation:
                 label: Статусы
                 url: itpro/projects/orderstatuses
                 icon: icon-asterisk
+                permissions:
+                    - manage_statuses
     requests:
         label: 'Заявки на тестирование'
         url: itpro/projects/requests
@@ -48,3 +52,21 @@ navigation:
                 label: Статусы
                 url: itpro/projects/requeststatuses
                 icon: icon-asterisk
+                permissions:
+                    - manage_statuses
+permissions:
+    manage_request_statuses:
+        tab: Project
+        label: 'Редактирование статусов заявок на тестирование'
+    manage_platforms:
+        tab: Project
+        label: 'Редактирование списка платформ, под которые разрабатываются проекты'
+    manage_technologies:
+        tab: Project
+        label: 'Редактирование списка технологий, на которых выполнены проекты'
+    manage_portfolio:
+        tab: Project
+        label: 'Редактирование портфолио с проектами'
+    manage_order_statuses:
+        tab: Project
+        label: 'Редактирование списка со статусами заказов новых проектов'
