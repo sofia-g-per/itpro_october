@@ -27,6 +27,8 @@ class Project extends Model
     public $rules = [
     ];
 
+    public $jsonable = ['videos'];
+
     // связи
     public $belongsTo = [
         'technology' => 'itpro\projects\models\Technology'
@@ -49,6 +51,6 @@ class Project extends Model
     ];
 
     public $hasMany = [
-        'requests' => 'itpro\Projects\Models\Request'
+        'requests' => 'itpro\Projects\Models\Request',
     ];
 }

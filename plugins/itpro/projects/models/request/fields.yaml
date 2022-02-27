@@ -4,12 +4,19 @@ tabs:
             label: Проект
             nameFrom: title
             descriptionFrom: description
-            span: auto
+            span: full
             type: relation
             tab: 'Информация о проекте'
         status:
             label: Статус
             nameFrom: title
-            span: auto
+            descriptionFrom: description
+            span: left
             type: relation
+            tab: 'Информация о проекте'
+        completed_at:
+            label: 'Дата предоставления доступа к проекту'
+            mode: datetime
+            span: right
+            type: datepicker
             tab: 'Информация о проекте'

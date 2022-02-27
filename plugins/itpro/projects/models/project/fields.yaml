@@ -41,3 +41,10 @@ fields:
         span: left
         type: fileupload
         comment: 'Для выбора нескольких изображений, зажмите shift'
+    videos:
+        label: 'Ссылки на видео проекта с youtube'
+        prompt: 'Добавить ссылку'
+        style: default
+        span: right
+        type: repeater
+        form: {  }

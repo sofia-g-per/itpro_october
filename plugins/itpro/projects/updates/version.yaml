@@ -57,3 +57,12 @@
 1.0.20:
     - 'Updated table itpro_projects_orders'
     - builder_table_update_itpro_projects_orders_4.php
+1.0.21:
+    - 'Updated table itpro_projects_'
+    - builder_table_update_itpro_projects__2.php
+1.0.22:
+    - 'Created table itpro_projects_videos'
+    - builder_table_create_itpro_projects_videos.php
+1.0.23:
+    - 'Drop table itpro_projects_videos'
+    - builder_table_delete_itpro_projects_videos.php
