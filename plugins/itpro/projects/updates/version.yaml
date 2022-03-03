@@ -66,3 +66,9 @@
 1.0.23:
     - 'Drop table itpro_projects_videos'
     - builder_table_delete_itpro_projects_videos.php
+1.0.24:
+    - 'Updated table itpro_projects_'
+    - builder_table_update_itpro_projects__3.php
+1.0.25:
+    - 'Updated table itpro_projects_'
+    - builder_table_update_itpro_projects__4.php

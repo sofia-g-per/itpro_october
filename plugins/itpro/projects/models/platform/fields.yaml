@@ -7,16 +7,11 @@ fields:
         label: 'Иконка платформы'
         mode: image
         imageWidth: '200'
+        fileTypes: svg
         useCaption: true
         thumbOptions:
             mode: crop
             extension: auto
         span: full
         type: fileupload
-tabs:
-    fields:
-        text1:
-            label: Text
-            span: auto
-            type: text
-            tab: 'Tab 1'
+        comment: 'Формат: svg'

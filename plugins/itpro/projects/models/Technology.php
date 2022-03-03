@@ -31,4 +31,8 @@ class Technology extends Model
     public $attachOne = [
         'technology_icon' => 'System\Models\File'
     ];
+
+    public $hasMany = [
+        'projects' => 'itpro\Projects\Models\Project'
+    ];
 }

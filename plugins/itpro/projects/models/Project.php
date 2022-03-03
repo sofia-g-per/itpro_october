@@ -27,7 +27,7 @@ class Project extends Model
     public $rules = [
     ];
 
-    public $jsonable = ['videos'];
+    public $jsonable = ['images'];
 
     // связи
     public $belongsTo = [

@@ -7,12 +7,14 @@ fields:
         label: 'Иконка проекта'
         mode: image
         imageWidth: '100'
+        fileTypes: svg
         useCaption: true
         thumbOptions:
             mode: crop
             extension: auto
         span: right
         type: fileupload
+        comment: 'Формат: svg'
     description:
         label: 'Описание проекта'
         size: small
@@ -20,31 +22,33 @@ fields:
         type: textarea
     technology:
         label: Технология
-        nameFrom: technology_title
+        nameFrom: title
         descriptionFrom: description
         span: left
         type: relation
     platforms:
         label: Платформы
-        nameFrom: platform_title
-        descriptionFrom: description
+        nameFrom: title
         span: auto
         type: relation
-    project_images:
-        label: 'Изображения проекта'
-        mode: image
-        imageWidth: '100'
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: left
-        type: fileupload
-        comment: 'Для выбора нескольких изображений, зажмите shift'
-    videos:
-        label: 'Ссылки на видео проекта с youtube'
-        prompt: 'Добавить ссылку'
+    video:
+        label: 'Ссылка на видео с ютуба'
+        span: full
+        type: text
+    images:
+        label: 'Фотографии и описание'
+        prompt: 'Добавить фотография и описание'
         style: default
-        span: right
+        span: full
         type: repeater
-        form: {  }
+        form:
+            fields:
+                description:
+                    label: Описание
+                    span: auto
+                    type: text
+                photo:
+                    label: Фотография
+                    mode: file
+                    span: auto
+                    type: mediafinder
