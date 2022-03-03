@@ -4,3 +4,7 @@ columns:
         type: text
         searchable: true
         sortable: true
+    project_icon:
+        label: Иконка
+        type: partial
+        path: ~\plugins\Itpro\Projects\Models\Platform\_platform_icon.php

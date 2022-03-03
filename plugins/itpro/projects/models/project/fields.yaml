@@ -43,12 +43,17 @@ fields:
         type: repeater
         form:
             fields:
-                description:
-                    label: Описание
+                title:
+                    label: Заглавие
                     span: auto
                     type: text
                 photo:
                     label: Фотография
-                    mode: file
+                    mode: image
                     span: auto
                     type: mediafinder
+                description:
+                    label: Описание
+                    size: ''
+                    span: full
+                    type: textarea
