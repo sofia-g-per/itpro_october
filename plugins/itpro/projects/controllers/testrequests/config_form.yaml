@@ -1,0 +1,10 @@
+name: TestRequests
+form: $/itpro/projects/models/testrequest/fields.yaml
+modelClass: Itpro\Projects\Models\TestRequest
+defaultRedirect: itpro/projects/testrequests
+create:
+    redirect: 'itpro/projects/testrequests/update/:id'
+    redirectClose: itpro/projects/testrequests
+update:
+    redirect: itpro/projects/testrequests
+    redirectClose: itpro/projects/testrequests

@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Request extends Model
+class TestRequest extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     

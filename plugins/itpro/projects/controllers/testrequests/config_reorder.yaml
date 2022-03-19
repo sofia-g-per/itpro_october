@@ -1,0 +1,4 @@
+title: TestRequests
+modelClass: Itpro\Projects\Models\TestRequest
+toolbar:
+    buttons: reorder_toolbar

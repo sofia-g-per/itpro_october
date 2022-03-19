@@ -1,4 +1,0 @@
-title: Requests
-modelClass: Itpro\Projects\Models\Request
-toolbar:
-    buttons: reorder_toolbar

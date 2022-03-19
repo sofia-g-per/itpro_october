@@ -41,12 +41,12 @@ navigation:
                     - manage_statuses
     requests:
         label: 'Заявки на тестирование'
-        url: itpro/projects/requests
+        url: itpro/projects/testrequests
         icon: icon-send-o
         sideMenu:
             requests:
                 label: 'Заявки на тестирование'
-                url: itpro/projects/requests
+                url: itpro/projects/testrequests
                 icon: icon-send-o
             request-statuses:
                 label: Статусы

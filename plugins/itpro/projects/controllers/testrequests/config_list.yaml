@@ -1,6 +1,6 @@
-list: $/itpro/projects/models/request/columns.yaml
-modelClass: Itpro\Projects\Models\Request
-title: Requests
+list: $/itpro/projects/models/testrequest/columns.yaml
+modelClass: Itpro\Projects\Models\TestRequest
+title: TestRequests
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true
@@ -9,4 +9,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'itpro/projects/requests/update/:id'
+recordUrl: 'itpro/projects/testrequests/update/:id'

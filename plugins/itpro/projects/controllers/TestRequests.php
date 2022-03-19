@@ -3,7 +3,7 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
-class Requests extends Controller
+class TestRequests extends Controller
 {
     public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController',        'Backend\Behaviors\ReorderController'    ];
     
@@ -14,6 +14,6 @@ class Requests extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Itpro.Projects', 'settings', 'request-statuses');
+        BackendMenu::setContext('Itpro.Projects', 'requests', 'requests');
     }
 }
