@@ -72,3 +72,18 @@
 1.0.25:
     - 'Updated table itpro_projects_'
     - builder_table_update_itpro_projects__4.php
+1.0.26:
+    - 'Deleted phone from table itpro_projects_clients'
+    - builder_table_update_itpro_projects_clients.php
+1.0.27:
+    - 'Added file column itpro_projects_orders'
+    - builder_table_update_itpro_projects_orders_5.php
+1.0.28:
+    - 'Fixed email value being integer itpro_projects_clients'
+    - builder_table_update_itpro_projects_clients_2.php
+1.0.29:
+    - 'Deleted project description itpro_projects_orders'
+    - builder_table_update_itpro_projects_orders_6.php
+1.0.30:
+    - 'Updated table itpro_projects_orders'
+    - builder_table_update_itpro_projects_orders_7.php
