@@ -1,0 +1,26 @@
+description = "Основной шаблон с хедером и футером"
+==
+<!DOCTYPE html>
+<html lang="rus">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>ITPRO</title>
+    <link rel="stylesheet" href="{{ [
+        'assets/css/index.css'
+      ]|theme }}">
+    {% styles %}
+  </head>
+  <body>
+      {% partial "TheHeader" %}
+    <main>
+        {% page %}
+    </main>
+    {% partial "TheFooter" %}
+
+    {% framework extras %}
+    {% scripts %}
+  </body>
+</html>

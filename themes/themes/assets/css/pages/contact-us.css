@@ -1,0 +1,16 @@
+.contact-us{
+    background: 
+        url('../img/background/form-purple-left.png') 0% 10%  no-repeat,
+        url('../img/background/form-purple-middle.png')  60% 80% no-repeat
+        ;
+}
+
+.contact-us__text-container{
+    padding: 20vh 4vw 20vh 7vw;
+}
+
+.contact-us__form{
+    background: rgba(0, 0, 0, .3);
+}
+
+

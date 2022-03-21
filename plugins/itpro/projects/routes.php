@@ -3,11 +3,11 @@
 use Illuminate\Http\Request;
 use Itpro\Projects\Models\Order;
 use Itpro\Projects\Models\Client;
-// use Itpro\Projects\Models\Request;
 
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Itpro\Projects\Models\Technology;
+use Itpro\Projects\Models\TestRequest;
 use Illuminate\Support\Facades\Validator;
 
 Route::get('/technologies', function(){
@@ -40,7 +40,7 @@ Route::post('/send-test-request', function(Request $request){
     $client->email = request('email');
     $client->save();
 
-    $request = new Request();
+    $request = new TestRequest();
     $request->description = request('description');
     $request->client_id = $client->id;
     $request->project_id = request('project_id');
@@ -91,3 +91,7 @@ Route::post('/send-order', function(Request $request){
         ]
     ]);
 });
+
+// Route::get('/{path?}',  function() {
+//     return File::get(public_path('itpro-front\public\index.html'));
+// })->where('path', '.*')->name('react');
