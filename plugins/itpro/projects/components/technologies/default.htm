@@ -1,0 +1,12 @@
+{% set technologies = __SELF__.technologies %}
+
+<div className='tab-buttons'>
+    {% for technology in technologies %}
+    <!-- onClick={()=>{onCategoryChange(id)}} -->
+    <!-- className={`tab-button ${isActive? 'tab-button--active' : ''}`} -->
+        <button class="tab-button">
+            <img src="{{technology.technology_icon.path}}"/>
+            <span>{{ technology.title }}</span>
+        </button>
+    {% endfor %}
+</div>

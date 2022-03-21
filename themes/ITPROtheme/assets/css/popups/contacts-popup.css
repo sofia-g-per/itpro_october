@@ -1,0 +1,37 @@
+.contacts-popup{
+    background:
+        url('../img/contacts-background-image.png') center right / auto 100% no-repeat,
+        var(--color-black);
+}
+
+.contacts-popup__content{
+    width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
+    row-gap: 8vh;
+}
+
+.contacts-popup__logo{
+    width: 7.8vw;
+}
+
+.contacts-popup__content:last-child{
+    justify-self: baseline;
+}
+
+.contacts-popup__item{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.contacts-popup__mail__link{
+    text-decoration: none;
+}
+
+.contacts-popup__mail__text{
+    font-size: 2.8rem;
+}
+
+.contacts-popup__socials__text{
+}

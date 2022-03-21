@@ -1,0 +1,40 @@
+.purple-text {
+	color: #A768BA;
+}
+
+.dev-with-ar-vr {
+	display: flex;
+	justify-content: space-between;
+	padding: 16rem 14rem;
+	min-height: 109rem;
+}
+
+.text-with-arrow {
+	display: flex;
+	padding: 4rem 0 7rem 0;
+}
+
+.arrow {
+	padding-left: 2.5rem;
+}
+
+.video-background-AR-VR {
+    position:absolute;
+    z-index:-1;
+    right: 0;
+ }
+
+ .background-lights {
+ 	position:absolute;
+    z-index:-10;
+    top: 0;
+ }
+
+ .light1-AR-VR {
+ 	left: 20rem;
+ }
+
+ .light2-AR-VR {
+ 	left: 45rem;
+ }
+
