@@ -1,0 +1,6 @@
+<div class='platform-list'>
+    <span>Платформы: </span>
+        {% for platform in platforms %}
+          <img src="{{platform.platform_icon.path}}" alt="{{platform.title}}" />
+        {% endfor %}
+</div>

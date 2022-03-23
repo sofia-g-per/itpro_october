@@ -1,0 +1,78 @@
+<form 
+    class="{{ "{containerClass} form" }}" 
+    onSubmit={handleSubmit} 
+    encType="multipart/form-data"
+    method='post'>
+
+        {% partial "form/TextInput" 
+            fieldData={
+                title: 'Имя',
+                fieldName: 'client_name',
+                value: '',
+                comment: '',
+                error: false,
+            }
+        %}
+            <!-- onChange={handleChange} -->
+
+
+
+
+        {% partial "form/TextInput"
+            fieldData={
+                title: 'Почта',
+                fieldName: 'email',
+                value: '',
+                comment: '',
+                error: false,
+
+            }
+        %}
+            <!-- onChange={handleChange} -->
+
+
+
+        {% partial"form/FormSelect" 
+            fieldData= {
+                title: 'Технология',
+                fieldName: 'technology_id',
+                value: null,
+                comment: '',
+                error: false,
+                options: categoryOptions,
+            }
+        %}
+            <!-- onChange={handleChange} -->
+
+
+
+        {% partial "form/TextInput" 
+            fieldData={
+                title: 'Название проекта',
+                fieldName: 'project_title',
+                value: '',
+                comment: '',
+                error: false,
+            }
+        %}
+            <!-- onChange={handleChange} -->
+
+
+
+        {% partial "form/FileInput" fieldData=            {
+                title: 'Загрузить описание проекта',
+                fieldName: 'file',
+                value: '',
+                comment: 'Поддерживаемые форматы: PDF, DOCX, PNG, JPEG ',
+                error: false,
+            } 
+        %}
+            <!-- onChange={handleChange} -->
+
+
+    <div>
+        <BasicButton title="Отправить" type="submit" buttonClass={buttonClass}></BasicButton>
+        <p class='text--small form__field__error-label'>Нажимая кнопку “Отправить” Вы даёте согласие на обработку своих персональных данных.</p>
+    </div>
+</form>
+)

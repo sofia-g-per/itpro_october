@@ -1,6 +1,61 @@
 title = "Project"
-url = "/project/:id"
+url = "/project/:project"
 layout = "mainTemplate"
 description = "Страница проекта"
 is_hidden = 0
 ==
+<?php
+use Itpro\Projects\Models\Project;
+
+function onStart()
+{
+    $projectId = $this->param('project');
+    $this['project'] = Project::find($projectId);
+}
+?>
+==
+{% put styles %}
+    <link rel="stylesheet" href="{{'assets/css/pages/project.css'|theme}}">
+{% endput %}
+
+<div class='project-page-wrapper'>
+    <div class='project-info'>
+      <div class='project-info__header'>
+        <h1 class='primary-heading'>{{project.title}}</h1>
+        <p class='basic-text'>{{project.description}}</p>
+        {% partial "PlatformList" platforms=project.platforms %}
+      </div>
+      <div class='project-info__images'>
+        {% for image in project.images %}
+          
+            {% partial 'ProjectImageCard' image=image %}
+            <!-- <ProjectImageCard image={image} onOpenPopup={handleOpenTestReuqestPopup} key={image.title}></ProjectImageCard> -->
+          
+        {% endfor %}
+      </div>
+    </div>
+    <!-- <div class='project-video'>
+      <iframe src="{{project.video}}" title="Видео проекта" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    </div> -->
+    <section class="split-middle-flex project-page__cta">
+      <div class='project-page__cta__text-container'>
+          <h2 class='secondary-heading'>Свяжитесь с нами</h2>
+          <p class='basic-text'>
+              Проектируем промышленные симуляторы, игровой контент 
+                в виртуальной и дополненной реальности. Снижаем расходы за счет автоматизации, 
+                оптимизации мобильных приложений и веб-сервисов.
+          </p>
+      </div>
+      <!-- <OrderForm 
+        portfolio={portfolio}
+        containerClass='project-page__cta__form'
+        buttonClass='basic-button--blue'
+      ></OrderForm> -->
+    </section>
+    <!-- {
+          isTestReuqestPopupOpen &&
+          <Popup containerClass="test-request-popup-wrapper" onClosePopup={handleClosePopup}>
+              <TestRequestPopup projectId={project.id} projects={cat.projects}></TestRequestPopup>
+          </Popup>
+      } -->
+  </div>

@@ -1,0 +1,14 @@
+
+<div class="form__field">
+  <select 
+    onChange={onChange} 
+    class={`form__select basic-text ${fieldData.error? 'form__field--error' : ''}`} 
+    name="{{fieldData.fieldName}}" aria-label="{{fieldData.title}}"
+  >
+    <!-- {!fieldData.value && <option value={fieldData.title} selected class='visually-hidden'>{fieldData.title}</option>} -->
+    {% for option in fieldData.options %} 
+        <option class='basic-text' value="{{option.value}}"> {{option.title}} </option>
+    {% endfor %}
+  </select>
+<p class="form__field__error-label text--small">{{formData.comment}}</p>
+</div>

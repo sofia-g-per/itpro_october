@@ -1,3 +1,6 @@
+@import '../partials/project-card.css';
+@import '../partials/platform-list.css';
+
 .project-page-wrapper{
     display: flex;
     flex-direction: column;

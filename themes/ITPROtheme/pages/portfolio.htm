@@ -23,8 +23,7 @@ is_hidden = 0
                 <p>
                     ITPRO Studio специализируется на создании продуктов для развития бизнеса, презентаций, обучающих материалов, заработка и развлечений.
                 </p>
-               {% set technologies = technologies.technologies %}
-
+                {% set technologies = technologies.technologies %}
             <div class='tab-buttons'>
                 {% for technology in technologies %}
                 <!-- onClick={()=>{onCategoryChange(id)}} -->
@@ -36,27 +35,12 @@ is_hidden = 0
                 {% endfor %}
             </div>
             </div>
-            <div class='portfolio__projects'>
-                {% for project in technologies[0].projects %}
-                    <div class='project-card'>
-                        <div class='project-card__image-container'>
-                            <img class='project-card__image' src="{{project.images[0].photo|media}}" />
-                            <img class='project-card__project-icon' src="{{project.project_icon.path}}" alt="" />
-                        </div>
-                        
-                        <div class='project-card__text-container'>
-                            <h3 class='tertiary-heading'>{{project.title}}</h3>
-                            <div class='platform-list'>
-                                <span>Платформы: </span>
-                                {% for platform in project.platforms %}
-                                    <img src="{{platform.platform_icon.path}}" alt='{{platform.title}}'/>
-                                {% endfor %}
-                            </div>
-                            <p class='basic-text'>{{project.description}}</p>
-                            <a class='link--blue' href={{'Project'|page}}>Подробнее</a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+            {% for technology in technologies %}
+                <div class='portfolio__projects' id="{{technology.title}}">
+                    {% for project in technology.projects %}
+                        {% partial "ProjectCard" project=project %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
     </div>
 </section>

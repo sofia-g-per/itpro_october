@@ -4,3 +4,18 @@ layout = "mainTemplate"
 meta_title = "Свяжитесь с нами!"
 is_hidden = 0
 ==
+{% put styles %}
+    <link rel="stylesheet" href="{{'assets/css/pages/contact-us.css'|theme}}">
+{% endput %}
+
+<section class="split-middle-flex contact-us">
+    <div class='contact-us__text-container align-last-to-bottom'>
+        <h2 class='secondary-heading'>Вместе, мы сможем превратить идею в реальность!</h2>
+        <a href="mailto:info@itpro.moscow">info@itpro.moscow</a>
+    </div>
+    {% partial "form/OrderForm"         
+        portfolio=portfolio
+        containerClass='contact-us__form'
+        buttonClass='basic-button--purple' 
+    %}
+</section>

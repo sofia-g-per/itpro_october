@@ -1,0 +1,13 @@
+<div class='project-card'>
+    <div class='project-card__image-container'>
+        <img class='project-card__image' src="{{project.images[0].photo|media}}" />
+        <img class='project-card__project-icon' src="{{project.project_icon.path}}" alt="" />
+    </div>
+    
+    <div class='project-card__text-container'>
+        <h3 class='tertiary-heading'>{{project.title}}</h3>
+        {% partial "PlatformList" platforms=project.platforms %}
+        <p class='basic-text'>{{project.description}}</p>
+        <a class='link--blue' href="{{ 'Project'|page({ project: project.id}) }}">Подробнее</a>
+    </div>
+</div>
