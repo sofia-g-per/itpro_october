@@ -1,6 +1,6 @@
 <form 
     class="{{containerClass ~ ' form'}}" 
-    onSubmit={handleSubmit} 
+    data-request="onSend" 
     encType="multipart/form-data"
     method='post'>
 
@@ -13,10 +13,6 @@
                 error: false,
             }
         %}
-            <!-- onChange={handleChange} -->
-
-
-
 
         {% partial "form/TextInput"
             fieldData={
@@ -28,9 +24,6 @@
 
             }
         %}
-            <!-- onChange={handleChange} -->
-
-
 
         {% partial"form/FormSelect" 
             fieldData= {
@@ -39,12 +32,14 @@
                 value: null,
                 comment: '',
                 error: false,
-                options:    ,
+                options:  [
+                    {
+                        value: 1,
+                        name: 'VR'
+                    }
+                ]  ,
             }
         %}
-            <!-- onChange={handleChange} -->
-
-
 
         {% partial "form/TextInput" 
             fieldData={
@@ -55,9 +50,6 @@
                 error: false,
             }
         %}
-            <!-- onChange={handleChange} -->
-
-
 
         {% partial "form/FileInput" fieldData=            {
                 title: 'Загрузить описание проекта',
@@ -67,8 +59,6 @@
                 error: false,
             } 
         %}
-            <!-- onChange={handleChange} -->
-
 
     <div>
         <BasicButton title="Отправить" type="submit" buttonClass={buttonClass}></BasicButton>

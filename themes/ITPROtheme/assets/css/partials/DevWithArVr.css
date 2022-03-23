@@ -1,12 +1,17 @@
-.purple-text {
-	color: #A768BA;
+ .dev-with-ar-vr {
+   display: flex;
+   justify-content: space-between;
+   padding: 16vh 7vw;
+   min-height: 100vh;
+
+   background: 
+      url("../../img/background/Video.png") 100% 43vh / auto 50vh no-repeat,
+      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
+   ;
 }
 
-.dev-with-ar-vr {
-	display: flex;
-	justify-content: space-between;
-	padding: 16rem 14rem;
-	min-height: 109rem;
+.purple-text {
+	color: #A768BA;
 }
 
 .text-with-arrow {
@@ -18,7 +23,7 @@
 	padding-left: 2.5rem;
 }
 
-.video-background-AR-VR {
+/*.video-background-AR-VR {
     position:absolute;
     z-index:-1;
     right: 0;
@@ -38,3 +43,7 @@
  	left: 45rem;
  }
 
+ .background-img {
+    
+ }
+*/

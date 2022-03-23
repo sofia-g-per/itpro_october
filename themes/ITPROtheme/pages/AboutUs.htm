@@ -5,3 +5,15 @@ description = "Дефолтная страница \"О нас\""
 meta_title = "О нас"
 is_hidden = 0
 ==
+{% put styles %}
+    <link rel="stylesheet" href="{{'assets/css/pages/about-us.css'|theme}}">
+{% endput %}
+
+<section className="">
+    {% partial "DevWithArVr" %}
+    {% partial "OurCustomers" %}
+    {% partial "LogoSection" %}
+    <!-- <LogoSection></LogoSection> -->
+    <!-- <StagesOfDevScroll></StagesOfDevScroll>
+    <StagesOfDevelopment></StagesOfDevelopment> -->
+  </section>

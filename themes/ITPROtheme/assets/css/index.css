@@ -116,21 +116,35 @@ body {
 	color: var(--color-grey);
 }
 
-.link--blue{
-  text-decoration: none;
-  color: var(--color-accent-blue);
+.arrow-link{
   display: flex;
   align-items: center;
   text-align: center;
+  text-decoration: none;
   gap: 2rem;
 }
 
-.link--blue:after{
+.arrow-link:after{
   content: '';
   display: block;
-  background: url('../img/arrow-right.png');
   width: 3rem;
   height: 1rem;
+}
+
+.arrow-link--blue{
+  color: var(--color-accent-blue);
+}
+
+.arrow-link--purple{
+  color: var(--color-accent-purple);
+}
+
+.arrow-link--blue:after{
+  background: url('../img/arrow-right.png');
+}
+
+.arrow-link--purple:after{
+  background: url("../img/background/Vector 85.svg");
 }
 
 .white-text {
