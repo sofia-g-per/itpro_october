@@ -1,8 +1,9 @@
 
 <div class="form__field">
+  <!--  ~ fieldData.error? 'form__field--error' : '' -->
   <select 
     onChange={onChange} 
-    class={`form__select basic-text ${fieldData.error? 'form__field--error' : ''}`} 
+    class="{{ 'form__select basic-text ' }}"
     name="{{fieldData.fieldName}}" aria-label="{{fieldData.title}}"
   >
     <!-- {!fieldData.value && <option value={fieldData.title} selected class='visually-hidden'>{fieldData.title}</option>} -->

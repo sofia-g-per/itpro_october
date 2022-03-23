@@ -1,5 +1,5 @@
 <form 
-    class="{{ "{containerClass} form" }}" 
+    class="{{containerClass ~ ' form'}}" 
     onSubmit={handleSubmit} 
     encType="multipart/form-data"
     method='post'>
@@ -39,7 +39,7 @@
                 value: null,
                 comment: '',
                 error: false,
-                options: categoryOptions,
+                options:    ,
             }
         %}
             <!-- onChange={handleChange} -->
