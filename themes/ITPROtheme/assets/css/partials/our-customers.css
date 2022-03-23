@@ -1,7 +1,6 @@
 .our-customers {
 	display: flex;
-	min-height: 46rem;
-
+	min-height: 46rem var(--padding-l);
 }
 
 .customers-text-padding {
@@ -17,4 +16,8 @@
 	background: 
 	url('../../img/our_customers/213123 1.png') no-repeat top left / auto 100% 
 	;
+}
+
+.our-customers__img img{
+	max-width: 100%;
 }

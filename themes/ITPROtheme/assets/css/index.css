@@ -23,10 +23,13 @@ html{
   --color--blue-dark:#377E95;
   --color--blue-darker: #1F4B59;
   --popup-padding: 3.5rem;
-}
-@media(max-width: 700px){
+
+  /* 140px при экране 1920 */
+  --padding-l: calc(1rem + 130 * (100vw / 1920)); 
+	/* font-size:  */
 
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -197,15 +200,15 @@ body {
  */
 
 .logo {
-	width: 3.6vw;
+	width: 6.9rem;
 }
 
 .social {
 	display: flex;
-	width: 18.9vw;
-	justify-content: space-between;
+	gap: 7.7rem;
   align-items: center;
 }
+
 
 .basic-button{
   border: none;
@@ -239,3 +242,9 @@ body {
   background-color: var(--color-blue-darker);
 }
 
+
+@media (max-width: 1000px){
+  :root{
+    --padding-l: 2rem;
+  }
+}
