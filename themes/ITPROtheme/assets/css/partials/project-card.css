@@ -26,3 +26,15 @@
     row-gap: 2rem;
 }
 
+@media (max-width: 1000px){
+    .project-card{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6rem;
+    }
+
+    .project-card__text-container{
+        padding: 0 2rem;
+    }
+}
+

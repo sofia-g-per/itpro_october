@@ -1,14 +1,5 @@
-@import '../UI/tab-button.css';
-@import '../partials/platform-list.css';
-@import '../partials/project-card.css';
-/* @import '../platform-list.css'; */
-
 .portfolio{
     background: url('../../img/background/blue-left.png') 100% 150% no-repeat;
-}
-
-.portfolio__main-content{
-    padding-right: 14rem;
 }
 
 .tab-buttons{
@@ -30,21 +21,14 @@
 .portfolio__header{
     display: grid;
     grid-template-columns: 1.6fr 1fr;
-    padding: 4rem 0 18rem 0;
+    padding: 4rem var(--padding-l) 18rem var(--padding-l);
     gap: 3.8rem 6rem;
     background: url('../../img/background/blue-middle.png') 0 95% no-repeat;
 
 }
-@media(max-width: 500px){
-    .portfolio__header{
-        grid-template-columns: 1fr;
-    }
-}
-
 
 .portfolio__header .primary-heading{
     grid-row: span 2;
-    padding-left: 14rem;
 }
 
 .portfolio__projects{
@@ -54,3 +38,13 @@
     padding-bottom: 18rem;
 }
 
+@media(max-width: 1000px){
+
+    .portfolio__header{
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio__projects{
+        padding-bottom: 12rem;
+    }
+}
