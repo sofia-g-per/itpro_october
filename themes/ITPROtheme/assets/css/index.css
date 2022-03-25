@@ -248,3 +248,15 @@ body {
     --padding-l: 2rem;
   }
 }
+
+@media (max-width: 480px){
+  :root{
+    --page-title-font-size: 4rem;
+  }
+}
+
+@media (max-width: 360px){
+  :root{
+    ---section-title-font-size: 2.8rem
+  }
+}

@@ -10,7 +10,7 @@
 .customers-text-container {
 	display: flex;
 	flex-direction: column;
-	padding: 0 7vw;
+	padding: 27rem 7vw 0 7vw;
 	justify-content: end;
 
 	background: 
@@ -20,4 +20,13 @@
 
 .our-customers__img img{
 	max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+	.our-customers__img{
+		display: none;
+	}
+	.customers-text-container {
+		width: 100vw;
+	}
 }

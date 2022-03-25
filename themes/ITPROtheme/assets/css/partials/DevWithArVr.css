@@ -23,27 +23,14 @@
 	padding-left: 2.5rem;
 }
 
-/*.video-background-AR-VR {
-    position:absolute;
-    z-index:-1;
-    right: 0;
- }
+@media (max-width: 1000px){
+   .dev-with-ar-vr {
+      flex-direction: column;
+      background: 
+         url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
+      ;
 
- .background-lights {
- 	position:absolute;
-    z-index:-10;
-    top: 0;
- }
-
- .light1-AR-VR {
- 	left: 20rem;
- }
-
- .light2-AR-VR {
- 	left: 45rem;
- }
-
- .background-img {
-    
- }
-*/
+      justify-content: center;
+      gap: 4rem;
+   }
+}
