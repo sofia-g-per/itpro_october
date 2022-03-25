@@ -1,6 +1,6 @@
 .stages-of-development {
 	margin-top: 18rem;
-	padding: 0 14rem 19rem 14rem;
+	padding: 0 var(--padding-l) 19rem var(--padding-l);
 	min-height: 59.5rem;
 	background: rgb(0,0,0);
 	background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);

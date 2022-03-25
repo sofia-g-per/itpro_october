@@ -18,8 +18,14 @@
 	;
 }
 
+.our-customers__img{
+	min-height: 100%;
+}
+
 .our-customers__img img{
-	max-width: 100%;
+	/* max-width: 100%; */
+	min-height: 100%;
+	/* object-fit: fill; */
 }
 
 @media (max-width: 1000px) {
