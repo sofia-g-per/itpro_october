@@ -10,18 +10,12 @@
    ;
 }
 
-.purple-text {
-	color: #A768BA;
+.dev-with__text-container{
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
 }
 
-.text-with-arrow {
-	display: flex;
-	padding: 4rem 0 7rem 0;
-}
-
-.arrow {
-	padding-left: 2.5rem;
-}
 
 @media (max-width: 1000px){
    .dev-with-ar-vr {

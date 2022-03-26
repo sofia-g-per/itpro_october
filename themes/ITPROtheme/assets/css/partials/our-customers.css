@@ -13,7 +13,7 @@
 .customers-text-container {
 	display: flex;
 	flex-direction: column;
-	padding: 27rem 7vw 0 7vw;
+	padding: 25.7rem 7vw 0 7vw;
 	justify-content: end;
 	/* min-width: calc(50ch); */
 

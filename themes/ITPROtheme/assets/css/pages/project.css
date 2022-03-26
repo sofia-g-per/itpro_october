@@ -8,9 +8,10 @@
 }
 
 .project-info{
-    padding: 18vh 14rem 0 14rem;
+    padding: 18vh var(--padding-l) 0 var(--padding-l);
     display: flex;
     flex-direction: column;
+    /* word-wrap: break-word; */
     gap: 8vh;
     background: url('../../img/background/blue-project-middle.png') 0 -30vh no-repeat;
 }

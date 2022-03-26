@@ -1,8 +1,14 @@
+<!-- {{__SELF__.property('containerClass')}}
+<p>{{containerClass~'form'}}</p>
+{% set formClass = containerClass ~ 'form'  %}
+<p>{{formClass}}</p> -->
+
 <form 
-    class="{{containerClass ~ ' form'}}" 
+    class={{containerClass~form}} 
     data-request="onSend" 
     encType="multipart/form-data"
     method='post'>
+    
 
         {% partial "form/TextInput" 
             fieldData={
