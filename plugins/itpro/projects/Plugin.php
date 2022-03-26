@@ -8,7 +8,7 @@ class Plugin extends PluginBase
     {
         return [
             'Itpro\Projects\Components\Technologies' => 'technologies',
-            'Itpro\Projects\Components\OrderForm' => 'orderForm',
+            'Itpro\Projects\Components\orderForm' => 'orderForm',
             'Itpro\Projects\Components\testRequestForm' => 'testRequestForm'
         ];
     }
