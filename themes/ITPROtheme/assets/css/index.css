@@ -261,6 +261,38 @@ body {
   background-color: var(--color-blue-darker);
 }
 
+.nav-bar-column,
+.mobile-nav-popup .nav-bar {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+  gap: 2rem;
+}
+
+.nav-bar-link {
+	padding: 0.5rem 0;
+	justify-content: space-between;
+	text-decoration: none;
+	color: var(--color-grey);
+
+	background-image: linear-gradient(currentColor, currentColor);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.1rem;
+    transition: background-size .3s;
+}
+
+.nav-bar-link:hover,
+.nav-bar-link--active {
+	color: var(--color-white);
+	background-size: 100% 0.1rem;
+}
+
+/* 
+---------------------------------------------
+  QUERIES
+---------------------------------------------
+ */
 
 @media (max-width: 1000px){
   :root{
@@ -268,7 +300,7 @@ body {
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 560px){
   :root{
     --page-title-font-size: 4rem;
   }

@@ -26,31 +26,6 @@
 	grid-column: 2;
 }
 
-.nav-bar-column {
-	display: flex;
-	flex-direction: column;
-	text-align: right;
-}
-
-.nav-bar-link {
-	padding: 0.5rem 0;
-	justify-content: space-between;
-	text-decoration: none;
-	color: var(--color-grey);
-
-	background-image: linear-gradient(currentColor, currentColor);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1rem;
-    transition: background-size .3s;
-}
-
-.nav-bar-link:hover,
-.nav-bar-link--active {
-	color: var(--color-white);
-	background-size: 100% 0.1rem;
-}
-
 .left-part-footer-bar {
 	text-align: left;
 	display: flex;

@@ -10,12 +10,16 @@ description = "Основной шаблон с хедером и футером
     <title>ITPRO</title>
     <link rel="stylesheet" href="{{ [
         'assets/css/index.css',
-        'assets/css/UI/popup.css'
+        'assets/css/UI/popup.css',
+        'assets/css/popups/mobile-nav.css'
       ]|theme }}">
     {% styles %}
   </head>
   <body>
       {% partial "TheHeader" %}
+      <dialog class="popup mobile-nav-popup" data-popup="mobile-nav">
+        {% partial "Navbar" containerClass="nav-bar-column" %}
+      </dialog>
       <dialog class="popup contacts-popup" data-popup="contacts">
           <button class='x-button'>
               <img src="{{'assets/img/x-button.svg'|theme}}" alt="закрыть попап" />

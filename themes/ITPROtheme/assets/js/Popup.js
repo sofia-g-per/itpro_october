@@ -12,8 +12,20 @@ const closePopup = (popup) => {
     popup.classList.remove('popup--active');
 }
 
+const togglePopup = (popup) => {
+    if(popup.classList.contains('popup--active')){
+        popup.classList.remove('popup--active');
+
+    }else{
+        popup.classList.add('popup--active');
+    }
+}
+
 popups.forEach((popup)=>{
-    popup.querySelector(".x-button").addEventListener('click', closePopup.bind(this, popup));
+    const xBtn = popup.querySelector(".x-button");
+    if(xBtn){
+        xBtn.addEventListener('click', closePopup.bind(this, popup));
+    }
 });
 
 popupBtns.forEach((popupBtn)=> {
@@ -25,5 +37,9 @@ popupBtns.forEach((popupBtn)=> {
             return;
         }
     });
-    popupBtn.addEventListener('click', openPopup.bind(this, targetPopup));
+    if(popupName !== "mobile-nav"){
+        popupBtn.addEventListener('click', openPopup.bind(this, targetPopup));
+    } else{
+        popupBtn.addEventListener('click', togglePopup.bind(this, targetPopup));
+    }
 });
