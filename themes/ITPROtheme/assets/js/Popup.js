@@ -1,7 +1,6 @@
 const pageOverlay = document.querySelector(".page-overlay");
 const popups = document.querySelectorAll(".popup");
 const popupBtns = document.querySelectorAll(".open-popup-btn");
-console.log();
 
 const openPopup = (popup) =>  {
     pageOverlay.classList.add("page-overlay--active");
@@ -26,6 +25,5 @@ popupBtns.forEach((popupBtn)=> {
             return;
         }
     });
-    console.log('target', targetPopup)
     popupBtn.addEventListener('click', openPopup.bind(this, targetPopup));
 });

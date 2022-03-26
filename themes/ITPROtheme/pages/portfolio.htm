@@ -11,6 +11,12 @@ is_hidden = 0
     <link rel="stylesheet" href="{{'assets/css/UI/tab-button.css'|theme}}">
     <link rel="stylesheet" href="{{'assets/css/partials/platform-list'|theme}}">
     <link rel="stylesheet" href="{{'assets/css/partials/project-card.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/Glider.js/glider.css'|theme}}">
+{% endput %}
+
+{% put scripts %}
+    <script src="{{'assets/js/Glider.js/glider.js'|theme}}"></script>
+    <script src="{{'assets/js/Portfolio.js'|theme}}" type="module" ></script>
 {% endput %}
 
 <section class="portfolio">
@@ -37,7 +43,8 @@ is_hidden = 0
                     </button>
                 {% endfor %}
             </div>
-            </div>
+        </div>
+        <div class="glider">
             {% for technology in technologies %}
                 <div class='portfolio__projects' id="{{technology.title}}">
                     {% for project in technology.projects %}
@@ -45,5 +52,6 @@ is_hidden = 0
                     {% endfor %}
                 </div>
             {% endfor %}
+        </div>
     </div>
 </section>
