@@ -3,6 +3,8 @@ url = "/project/:project"
 layout = "mainTemplate"
 description = "Страница проекта"
 is_hidden = 0
+
+[testRequestForm]
 ==
 <?php
 use Itpro\Projects\Models\Project;
@@ -16,6 +18,8 @@ function onStart()
 ==
 {% put styles %}
     <link rel="stylesheet" href="{{'assets/css/pages/project.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/UI/form.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/popups/test-request-popup.css'|theme}}">
 {% endput %}
 
 <div class='project-page-wrapper'>
@@ -46,12 +50,31 @@ function onStart()
                 оптимизации мобильных приложений и веб-сервисов.
           </p>
       </div>
-      <!-- <OrderForm 
-        portfolio={portfolio}
+      {% component "OrderForm"
+        portfolio=portfolio
         containerClass='project-page__cta__form'
-        buttonClass='basic-button--blue'
-      ></OrderForm> -->
+        buttonClass='basic-button--blue' 
+      %}
     </section>
+    <dialog class="popup test-request-popup-wrapper" data-popup="test-request">
+        <button class='x-button'>
+            <img src="{{'assets/img/x-button.svg'|theme}}" alt="закрыть попап" />
+        </button>
+        <div class='test-request-popup'>
+          <div class='test-request-popup__text'>
+              <h2 class='popup-heading'>
+                  Вместе, мы сможем превратить идею в реальность!
+              </h2>
+              <a class='popup-text--small' href="mailto:info@itpro.moscow ">
+                  info@itpro.moscow 
+              </a>
+          </div>
+            {% component "testRequestForm"
+              projectId=project.id
+              buttonClass="basic-button--purple"
+            %}
+        </div>
+    </dialog>
     <!-- {
           isTestReuqestPopupOpen &&
           <Popup containerClass="test-request-popup-wrapper" onClosePopup={handleClosePopup}>

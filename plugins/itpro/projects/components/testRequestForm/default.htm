@@ -1,0 +1,58 @@
+<form 
+    class="test-request-popup__form" 
+    data-request="onSend" 
+    method='post'>
+    <div class="form">
+    {% set formData = [
+        {
+            title: projectId,
+            value: projectId,
+            fieldName: 'project_id',
+            comment: '',
+            options: projectOptions,
+            error: false,
+        },
+        {
+            title: 'Имя',
+            fieldName: 'client_name',
+            value: '',
+            comment: '',
+            error: false,
+        },
+        {
+            title: 'Почта',
+            fieldName: 'email',
+            value: '',
+            comment: '',
+            error: false,
+        },
+
+        {
+            title: 'Цели тестирования',
+            fieldName: 'description',
+            value: '',
+            comment: '',
+            error: false,
+        },
+    ] %}
+
+        
+        {% partial"form/FormSelect" 
+            fieldData = formData[0]
+        %}
+
+        {% partial "form/TextInput" 
+            fieldData= formData[1]
+        %}
+        {% partial "form/TextInput" 
+            fieldData= formData[2]
+        %}
+        {% partial "form/TextInput" 
+            fieldData= formData[3]
+        %}
+
+    <div>
+        <BasicButton title="Отправить" type="submit" buttonClass={buttonClass}></BasicButton>
+        <p class='text--small form__field__error-label'>Нажимая кнопку “Отправить” Вы даёте согласие на обработку своих персональных данных.</p>
+    </div>
+</form>
