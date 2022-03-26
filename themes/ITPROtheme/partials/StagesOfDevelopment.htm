@@ -20,18 +20,17 @@
 	},
 ] %}
 
-<div class="stages-of-development">
-	<h2 class="secondary-heading padding-heading">
+<div class="stages-of-dev">
+	<h2 class="stages-of-dev__heading secondary-heading">
 		Этапы разработки
 	</h2>
-	<div class="el-container glider">
-
+	<div class="stages-of-dev__scroller glider">
 		{% for stage in stages %}
-				<div class="text-container">
-					<img src="{{'assets/img/Ellipse 62.svg'|theme}}" alt="ellipse" class="ellipse"/>
-					<h3 class="tertiary-heading padding-tertiary-heading">
+				<div class="stage-of-dev">
+					<img src="{{'assets/img/Ellipse 62.svg'|theme}}" alt="ellipse" class="stage-of-dev__circle"/>
+					<h2 class="tertiary-heading">
 						{{stage.title}}
-					</h3>
+					</h2>
 					<p class="basic-text padding-text">
 						{{stage.description}}
 					</p>					

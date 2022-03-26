@@ -1,24 +1,43 @@
+.stages-of-dev{
+	padding: 6rem 0 18rem 0;
+
+    /* background: url('../../img/background/stages-of-dev.png') 0% 50% no-repeat; */
+	background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+
+	backdrop-filter: blur(140px);
+	background: -webkit-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+	background: -moz-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+	background: linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+}
+
+.stages-of-dev__heading{
+    padding: 0 var(--padding-l) 11vh var(--padding-l);
+}
+
 .stage-of-dev{
-    padding: 0 3.5vw;
+    padding: 2.5rem var(--padding-l) 0 var(--padding-l);
     display: flex;
     flex-direction: column;
+    justify-content: flex-start !important;
     position: relative;
 }
 
 .stage-of-dev__circle{
-    width: 2.7vw;
+    width: 3.4rem;
     padding-bottom: 4.4vh;
 }
 
 .stage-of-dev h2{
     padding-bottom: 2.2vh;
 }
+.stages-of-dev__scroller{
+    background: url('../../img/stages-of-dev-line-complete.png') top center / 100% auto repeat-x;
 
-.stages-of-dev__scroller .glider-track .stage-of-dev:nth-child(2n - 1){
-    padding-top: 10rem;
+}
+.stages-of-dev__scroller .stage-of-dev:nth-child(2n - 1){
 }
 
-.stages-of-dev__scroller .glider-track .stage-of-dev:nth-child(2n){
-    padding-top: 18rem;
+.stages-of-dev__scroller .stage-of-dev:nth-child(2n){
+    margin-top: 4rem;
 }
 
