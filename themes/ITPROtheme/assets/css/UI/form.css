@@ -35,7 +35,10 @@
     line-height: 0;
     outline: none;
     border-color: var(--color-white);
+}
 
+.form__select *{
+    background-color: transparent;
 }
 
 .form__input::placeholder{
@@ -71,7 +74,7 @@
 .form__file-label-wrapper::before{
     content: '';
     display: block;
-    background-image: url('../img/upload-icon.svg');
+    background-image: url('../../img/upload-icon.svg');
     width: 2.4rem;
     height: 2.4rem;
 }

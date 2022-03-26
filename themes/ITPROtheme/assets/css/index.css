@@ -1,5 +1,6 @@
 @import "./partials/the-header.css";
 @import "./partials/the-footer.css";
+@import "./popups/contacts-popup.css";
 
 html{
   font-size: 62.5%;
@@ -148,6 +149,22 @@ body {
 
 .arrow-link--purple:after{
   background: url("../img/background/Vector 85.svg");
+}
+
+.arrow-link--purple:hover{
+  color: var(--color-accent-purple--dark);
+}
+
+.arrow-link--blue:hover{
+  color: var(--color-accent-blue--dark);
+}
+
+.arrow-link--purple:hover{
+  color: var(--color-accent-purple--darker);
+}
+
+.arrow-link--blue:hover{
+  color: var(--color-accent-blue--darker);
 }
 
 .white-text {

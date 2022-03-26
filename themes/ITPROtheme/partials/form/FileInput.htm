@@ -1,9 +1,11 @@
 <div class="form__field">
-  <div class={`form__file-wrapper ${fieldData.error? 'form__field--error' : ''}`} >
+  <!-- ~ fieldData.error? 'form__field--error' : '' -->
+  <div class="{{'form__file-wrapper'}}" >
     <div class='form__file-label-wrapper'>
       <label htmlFor="{{fieldData.fieldName}}" class='basic-text'>{{fieldData.title}}</label>
     </div>
-    <input onChange={onChange} id="{{fieldData.fieldName}}" name="{{fieldData.fieldName}}" class='visually-hidden' type="file" />
+    <!-- onChange={onChange} -->
+    <input  id="{{fieldData.fieldName}}" name="{{fieldData.fieldName}}" class='visually-hidden' type="file" />
   </div>
   <p class="form__field__error-label text--small">{{formData.comment}}</p>
 </div>

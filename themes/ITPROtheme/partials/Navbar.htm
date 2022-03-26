@@ -11,6 +11,14 @@
     <a class="nav-bar-link {% if this.page.id == 'ContactUs' %}nav-bar-link--active{% endif %}" href="{{ 'ContactUs'|page }}">
         Заказать
     </a>
-    <!-- onClick={onOpenContactsPopup} -->
-    <a class="nav-bar-link" >Контакты</a>	
+    <!-- onClick={onOpenContactsPopup} href="#contactsPopup" -->
+    <a class="nav-bar-link open-popup-btn" data-popup="contacts">Контакты</a>	
 </div>
+
+<dialog class="popup contacts-popup" data-popup="contacts">
+  <!-- {/* onClick={onClosePopup} */} -->
+    <button class='x-button'>
+        <img src="{{'assets/img/x-button.svg'|theme}}" alt="закрыть попап" />
+    </button>
+    {% partial "popups/ContactsPopup" %}
+</dialog>

@@ -1,4 +1,5 @@
 .page-overlay{
+    display: none;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -11,6 +12,10 @@
     z-index: 9;
 }
 
+.page-overlay--active{
+    display: block;
+}
+
 .popup{
     border: none;
     position: fixed;
@@ -19,11 +24,15 @@
     top: 50%;
     transform: translate(-50%, -50%);
 
-    display: grid;
+    display: none;
     min-width: 80vw; 
     padding: var(--popup-padding);
     border-radius: 2rem;
     background-color: var(--color-black);
+}
+
+.popup--active{
+    display: grid;
 }
 
 .x-button{
