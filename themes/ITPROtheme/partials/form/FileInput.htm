@@ -2,9 +2,8 @@
   <!-- ~ fieldData.error? 'form__field--error' : '' -->
   <div class="{{'form__file-wrapper'}}" >
     <div class='form__file-label-wrapper'>
-      <label htmlFor="{{fieldData.fieldName}}" class='basic-text'>{{fieldData.title}}</label>
+      <label for="{{fieldData.fieldName}}" class='basic-text'>{{fieldData.title}}</label>
     </div>
-    <!-- onChange={onChange} -->
     <input  id="{{fieldData.fieldName}}" name="{{fieldData.fieldName}}" class='visually-hidden' type="file" />
   </div>
   <p class="form__field__error-label text--small">{{formData.comment}}</p>
