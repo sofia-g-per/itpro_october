@@ -35,12 +35,12 @@ is_hidden = 0
                 {% set technologies = technologies.technologies %}
             <div class='tab-buttons'>
                 {% for technology in technologies %}
-                <!-- onClick={()=>{onCategoryChange(id)}} -->
-                <!-- class={`tab-button ${isActive? 'tab-button--active' : ''}`} -->
-                    <button id="{{technology.id}}" class="tab-button">
-                        <img src="{{technology.technology_icon.path}}"/>
-                        <span>{{ technology.title }}</span>
-                    </button>
+                    {% if technology.projects|length %}
+                        <button id="{{technology.id}}" class="tab-button">
+                            <img src="{{technology.technology_icon.path}}"/>
+                            <span>{{ technology.title }}</span>
+                        </button>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
