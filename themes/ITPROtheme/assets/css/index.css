@@ -18,6 +18,7 @@ html{
   --color-accent-blue: #2FA4C9;
   --color-accent-pink: #DD345D;
   --color-accent-purple: #A768BA;
+
   --color-purple--dark: #76458a;
   --color-purple--darker: #633974;
 
@@ -126,6 +127,7 @@ body {
   text-align: center;
   text-decoration: none;
   gap: 2rem;
+  cursor: pointer;
 }
 
 .arrow-link:after{
@@ -152,19 +154,19 @@ body {
 }
 
 .arrow-link--purple:hover{
-  color: var(--color-accent-purple--dark);
+  color: var(--color-purple--dark);
 }
 
 .arrow-link--blue:hover{
-  color: var(--color-accent-blue--dark);
+  color: var(--color--blue-dark);
 }
 
-.arrow-link--purple:hover{
-  color: var(--color-accent-purple--darker);
+.arrow-link--purple:active{
+  color: var(--color-purple--darker);
 }
 
-.arrow-link--blue:hover{
-  color: var(--color-accent-blue--darker);
+.arrow-link--blue:active{
+  color: var(--color--blue-darker);
 }
 
 .white-text {
