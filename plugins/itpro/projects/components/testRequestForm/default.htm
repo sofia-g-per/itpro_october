@@ -35,8 +35,7 @@
             error: false,
         },
     ] %}
-
-        
+    
         {% partial"form/FormSelect" 
             fieldData = formData[0]
         %}
@@ -50,8 +49,8 @@
         {% partial "form/TextInput" 
             fieldData= formData[3]
         %}
-    <div>
-        <button class="{{'basic-button'~buttonClass}}">Отправить</button>
-        <p class='text--small form__field__error-label'>Нажимая кнопку “Отправить” Вы даёте согласие на обработку своих персональных данных.</p>
-    </div>
+        <div>
+            <button type="submit" class="{{__SELF__.property('buttonClass')}}">Отправить</button>
+            <p class='text--small form__field__error-label'>Нажимая кнопку “Отправить” Вы даёте согласие на обработку своих персональных данных.</p>
+        </div>
 </form>

@@ -1,7 +1,6 @@
 .test-request-popup-wrapper{
     background: url('../../img/background/contacts-popup-background.png') 0 0 / 40% 100% no-repeat,
     var(--color-black);
-
 }
 
 .test-request-popup{
@@ -30,4 +29,10 @@
 
 .test-request-popup__form{
     padding-left: var(--popup-padding);
+}
+
+@media (max-width: 1000px){
+    .test-request-popup{
+        grid-template-columns: 1fr;
+    }
 }

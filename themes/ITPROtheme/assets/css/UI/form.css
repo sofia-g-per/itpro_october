@@ -1,5 +1,5 @@
 .form{
-    /* width: 100%; */
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +11,10 @@
 .form__field{
     display: flex;
     flex-direction: column;
+}
+
+.form__field>*{
+    min-width: 100%;
 }
 
 .form__field__error-label{
