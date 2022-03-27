@@ -12,7 +12,7 @@ use October\Rain\Support\Facades\Flash;
 use Illuminate\Support\Facades\Validator;
 use October\Rain\Exception\ValidationException;
 
-class OrderForm extends ComponentBase
+class Orderform extends ComponentBase
 {
     public $technologies;
 
@@ -20,7 +20,7 @@ class OrderForm extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'OrderForm',
+            'name' => 'Orderform',
             'descripiton' => 'Форма для заказа проекта пользователем'
         ];
     }
