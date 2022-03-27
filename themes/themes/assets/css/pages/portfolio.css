@@ -1,0 +1,51 @@
+.portfolio{
+    background: url('../../img/background/blue-left.png') 100% 150% no-repeat;
+}
+
+.portfolio__main-content{
+    padding-right: 14rem;
+}
+
+.tab-buttons{
+    display: flex;
+    gap: 4rem;
+}
+
+.portfolio__video{
+    width: 100%;
+}
+
+.portfolio__video video{
+    width: 100%;
+    /* height: 54vh; */
+    /* object-fit: contain; */
+
+}
+
+.portfolio__header{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    padding: 4rem 0 18rem 0;
+    gap: 3.8rem 6rem;
+    background: url('../../img/background/blue-middle.png') 0 95% no-repeat;
+
+}
+@media(max-width: 500px){
+    .portfolio__header{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.portfolio__header .primary-heading{
+    grid-row: span 2;
+    padding-left: 14rem;
+}
+
+.portfolio__projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12rem;
+    padding-bottom: 18rem;
+}
+

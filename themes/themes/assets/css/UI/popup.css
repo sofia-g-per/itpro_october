@@ -1,0 +1,42 @@
+.page-overlay{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--color-black);
+    opacity: .8;
+    z-index: 9;
+}
+
+.popup{
+    border: none;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    min-width: 80vw; 
+    padding: var(--popup-padding);
+    border-radius: 2rem;
+    background-color: var(--color-black);
+}
+
+.x-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: .5;
+    justify-self: right;
+
+    transition: .3s;
+}
+
+.x-button:hover,
+.x-button:active{
+    opacity: 1;
+}
