@@ -1,10 +1,13 @@
 {% set technologies = __SELF__.technologies %}
 
 <form 
-    class="{{__SELF__.property('containerClass')}}" 
     data-request="onSend" 
+    data-request-validate
+    data-request-flash
     encType="multipart/form-data"
-    method='post'>
+    method='post'
+    class="{{__SELF__.property('containerClass')}}" 
+    >
     
     <div class="form__field">
         <input 
@@ -12,9 +15,8 @@
           aria-label="Имя" 
           name="client_name" 
           placeholder="Имя" 
-          class="{{ 'form__select basic-text '}}"
+          class="form__select basic-text {% if errors.first('client_name') %} form__field--error{% endif %}"
           />
-          <!--  ~ fieldData.error? 'form__field--error' : '' }} -->
         <p class="form__field__error-label text--small"></p>
       </div>
 
@@ -68,7 +70,7 @@
       </div>
 
         <div>
-            <button class="{{__SELF__.property('buttonClass')}}">Отправить</button>
+            <button type="submit" class="{{__SELF__.property('buttonClass')}}">Отправить</button>
             <p class='text--small form__field__error-label'>Нажимая кнопку “Отправить” Вы даёте согласие на обработку своих персональных данных.</p>
         </div>
 </form>
