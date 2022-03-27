@@ -33,16 +33,15 @@ function onStart()
       </div>
       <div class='project-info__images'>
         {% for image in project.images %}
-          
-            {% partial 'ProjectImageCard' image=image %}
-            <!-- <ProjectImageCard image={image} onOpenPopup={handleOpenTestReuqestPopup} key={image.title}></ProjectImageCard> -->
-          
+            {% partial 'ProjectImageCard' image=image %}          
         {% endfor %}
       </div>
     </div>
-    <!-- <div class='project-video'>
-      <iframe src="{{project.video}}" title="Видео проекта" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-    </div> -->
+    {% if project.video %}
+      <div class='project-video'>
+        <iframe src="{{project.video}}" title="Видео проекта" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
+    {% endif %}
     <section class="split-middle-flex project-page__cta">
       <div class='project-page__cta__text-container'>
           <h2 class='secondary-heading'>Свяжитесь с нами</h2>
