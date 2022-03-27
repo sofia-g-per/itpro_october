@@ -1,3 +1,8 @@
+
+{% put scripts %}
+  <script src="{{'assets/js/formValidation.js'|theme}}"></script>
+{% endput %}
+
 {% set technologies = __SELF__.technologies %}
 
 <form 
@@ -8,7 +13,9 @@
     method='post'
     class="{{__SELF__.property('containerClass')}}" 
     >
-    
+    {% for error in errors %}
+    <p> {{error}}</p>
+    {% endfor %}
     <div class="form__field">
         <input 
           type="text" 

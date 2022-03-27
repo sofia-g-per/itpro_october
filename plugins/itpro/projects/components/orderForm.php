@@ -3,14 +3,14 @@
 use Mail;
 use Input;
 use Redirect;
-use Validator;
-// use Illuminate\Support\Facades\Validator;
+use Validation;
 use Cms\Classes\ComponentBase;
 use Itpro\Projects\Models\Order;
 use Itpro\Projects\Models\Client;
 use Itpro\Projects\Models\Technology;
 use October\Rain\Support\Facades\Flash;
-use Dotenv\Exception\ValidationException;
+use Illuminate\Support\Facades\Validator;
+use October\Rain\Exception\ValidationException;
 
 class OrderForm extends ComponentBase
 {
