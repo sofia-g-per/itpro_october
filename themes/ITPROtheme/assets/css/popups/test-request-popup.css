@@ -1,6 +1,7 @@
 .test-request-popup-wrapper{
     background: url('../../img/background/contacts-popup-background.png') 0 0 / 40% 100% no-repeat,
     var(--color-black);
+    max-width: 90vw;
 }
 
 .test-request-popup{

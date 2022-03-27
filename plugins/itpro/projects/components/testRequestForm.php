@@ -1,10 +1,11 @@
 <?php namespace Itpro\Projects\Components;
 
-use Cms\Classes\ComponentBase;
-use Input;
 use Mail;
-use Validator;
+use Input;
 use Redirect;
+use Validator;
+use Cms\Classes\ComponentBase;
+use Itpro\Projects\Models\Project;
 
 class TestRequestForm extends ComponentBase
 {
@@ -16,7 +17,19 @@ class TestRequestForm extends ComponentBase
         ];
     }
 
+    protected function loadProjects(){
+        $projects = Project::all();
+        return $projects;
+    }
+
+
+    public function onRun(){
+        $this->projects = $this->loadProjects();
+    }
+
     public function onSend(){
         
     }
+
+    public $projects;
 }
