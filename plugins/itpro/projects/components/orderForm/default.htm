@@ -1,73 +1,74 @@
-<!-- {{__SELF__.property('containerClass')}}
-<p>{{containerClass~'form'}}</p>
-{% set formClass = containerClass ~ 'form'  %}
-<p>{{formClass}}</p> -->
+{% set technologies = __SELF__.technologies %}
 
 <form 
-    class={{containerClass~form}} 
+    class="{{__SELF__.property('containerClass')}}" 
     data-request="onSend" 
     encType="multipart/form-data"
     method='post'>
     
+    <div class="form__field">
+        <input 
+          type="text" 
+          aria-label="Имя" 
+          name="client_name" 
+          placeholder="Имя" 
+          class="{{ 'form__select basic-text '}}"
+          />
+          <!--  ~ fieldData.error? 'form__field--error' : '' }} -->
+        <p class="form__field__error-label text--small"></p>
+      </div>
 
-        {% partial "form/TextInput" 
-            fieldData={
-                title: 'Имя',
-                fieldName: 'client_name',
-                value: '',
-                comment: '',
-                error: false,
-            }
-        %}
+      <div class="form__field">
+        <input 
+          type="text" 
+          aria-label="Почта" 
+          name="email" 
+          placeholder="Почта" 
+          class="{{ 'form__select basic-text '}}"
+          />
+          <!--  ~ fieldData.error? 'form__field--error' : '' }} -->
+        <p class="form__field__error-label text--small"></p>
+      </div>
 
-        {% partial "form/TextInput"
-            fieldData={
-                title: 'Почта',
-                fieldName: 'email',
-                value: '',
-                comment: '',
-                error: false,
+      <div class="form__field">
+        <!--  ~ fieldData.error? 'form__field--error' : '' -->
+        <select 
+          class="{{ 'form__select basic-text ' }}"
+          name="technology_id" aria-label="Технология"
+        >
+          <!-- {!fieldData.value && <option value={fieldData.title} selected class='visually-hidden'>{fieldData.title}</option>} -->
+          {% for option in technologies %} 
+              <option class='basic-text' value="{{option.id}}"> {{option.title}} </option>
+          {% endfor %}
+        </select>
+      <p class="form__field__error-label text--small"></p>
+      </div>
 
-            }
-        %}
+      <div class="form__field">
+        <input 
+          type="text" 
+          aria-label="Название проекта" 
+          name="project_title" 
+          placeholder="Название проекта" 
+          class="{{ 'form__select basic-text '}}"
+          />
+          <!--  ~ fieldData.error? 'form__field--error' : '' }} -->
+        <p class="form__field__error-label text--small"></p>
+      </div>
 
-        {% partial"form/FormSelect" 
-            fieldData= {
-                title: 'Технология',
-                fieldName: 'technology_id',
-                value: null,
-                comment: '',
-                error: false,
-                options:  [
-                    {
-                        value: 1,
-                        name: 'VR'
-                    }
-                ]  ,
-            }
-        %}
-
-        {% partial "form/TextInput" 
-            fieldData={
-                title: 'Название проекта',
-                fieldName: 'project_title',
-                value: '',
-                comment: '',
-                error: false,
-            }
-        %}
-
-        {% partial "form/FileInput" fieldData=            {
-                title: 'Загрузить описание проекта',
-                fieldName: 'file',
-                value: '',
-                comment: 'Поддерживаемые форматы: PDF, DOCX, PNG, JPEG ',
-                error: false,
-            } 
-        %}
+      <div class="form__field">
+        <!-- ~ fieldData.error? 'form__field--error' : '' -->
+        <div class="{{'form__file-wrapper'}}" >
+          <div class='form__file-label-wrapper'>
+            <label for="file" class='basic-text'>Загрузить описание проекта</label>
+          </div>
+          <input  id="file" name="file" class='visually-hidden' type="file" />
+        </div>
+        <p class="form__field__error-label text--small">Поддерживаемые форматы: PDF, DOCX, PNG, JPEG</p>
+      </div>
 
         <div>
-            <button class="basic-button #{buttonClass}">Отправить</button>
+            <button class="{{__SELF__.property('buttonClass')}}">Отправить</button>
             <p class='text--small form__field__error-label'>Нажимая кнопку “Отправить” Вы даёте согласие на обработку своих персональных данных.</p>
         </div>
 </form>

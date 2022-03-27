@@ -4,6 +4,7 @@ layout = "mainTemplate"
 description = "Страница проекта"
 is_hidden = 0
 
+[orderForm]
 [testRequestForm]
 ==
 <?php
@@ -51,10 +52,9 @@ function onStart()
                 оптимизации мобильных приложений и веб-сервисов.
           </p>
       </div>
-      {% component "OrderForm"
-        portfolio=portfolio
-        containerClass='project-page__cta__form'
-        buttonClass='basic-button--blue' 
+      {% component "orderForm"         
+        containerClass='form'
+        buttonClass='basic-button basic-button--blue' 
       %}
     </section>
     <dialog class="popup test-request-popup-wrapper" data-popup="test-request">
