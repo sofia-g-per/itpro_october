@@ -20,7 +20,7 @@ class OrderForm extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'Order Form',
+            'name' => 'OrderForm',
             'descripiton' => 'Форма для заказа проекта пользователем'
         ];
     }
