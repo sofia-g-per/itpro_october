@@ -9,7 +9,7 @@ class Plugin extends PluginBase
         return [
             'Itpro\Projects\Components\Technologies' => 'technologies',
             'Itpro\Projects\Components\Orderform' => 'Orderform',
-            'Itpro\Projects\Components\TestRequestForm' => 'testRequestForm'
+            'Itpro\Projects\Components\Testrequestform' => 'Testrequestform'
         ];
     }
 
