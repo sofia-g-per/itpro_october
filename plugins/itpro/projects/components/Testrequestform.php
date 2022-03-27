@@ -12,7 +12,7 @@ class Testrequestform extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'Форма для заявки на тестирование проекта',
+            'name' => 'Testrequestform',
             'descripiton' => 'Форма для заявки на тестирование проекта'
         ];
     }
