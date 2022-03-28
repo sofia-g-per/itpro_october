@@ -33,7 +33,14 @@
 }
 
 @media (max-width: 1000px){
+
+    .test-request-popup-wrapper{
+        background: url('../../img/background/contacts-popup-background.png') 0 0 / 100% auto no-repeat,
+        var(--color-black);
+    }
+
     .test-request-popup{
         grid-template-columns: 1fr;
+        row-gap: 3rem;
     }
 }

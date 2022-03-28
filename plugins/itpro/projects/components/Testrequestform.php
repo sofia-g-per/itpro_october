@@ -1,13 +1,13 @@
 <?php namespace Itpro\Projects\Components;
 
 use Mail;
-use Input;
 use Redirect;
 use Validation;
 use Cms\Classes\ComponentBase;
 use Itpro\Projects\Models\Client;
 use Itpro\Projects\Models\Project;
 use Itpro\Projects\Models\TestRequest;
+use October\Rain\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use October\Rain\Exception\ValidationException;
 
@@ -31,8 +31,8 @@ class Testrequestform extends ComponentBase
         $this->projects = $this->loadProjects();
     }
 
-    public function onSend(){
-        $orderData = post();
+    public function onTestRequestSend(){
+        $orderData = Input::all();
         $validator = Validator::make($orderData, [
             'client_name'=>'required',
             'description'=>'required',
@@ -46,17 +46,17 @@ class Testrequestform extends ComponentBase
         } else{
 
         $client = new Client();
-        $client->name = request('client_name');
-        $client->email = request('email');
+        $client->name = Input::get('client_name');
+        $client->email = Input::get('email');
         $client->save();
     
         $request = new TestRequest();
-        $request->description = request('description');
+        $request->description = Input::get('description');
         $request->client_id = $client->id;
-        $request->project_id = request('project_id');
+        $request->project_id = Input::get('project_id');
         $request->save();
     
-        Flash::success('Форма отправлена!');
+        // Flash::success('Форма отправлена!');
 
         }
     }
