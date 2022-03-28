@@ -10,7 +10,7 @@ columns:
     project_icon:
         label: Иконка
         type: partial
-        path: ~\plugins\Itpro\Projects\Models\Project\_project_icon.php
+        path: ~/plugins/itpro/projects/models/project/_project_icon.php
     technology:
         label: Технология
         type: text
