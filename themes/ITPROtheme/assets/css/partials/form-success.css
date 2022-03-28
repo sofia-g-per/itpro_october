@@ -19,7 +19,7 @@
 }
 
 .submitted-popup__checkmark{
-    width: 21.6rem;
+    width: min( 40vw, 21.6rem);
     padding: 8vh 0 10vh 0;
 }
 
