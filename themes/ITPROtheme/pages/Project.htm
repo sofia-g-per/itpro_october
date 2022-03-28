@@ -4,8 +4,8 @@ layout = "mainTemplate"
 description = "Страница проекта"
 is_hidden = 0
 
-[Orderform]
-[Testrequestform]
+[orderform]
+[testrequestform]
 ==
 <?php
 use Itpro\Projects\Models\Project;
@@ -69,7 +69,7 @@ function onStart()
                   info@itpro.moscow 
               </a>
           </div>
-            {% component "Testrequestform"
+            {% component "testrequestform"
               projectId=project.id
               buttonClass="basic-button basic-button--purple"
             %}
