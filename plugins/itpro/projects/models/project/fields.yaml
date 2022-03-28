@@ -31,10 +31,17 @@ fields:
         nameFrom: title
         span: auto
         type: relation
-    video:
-        label: 'Ссылка на видео с ютуба'
+    project_video:
+        label: 'Видео проекта'
+        mode: file
+        fileTypes: mp4
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
         span: full
-        type: text
+        type: fileupload
+        comment: 'Загрузите видео в формате mp4'
     images:
         label: 'Фотографии и описание'
         prompt: 'Добавить фотография и описание'

@@ -37,9 +37,11 @@ function onStart()
         {% endfor %}
       </div>
     </div>
-    {% if project.video %}
+    {% if project.project_video.path %}
       <div class='project-video'>
-        <iframe src="{{project.video}}" title="Видео проекта" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <video controls autoplay loop>
+          <source src="{{project.project_video.path}}" type="video/mp4" />
+      </video>
       </div>
     {% endif %}
     <section class="split-middle-flex project-page__cta">

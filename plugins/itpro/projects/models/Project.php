@@ -43,7 +43,8 @@ class Project extends Model
     ];
 
     public $attachOne = [
-        'project_icon' => 'System\Models\File'
+        'project_icon' => 'System\Models\File',
+        'project_video' => 'System\Models\File'
     ];
 
     public $attachMany = [
