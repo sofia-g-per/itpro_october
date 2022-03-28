@@ -7,4 +7,4 @@ columns:
     project_icon:
         label: Иконка
         type: partial
-        path: ~\plugins\Itpro\Projects\Models\Technology\_technology_icon.php
+        path: ~/plugins/itpro/projects/models/technology/_technology_icon.php
