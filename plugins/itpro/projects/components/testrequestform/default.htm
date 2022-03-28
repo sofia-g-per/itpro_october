@@ -1,7 +1,15 @@
+
+{% put scripts %}
+  <script src="{{'assets/js/formValidation.js'|theme}}"></script>
+{% endput %}
+
+
 {% set projects = __SELF__.projects %}
 <form 
     class="test-request-popup__form" 
     data-request="onSend" 
+    data-request-validate
+    data-request-flash
     method='post'>
     <div class="form">
 
@@ -25,7 +33,7 @@
           aria-label="Имя" 
           name="client_name" 
           placeholder="Имя" 
-          class="form__select basic-text {% if errors.first('client_name') %} form__field--error{% endif %}"
+          class="form__select basic-text"
           />
         <p class="form__field__error-label text--small"></p>
       </div>
