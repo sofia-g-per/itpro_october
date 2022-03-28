@@ -1,10 +1,14 @@
 
+{% put styles %}
+<link rel="stylesheet" href="{{'assets/css/partials/form-success.css'|theme}}"></link>
+{% endput %}
+
 {% put scripts %}
   <script src="{{'assets/js/formValidation.js'|theme}}"></script>
 {% endput %}
 
-
 {% set projects = __SELF__.projects %}
+
 <form 
     class="test-request-popup__form" 
     data-request="onSend" 
@@ -46,7 +50,6 @@
           placeholder="Почта" 
           class="{{ 'form__select basic-text '}}"
           />
-          <!--  ~ fieldData.error? 'form__field--error' : '' }} -->
         <p class="form__field__error-label text--small"></p>
       </div>
 
@@ -58,10 +61,8 @@
           placeholder="Цели тестирования" 
           class="{{ 'form__select basic-text '}}"
           />
-          <!--  ~ fieldData.error? 'form__field--error' : '' }} -->
         <p class="form__field__error-label text--small"></p>
       </div>
-
         <div>
             <button type="submit" class="{{__SELF__.property('buttonClass')}}">Отправить</button>
             <p class='text--small form__field__error-label'>Нажимая кнопку “Отправить” Вы даёте согласие на обработку своих персональных данных.</p>

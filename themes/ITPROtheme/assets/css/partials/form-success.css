@@ -1,0 +1,29 @@
+/* .submitted-popup-wrapper{
+
+} */
+.submitted-popup{
+    display: none;
+    /* width: 39vw !important; */
+    background: 
+        url('../../img/background/submitted-background.png') 0 0 / 100% 100%,
+        var(--color-black);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4vh;
+}
+
+
+.submitted-popup--active{
+    display: flex!important;
+}
+
+.submitted-popup__checkmark{
+    width: 21.6rem;
+    padding: 8vh 0 10vh 0;
+}
+
+.submitted-popup__text{
+    max-width: 45ch;
+    padding-bottom: 6vh;
+}

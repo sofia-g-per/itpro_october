@@ -1,7 +1,6 @@
 <?php namespace Itpro\Projects\Components;
 
 use Mail;
-use Input;
 use Redirect;
 use Validation;
 use Cms\Classes\ComponentBase;
@@ -9,8 +8,10 @@ use Itpro\Projects\Models\Order;
 use Itpro\Projects\Models\Client;
 use Itpro\Projects\Models\Technology;
 use October\Rain\Support\Facades\Flash;
+use October\Rain\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use October\Rain\Exception\ValidationException;
+use System\Models\File;
 
 class Orderform extends ComponentBase
 {
@@ -36,7 +37,7 @@ class Orderform extends ComponentBase
     }
 
     public function onSend(){
-        $orderData = post();
+        $orderData = Input::all();
         $validator = Validator::make($orderData, [
             'client_name'=>'required',
             'email'=>'required|email',
@@ -51,18 +52,27 @@ class Orderform extends ComponentBase
 
 
         $client = new Client();
-        $client->name = request('client_name');
-        $client->email = request('email');
+        // No resource with given URL found
+        $client->name = Input::get('client_name');
+        $client->email = Input::get('email');
         $client->save();
 
         $order = new Order();
-        $order->title = request('project_title');
+        $order->title = Input::get('project_title');
         $order->client_id = $client->id;
-        $order->technology_id = request('technology_id');
-        $order->file = request()->file('file')->store('files/orders');
-        $order->save();
+        $order->technology_id = Input::get('technology_id');
+
+
+        $order->order_file = Input::file('file');
         
-        Flash::success('Форма отправлена!');
+        // $file = new File();
+        // $file->data = Input::file('file');
+        // $file->save();
+        // $order->file file()->add($file); 
+
+        $order->save();
+
+        // Flash::success('Форма отправлена!');
                 // Mail::send('itpro.contact::mail.message', input vars , function($message){
         // $message->to('info@itpro.moscow', '');
         // $message->subject('Новый заказ!')
