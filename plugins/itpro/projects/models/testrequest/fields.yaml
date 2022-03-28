@@ -1,0 +1,22 @@
+tabs:
+    fields:
+        project:
+            label: Проект
+            nameFrom: title
+            descriptionFrom: description
+            span: full
+            type: relation
+            tab: 'Информация о проекте'
+        status:
+            label: Статус
+            nameFrom: title
+            descriptionFrom: description
+            span: left
+            type: relation
+            tab: 'Информация о проекте'
+        completed_at:
+            label: 'Дата предоставления доступа к проекту'
+            mode: datetime
+            span: right
+            type: datepicker
+            tab: 'Информация о проекте'
