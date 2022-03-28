@@ -27,10 +27,12 @@
 }
 
 @media (max-width: 1000px){
-    .project-card{
+    .project-card,
+    .project-info__images .project-card:nth-child(2n) {
         display: grid;
         grid-template-columns: 1fr;
         gap: 6rem;
+        padding: 4rem 0;
     }
 
     .project-card__text-container{
