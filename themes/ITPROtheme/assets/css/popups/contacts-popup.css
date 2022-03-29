@@ -1,6 +1,6 @@
 .contacts-popup{
     background:
-        url('../../img/contacts-background-image.png') center right / auto 100% no-repeat,
+        url('../../../assets/img/contacts-background-image.png') center right / auto 100% no-repeat,
         var(--color-black) !important;
 }
 
