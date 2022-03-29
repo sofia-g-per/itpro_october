@@ -5,7 +5,9 @@ tabs:
             nameFrom: title
             descriptionFrom: description
             span: full
+            readOnly: 1
             type: relation
+            comment: 'Вы не можете редактировать это поле'
             tab: 'Информация о проекте'
         status:
             label: Статус
@@ -24,7 +26,7 @@ tabs:
             label: Менеджер
             nameFrom: ''
             descriptionFrom: description
-            select: concat(first_name, ' ', last_name)
+            select: 'concat(first_name, '' '', last_name)'
             span: full
             type: relation
             tab: 'Информация о проекте'

@@ -2,6 +2,7 @@ fields:
     title:
         label: 'Название проекта'
         span: left
+        required: 1
         type: text
     project_icon:
         label: 'Иконка проекта'
@@ -13,24 +14,29 @@ fields:
             mode: crop
             extension: auto
         span: right
+        required: 1
         type: fileupload
         comment: 'Формат: svg'
-    description:
-        label: 'Описание проекта'
-        size: small
-        span: full
-        type: textarea
     technology:
         label: Технология
         nameFrom: title
         descriptionFrom: description
         span: left
+        required: 1
         type: relation
     platforms:
         label: Платформы
         nameFrom: title
+        descriptionFrom: description
         span: auto
+        required: 1
         type: relation
+    description:
+        label: 'Описание проекта'
+        size: ''
+        span: full
+        required: 1
+        type: textarea
     project_video:
         label: 'Видео проекта'
         mode: file

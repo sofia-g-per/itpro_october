@@ -3,7 +3,20 @@ tabs:
         title:
             label: Название
             span: left
+            readOnly: 1
+            required: 0
             type: text
+            comment: 'Вы не можете редактировать это поле'
+            tab: 'Информация о проекте'
+        technology_id:
+            label: 'Технология разработки'
+            nameFrom: title
+            descriptionFrom: description
+            span: auto
+            readOnly: 1
+            required: 0
+            type: relation
+            comment: 'Вы не можете редактировать это поле'
             tab: 'Информация о проекте'
         status:
             label: Статус
@@ -16,7 +29,7 @@ tabs:
             label: Менеджер
             nameFrom: ''
             descriptionFrom: description
-            select: concat(first_name, ' ', last_name)
-            span: full
+            select: 'concat(first_name, '' '', last_name)'
+            span: right
             type: relation
             tab: 'Информация о проекте'

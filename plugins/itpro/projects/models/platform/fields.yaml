@@ -2,6 +2,7 @@ fields:
     title:
         label: Название
         span: full
+        required: 1
         type: text
     platform_icon:
         label: 'Иконка платформы'
@@ -13,5 +14,6 @@ fields:
             mode: crop
             extension: auto
         span: full
+        required: 1
         type: fileupload
         comment: 'Формат: svg'

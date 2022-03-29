@@ -1,5 +1,6 @@
 fields:
     title:
-        label: Статус
+        label: 'Название статуса'
         span: full
+        required: 1
         type: text
