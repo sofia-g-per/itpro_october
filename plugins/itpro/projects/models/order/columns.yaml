@@ -10,9 +10,11 @@ columns:
         sortable: true
         select: title
         relation: technology
-    description:
-        label: Описание
-        type: text
+    file:
+        label: 'Описание'
+        type: partial
+        relation: order_file
+        path: ~/plugins/itpro/projects/models/order/_order_file.php
     status:
         label: Статус
         type: text
@@ -22,16 +24,17 @@ columns:
     client_name:
         relation: client
         valueFrom: name
-        label: Имя заказчика
+        label: 'Имя заказчика'
         type: text
         sortable: true
     client_email:
         relation: client
         valueFrom: email
-        label: Почта заказчика
+        label: 'Почта заказчика'
         type: text
         sortable: true
     created_at:
         label: 'Дата подачи заявки'
         type: datetime
         sortable: true
+
