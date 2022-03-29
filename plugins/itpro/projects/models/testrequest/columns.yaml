@@ -6,7 +6,7 @@ columns:
         sortable: true
         select: title
         relation: project
-    descriptionn:
+    description:
         label: 'Описание целей тестирования'
         type: text
     status:
@@ -15,15 +15,19 @@ columns:
         sortable: true
         select: title
         relation: status
+    client_name:
+        relation: client
+        valueFrom: name
+        label: Имя заказчика
+        type: text
+        sortable: true
+    client_email:
+        relation: client
+        valueFrom: email
+        label: Почта заказчика
+        type: text
+        sortable: true
     created_at:
-        label: 'Дата формирования'
-        type: datetime
-        sortable: true
-    manager_defined_at:
-        label: 'Дата назначения менеджера'
-        type: datetime
-        sortable: true
-    completed_at:
-        label: 'Дата предоставления доступа'
+        label: 'Дата запроса'
         type: datetime
         sortable: true

@@ -7,9 +7,11 @@ columns:
     description:
         label: Описание
         type: text
+        searchable: false
     project_icon:
         label: Иконка
         type: partial
+        sortable: false
         path: ~/plugins/itpro/projects/models/project/_project_icon.php
     technology:
         label: Технология
