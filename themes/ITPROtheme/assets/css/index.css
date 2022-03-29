@@ -300,6 +300,10 @@ body {
   :root{
     --padding-l: 2rem;
   }
+
+  .basic-text{
+    max-width: auto!important;
+  }
 }
 
 @media (max-width: 560px){
