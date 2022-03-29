@@ -26,6 +26,7 @@ class Order extends Model
         'technology' => 'itpro\projects\models\Technology',
         'status' => 'itpro\projects\models\OrderStatus',
         'client' => 'itpro\projects\models\Client',
+        'manager' => 'backend\models\User'
     ];
 
     public $attachOne = [

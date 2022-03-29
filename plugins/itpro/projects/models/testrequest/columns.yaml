@@ -31,3 +31,10 @@ columns:
         label: 'Дата запроса'
         type: datetime
         sortable: true
+    manager_id:
+        label: Менеджер
+        type: text
+        searchable: true
+        sortable: true
+        select: concat(last_name, ' ', first_name)
+        relation: manager

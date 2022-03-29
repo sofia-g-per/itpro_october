@@ -20,3 +20,11 @@ tabs:
             span: right
             type: datepicker
             tab: 'Информация о проекте'
+        manager:
+            label: Менеджер
+            nameFrom: ''
+            descriptionFrom: description
+            select: concat(first_name, ' ', last_name)
+            span: full
+            type: relation
+            tab: 'Информация о проекте'

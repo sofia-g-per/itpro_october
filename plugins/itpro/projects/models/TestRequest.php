@@ -27,5 +27,6 @@ class TestRequest extends Model
         'project' => 'itpro\projects\models\Project',
         'status' => 'itpro\projects\models\RequestStatus',
         'client' => 'itpro\projects\models\Client',
+        'manager' => 'backend\models\User'
     ];
 }

@@ -10,17 +10,6 @@ columns:
         sortable: true
         select: title
         relation: technology
-    file:
-        label: 'Описание'
-        type: partial
-        relation: order_file
-        path: ~/plugins/itpro/projects/models/order/_order_file.php
-    status:
-        label: Статус
-        type: text
-        sortable: true
-        select: title
-        relation: status
     client_name:
         relation: client
         valueFrom: name
@@ -33,8 +22,25 @@ columns:
         label: 'Почта заказчика'
         type: text
         sortable: true
+    status:
+        label: Статус
+        type: text
+        sortable: true
+        select: title
+        relation: status
     created_at:
         label: 'Дата подачи заявки'
         type: datetime
         sortable: true
-
+    file:
+        label: Описание
+        type: partial
+        relation: order_file
+        path: ~/plugins/itpro/projects/models/order/_order_file.php
+    manager_id:
+        label: Менеджер
+        type: text
+        searchable: true
+        sortable: true
+        select: concat(last_name, ' ', first_name)
+        relation: manager
