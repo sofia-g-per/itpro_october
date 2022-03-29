@@ -25,6 +25,7 @@
 .stage-of-dev__circle{
     width: 3.4rem;
     padding-bottom: 4.4vh;
+    padding-top: 2rem;
 }
 
 .stage-of-dev h2{
@@ -38,6 +39,6 @@
 }
 
 .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 

@@ -1,6 +1,6 @@
 .logo-section {
 	display: flex;
-	padding-top: 6rem;
+	padding: 6rem 0;
 	overflow: hidden;
 	gap: 4.9vw;
 }
