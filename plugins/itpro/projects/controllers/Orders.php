@@ -1,6 +1,7 @@
 <?php namespace Itpro\Projects\Controllers;
 
 use Backend\Classes\Controller;
+use Itpro\Projects\Models\Order;
 use BackendMenu;
 
 class Orders extends Controller
@@ -15,5 +16,12 @@ class Orders extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('Itpro.Projects', 'orders');
+    }
+
+    public function onRecordClick()
+    {     
+        $this->vars['recordId'] = post('record_id');
+        $this->vars['order'] = Order::find(post('record_id'));
+        return $this->makePartial('order_details');
     }
 }

@@ -1,4 +1,0 @@
-<?= $this->relationRender('client') 
-
-
-?>

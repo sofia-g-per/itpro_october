@@ -10,3 +10,5 @@ toolbar:
     search:
         prompt: 'backend::lang.list.search_prompt'
 recordUrl: 'itpro/projects/orders/update/:id'
+
+# recordOnClick: "$.popup({ handler: 'onRecordClick', extraData: { record_id: ':id' } })"
