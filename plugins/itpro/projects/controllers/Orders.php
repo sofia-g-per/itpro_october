@@ -1,8 +1,9 @@
 <?php namespace Itpro\Projects\Controllers;
 
+use BackendMenu;
 use Backend\Classes\Controller;
 use Itpro\Projects\Models\Order;
-use BackendMenu;
+use October\Rain\Support\Facades\Event;
 
 class Orders extends Controller
 {

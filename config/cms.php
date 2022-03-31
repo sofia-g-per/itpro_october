@@ -215,8 +215,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Check import timestamps when combining assets
-    |----------------------------------    'enableAssetMinify' => true,
------
+    |--------------------------------------------------------------------------
     |
     | If deep hashing is enabled, the combiner cache will be reset when a change
     | is detected on imported files, in addition to those referenced directly.

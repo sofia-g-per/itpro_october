@@ -28,36 +28,48 @@ navigation:
         label: Заказы
         url: itpro/projects/orders
         icon: icon-archive
+        permissions:
+            - manage_orders
+            - assign_self_orders
         sideMenu:
             orders:
                 label: Заказы
                 url: itpro/projects/orders
                 icon: icon-archive
+                permissions:
+                    - assign_self_orders
+                    - manage_orders
             order-status:
                 label: Статусы
                 url: itpro/projects/orderstatuses
                 icon: icon-asterisk
                 permissions:
-                    - manage_statuses
+                    - manage_orders
     requests:
         label: 'Заявки на тестирование'
         url: itpro/projects/testrequests
         icon: icon-send-o
+        permissions:
+            - manage_requests
+            - assign_self_test_request
         sideMenu:
             requests:
                 label: 'Заявки на тестирование'
                 url: itpro/projects/testrequests
                 icon: icon-send-o
+                permissions:
+                    - assign_self_test_request
+                    - manage_requests
             request-statuses:
                 label: Статусы
                 url: itpro/projects/requeststatuses
                 icon: icon-asterisk
                 permissions:
-                    - manage_statuses
+                    - manage_requests
 permissions:
-    manage_request_statuses:
+    manage_requests:
         tab: Project
-        label: 'Редактирование статусов заявок на тестирование'
+        label: 'Полноценное редактирование заявок на тестирование и их статусов'
     manage_platforms:
         tab: Project
         label: 'Редактирование списка платформ, под которые разрабатываются проекты'
@@ -67,6 +79,12 @@ permissions:
     manage_portfolio:
         tab: Project
         label: 'Редактирование портфолио с проектами'
-    manage_order_statuses:
+    manage_orders:
         tab: Project
-        label: 'Редактирование списка со статусами заказов новых проектов'
+        label: 'Полноценное редактирование заказов новых проектов и их статусов'
+    assign_self_test_request:
+        tab: Project
+        label: 'Назначение себя на заявки на тестирование и редактирование статусов своих заявок'
+    assign_self_orders:
+        tab: Project
+        label: 'Назначение себя на заказы и  редактирование статуса своих заказов'
