@@ -35,9 +35,9 @@
 .stage-of-dev h2{
     padding-bottom: 2rem;
 }
-.stages-of-dev__scroller{
+.glider-track{
     background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / auto auto repeat-x;
-
+    background-attachment: scroll;
 }
 .stages-of-dev__scroller .stage-of-dev:nth-child(2n - 1){
 }
@@ -49,4 +49,64 @@
 .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
     margin-top: 2.3vw;
 }
+
+
+@media (max-width: 1000px){
+    .glider-track{
+        background-size: 200vw;
+        /* background-clip: ; */
+    }
+
+    .stage-of-dev__circle{
+        margin-bottom: 4rem;
+    }
+
+    .stage-of-dev{
+        padding-top: 0rem;
+    }
+
+    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
+        margin-top: 8vw;
+    }
+    
+    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
+        margin-top: 11vw;
+    }
+}
+
+@media (max-width: 769px){
+    .glider-track{
+        background-size: 300vw;
+        /* background-clip: ; */
+    }
+
+    .stage-of-dev__circle{
+        margin-bottom: 4rem;
+    }
+
+    .stage-of-dev{
+        padding-top: 0rem;
+    }
+
+    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
+        margin-top: 19vw;
+    }
+    
+    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
+        margin-top: 12vw;
+    }
+}
+
+@media (max-width: 500px){
+    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
+        margin-top: 15vw;
+    }
+    
+    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
+        margin-top: 10vw;
+    }
+}
+
+
+
 
