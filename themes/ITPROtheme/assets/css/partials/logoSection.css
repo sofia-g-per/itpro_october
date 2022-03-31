@@ -1,0 +1,15 @@
+.logo-section {
+	display: flex;
+	padding: 6rem 0;
+	overflow: hidden;
+	gap: 4.9vw;
+}
+
+.row-of-logos {
+	display: flex;
+	gap: 4.9vw;
+}
+
+.logo-section__item {
+	overflow: visible;
+}

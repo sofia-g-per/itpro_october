@@ -1,0 +1,45 @@
+.our-customers {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+	/* min-height: 46rem var(--padding-l); */
+	align-content: center;
+
+}
+
+.customers-text-padding {
+	padding: 4rem 0 6rem 0;
+}
+
+.customers-text-container {
+	display: flex;
+	flex-direction: column;
+	padding: 25.7rem 7vw 0 7vw;
+	justify-content: end;
+	/* min-width: calc(50ch); */
+
+	background: 
+	url('../../img/our_customers/213123 1.png') no-repeat top left / cover 
+	;
+}
+
+.our-customers__img{
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.our-customers__img img{
+	min-height: 100%;
+	width: 100%; 
+	object-fit: cover;
+
+
+}
+
+@media (max-width: 1000px) {
+	.our-customers__img{
+		display: none;
+	}
+	.customers-text-container {
+		width: 100vw;
+	}
+}
