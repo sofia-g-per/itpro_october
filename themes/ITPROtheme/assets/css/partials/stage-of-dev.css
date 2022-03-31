@@ -15,7 +15,9 @@
 }
 
 .stage-of-dev{
-    padding: .6rem var(--padding-l) 0 var(--padding-l);
+    padding: .6rem calc(1rem + 130 * (100vw / 1920)) 0 calc(1rem + 130 * (100vw / 1920));
+    /* padding: .6rem 0 0 0; */
+    min-width: 33vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start !important;
@@ -34,13 +36,17 @@
     padding-bottom: 2rem;
 }
 .stages-of-dev__scroller{
-    background: url('../../img/stages-of-dev-wave.svg') top center / 100% auto repeat-x;
+    background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / auto auto repeat-x;
 
 }
 .stages-of-dev__scroller .stage-of-dev:nth-child(2n - 1){
 }
 
 .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
-    margin-top: 10rem;
+    margin-top: 5.3vw;
+}
+
+.stages-of-dev__scroller .stage-of-dev:nth-child(3n){
+    margin-top: 2.3vw;
 }
 
