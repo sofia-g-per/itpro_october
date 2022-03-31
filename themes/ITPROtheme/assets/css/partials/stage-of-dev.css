@@ -1,7 +1,6 @@
 .stages-of-dev{
 	padding: 6rem 0 18rem 0;
 
-    /* background: url('../../img/background/stages-of-dev.png') 0% 50% no-repeat; */
 	background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
 
 	backdrop-filter: blur(140px);
@@ -16,7 +15,6 @@
 
 .stage-of-dev{
     padding: .6rem calc(1rem + 130 * (100vw / 1920)) 0 calc(1rem + 130 * (100vw / 1920));
-    /* padding: .6rem 0 0 0; */
     min-width: 33vw;
     display: flex;
     flex-direction: column;
@@ -39,8 +37,6 @@
     background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / auto auto repeat-x;
     background-attachment: scroll;
 }
-.stages-of-dev__scroller .stage-of-dev:nth-child(2n - 1){
-}
 
 .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
     margin-top: 5.3vw;
@@ -54,7 +50,6 @@
 @media (max-width: 1000px){
     .glider-track{
         background-size: 200vw;
-        /* background-clip: ; */
     }
 
     .stage-of-dev__circle{

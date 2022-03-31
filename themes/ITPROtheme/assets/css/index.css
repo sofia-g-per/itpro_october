@@ -1,7 +1,3 @@
-@import "./partials/the-header.css";
-@import "./partials/the-footer.css";
-@import "./popups/contacts-popup.css";
-
 html{
   font-size: 62.5%;
 
@@ -225,7 +221,7 @@ body {
 
 .social {
 	display: flex;
-	gap: 7.7rem;
+	gap: 5rem;
   align-items: center;
 }
 

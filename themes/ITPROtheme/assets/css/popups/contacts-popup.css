@@ -1,18 +1,18 @@
 .contacts-popup{
     background:
         url('../../img/contacts-bg.png') center right / auto 100% no-repeat,
-        var(--color-black) !important;
+        var(--color-black);
 }
 
 .contacts-popup__content{
     width: 50%;
     display: grid;
     grid-template-rows: 1fr 1fr auto;
-    row-gap: 8vh;
+    row-gap: max(4rem, 4vw);
 }
 
 .contacts-popup__logo{
-    width: 7.8vw;
+    width: 15rem;
 }
 
 .contacts-popup__content:last-child{
@@ -22,7 +22,7 @@
 .contacts-popup__item{
     display: flex;
     flex-direction: column;
-    gap: 4vh;
+    gap: max(2rem, 2vw);
 }
 
 .contacts-popup__mail__link{
@@ -33,5 +33,19 @@
     font-size: 2.8rem;
 }
 
-.contacts-popup__socials__text{
+@media (max-width: 1347px){
+    .contacts-popup{
+        background: var(--color-black);
+    }
+
+    .contacts-popup__content{
+        width: auto!important;
+        padding: 0 var(--padding-l);
+        text-align: center;
+        justify-items: center;
+    }
+
+    .contacts-popup .social{
+        justify-content: center;
+    }
 }
