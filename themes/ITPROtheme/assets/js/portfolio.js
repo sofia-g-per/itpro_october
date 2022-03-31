@@ -8,7 +8,6 @@ window.addEventListener('load', function(){
 
     const categoryBtns = document.querySelectorAll(".tab-button");
     categoryBtns[0].classList.add('tab-button--active');
-    console.log(categoryBtns);
     const changeCategory = (e)=> {
         const btn = e.target.closest('.tab-button');
         if (btn && !btn.classList.contains('tab-button--active')){
