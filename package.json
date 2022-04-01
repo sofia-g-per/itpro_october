@@ -6,12 +6,7 @@
     "helpers": "tests/js/helpers"
   },
   "scripts": {
-    "test": "mocha --require @babel/register tests/js/cases/**/*.js",
-    "development": "mix",
-    "watch": "mix watch",
-    "watch-poll": "mix watch -- --watch-options-poll=1000",
-    "hot": "mix watch --hot",
-    "production": "mix --production"
+    "test": "mocha --require @babel/register tests/js/cases/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -42,9 +37,7 @@
     "chai": "^4.2.0",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
-    "laravel-mix": "^6.0.43",
     "mocha": "^6.2.0",
-    "sinon": "^7.4.1",
-    "cross-env":"^5.0.1" 
+    "sinon": "^7.4.1"
   }
 }
