@@ -47,16 +47,26 @@ class Orders extends Controller
                 return $this->makePartial('assign_self');
             }
             else if($order->manager_id === $user->id){
-
+                $this->asExtension('FormController')->update(post('record_id'));
+                $this->vars['recordId'] = post('record_id');
+                return $this->makePartial('set_status');
             }
 
         }
     }
 
+    // если менеджер нажал кнопку да на попапе _assign_self.htm
     public function onAssignSelf()
     {
         $user =  BackendAuth::getUser();
         Order::where('id', post('record_id'))->update(['manager_id'=> $user->id]);
+        return $this->listRefresh();
+    }
+
+    // если менеджер нажал кнопку отправить на форме _set_status.htm
+    public function onUpdate()
+    {
+        $this->asExtension('FormController')->update_onSave(post('record_id'));
         return $this->listRefresh();
     }
 }
