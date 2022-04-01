@@ -47,6 +47,8 @@ class Orders extends Controller
                 return $this->makePartial('assign_self');
             }
             else if($order->manager_id === $user->id){
+
+
                 $this->asExtension('FormController')->update(post('record_id'));
                 $this->vars['recordId'] = post('record_id');
                 return $this->makePartial('set_status');
@@ -69,4 +71,13 @@ class Orders extends Controller
         $this->asExtension('FormController')->update_onSave(post('record_id'));
         return $this->listRefresh();
     }
+
+    // Event::listen('backend.form.extendFields', function ((\Backend\Widgets\Form) $widget) {
+    
+    //     if (BackendAuth::getUser()->hasPermission('assign_self_orders')) {
+    //         $widget->removeField('surname');
+    //     }
+    // });
+
+
 }
