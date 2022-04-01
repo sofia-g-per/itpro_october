@@ -35,11 +35,11 @@
 }
 
 .stages-of-dev__scroller .glider-track{
-    background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / auto auto repeat-x;
+    background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / 100vw auto repeat-x;
     background-attachment: scroll;
 }
 
-.stages-of-dev__scroller .stage-of-dev:nth-child(2n){
+.stages-of-dev__scroller .stage-of-dev:nth-child(3n-1){
     margin-top: 5.3vw;
 }
 
