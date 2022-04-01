@@ -41,6 +41,7 @@
     "sinon": "^7.4.1"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.5.2"
+    "@glidejs/glide": "^3.5.2",
+    "glider-js": "^1.7.7"
   }
 }
