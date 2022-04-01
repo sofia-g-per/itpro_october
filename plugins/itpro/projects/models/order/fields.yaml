@@ -8,7 +8,7 @@ tabs:
             type: text
             comment: 'Вы не можете редактировать это поле'
             tab: 'Информация о проекте'
-        technology_id:
+        technology:
             label: 'Технология разработки'
             nameFrom: title
             descriptionFrom: description
