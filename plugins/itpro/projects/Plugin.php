@@ -3,6 +3,7 @@
 use System\Classes\PluginBase;
 use Backend\Facades\BackendAuth;
 use Itpro\Projects\Controllers\Orders;
+use Itpro\Projects\Controllers\TestRequests;
 
 class Plugin extends PluginBase
 {
@@ -21,6 +22,13 @@ class Plugin extends PluginBase
 
     public function boot(){
         Orders::extendFormFields(function ($form, $model, $context) {
+        
+            if (BackendAuth::getUser()->hasPermission('assign_self_orders')) {
+                $form->removeField('manager');
+            }
+        });
+
+        TestRequests::extendFormFields(function ($form, $model, $context) {
         
             if (BackendAuth::getUser()->hasPermission('assign_self_orders')) {
                 $form->removeField('manager');

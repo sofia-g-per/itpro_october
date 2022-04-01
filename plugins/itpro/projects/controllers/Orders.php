@@ -17,7 +17,7 @@ class Orders extends Controller
     public function listExtendQuery($query, $definition)
     {
         $user = BackendAuth::getUser();
-        if (BackendAuth::getUser()->hasPermission('assign_self_orders')) {
+        if ($user->hasPermission('assign_self_orders')) {
             $query->where('manager_id', null)->orWhere('manager_id', $user->id);
         }
     }
@@ -47,8 +47,9 @@ class Orders extends Controller
                 return $this->makePartial('assign_self');
             }
             else if($order->manager_id === $user->id){
-
-
+                //Загрузка дефолтной формы для заказов в попапе set_status
+                //форма отличается от формы для админов благодаря
+                // функции в файле Plugin.php
                 $this->asExtension('FormController')->update(post('record_id'));
                 $this->vars['recordId'] = post('record_id');
                 return $this->makePartial('set_status');
@@ -71,13 +72,4 @@ class Orders extends Controller
         $this->asExtension('FormController')->update_onSave(post('record_id'));
         return $this->listRefresh();
     }
-
-    // Event::listen('backend.form.extendFields', function ((\Backend\Widgets\Form) $widget) {
-    
-    //     if (BackendAuth::getUser()->hasPermission('assign_self_orders')) {
-    //         $widget->removeField('surname');
-    //     }
-    // });
-
-
 }

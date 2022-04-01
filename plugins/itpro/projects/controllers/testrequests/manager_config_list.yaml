@@ -1,0 +1,13 @@
+list: $/itpro/projects/models/testrequest/columns.yaml
+modelClass: Itpro\Projects\Models\TestRequest
+title: TestRequests
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'itpro/projects/testrequests/update/:id'
+recordOnClick: "$.popup({ handler: 'onRecordClick', extraData: { record_id: ':id' } })"
