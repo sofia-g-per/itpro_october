@@ -33,7 +33,8 @@
 .stage-of-dev h2{
     padding-bottom: 2rem;
 }
-.glider-track{
+
+.stages-of-dev__scroller .glider-track{
     background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / auto auto repeat-x;
     background-attachment: scroll;
 }
@@ -48,7 +49,7 @@
 
 
 @media (max-width: 1000px){
-    .glider-track{
+    .stages-of-dev__scroller .glider-track{
         background-size: 200vw;
     }
 
@@ -70,9 +71,8 @@
 }
 
 @media (max-width: 769px){
-    .glider-track{
+    .stages-of-dev__scroller .glider-track{
         background-size: 300vw;
-        /* background-clip: ; */
     }
 
     .stage-of-dev__circle{

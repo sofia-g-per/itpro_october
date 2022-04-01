@@ -5,7 +5,7 @@
     display: none;
     /* width: 39vw !important; */
     background: 
-        /* url('../../img/background/submitted-background.png') 0 0 / 100% 100%, */
+        url('../../img/background/submitted-background.png') 0 0 / 100% 100%,
         var(--color-black);
     flex-direction: column;
     align-items: center;
