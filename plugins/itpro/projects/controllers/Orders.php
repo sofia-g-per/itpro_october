@@ -35,22 +35,28 @@ class Orders extends Controller
 
     public function onRecordClick()
     {     
-        $this->vars['recordId'] = post('record_id');
+        $this->vars['record_id'] = post('record_id');
         $order = Order::find(post('record_id'));
         $this->vars['order'] = $order;
         // если авторизированный пользователь имеет permissions (assign_self_orders) 
         // (присуще менеджерам)
         $user = BackendAuth::getUser();
-        return $this->makePartial('assign_self');
 
         if($user->hasPermission('assign_self_orders')){
             if($order->manager_id === null){
-
+                return $this->makePartial('assign_self');
             }
             else if($order->manager_id === $user->id){
-                // return $this->makePartial('assign_self');
+
             }
 
         }
+    }
+
+    public function onAssignSelf()
+    {
+        $user =  BackendAuth::getUser();
+        Order::where('id', post('record_id'))->update(['manager_id'=> $user->id]);
+        return $this->listRefresh();
     }
 }
