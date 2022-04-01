@@ -140,6 +140,7 @@
     _.trackWidth = width
     _.isDrag = false
     _.preventClick = false
+    _.move = false
 
     _.opt.resizeLock && _.scrollTo(_.slide * _.itemWidth, 0)
 
@@ -166,6 +167,10 @@
       }
       _.isDrag = false
     }
+    
+    const move = function(){
+      _.move = true
+    };
 
     var events = {
       mouseup: mouseup,
@@ -175,14 +180,22 @@
         e.stopPropagation()
         _.mouseDown = e.clientX
         _.ele.classList.add('drag')
+        _.move = false
+        setTimeout(move, 300);
+      },
+      touchstart: function (e) {
+        _.ele.classList.add('drag')
+        _.move = false
+        setTimeout(move, 300);
       },
       mousemove: _.mouse,
       click: function (e) {
-        if (_.preventClick) {
+        if (_.preventClick && _.move) {
           e.preventDefault()
           e.stopPropagation()
         }
         _.preventClick = false
+        _.move = false
       }
     }
 
@@ -262,9 +275,11 @@
           'disabled',
           _.ele.scrollLeft <= 0 || disableArrows
         )
-        _.arrows.prev.classList.contains('disabled')
-          ? _.arrows.prev.setAttribute('aria-disabled', true)
-          : _.arrows.prev.setAttribute('aria-disabled', false)
+
+        _.arrows.prev.setAttribute(
+          'aria-disabled',
+          _.arrows.prev.classList.contains('disabled')
+        )
       }
       if (_.arrows.next) {
         _.arrows.next.classList.toggle(
@@ -272,9 +287,11 @@
           Math.ceil(_.ele.scrollLeft + _.containerWidth) >=
             Math.floor(_.trackWidth) || disableArrows
         )
-        _.arrows.next.classList.contains('disabled')
-          ? _.arrows.next.setAttribute('aria-disabled', true)
-          : _.arrows.next.setAttribute('aria-disabled', false)
+
+        _.arrows.next.setAttribute(
+          'aria-disabled',
+          _.arrows.next.classList.contains('disabled')
+        )
       }
     }
 
@@ -369,9 +386,12 @@
     var originalSlide = slide
     ++_.animate_id
 
+    var prevSlide = _.slide
+    var position
+
     if (dot === true) {
-      slide = slide * _.containerWidth
-      slide = Math.round(slide / _.itemWidth) * _.itemWidth
+      slide = Math.round(slide * _.containerWidth / _.itemWidth)
+      position = slide * _.itemWidth
     } else {
       if (typeof slide === 'string') {
         var backwards = slide === 'prev'
@@ -401,12 +421,14 @@
       slide = Math.max(Math.min(slide, _.slides.length), 0)
 
       _.slide = slide
-      slide = _.itemWidth * slide
+      position = _.itemWidth * slide
     }
 
+    _.emit('scroll-item', {prevSlide, slide});
+
     _.scrollTo(
-      slide,
-      _.opt.duration * Math.abs(_.ele.scrollLeft - slide),
+      position,
+      _.opt.duration * Math.abs(_.ele.scrollLeft - position),
       function () {
         _.updateControls()
         _.emit('animated', {

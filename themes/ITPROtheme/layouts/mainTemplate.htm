@@ -17,6 +17,7 @@ description = "Основной шаблон с хедером и футером
     <meta name="description" content="ITPRO Studio специализируется на создании продуктов для развития бизнеса, презентаций, обучающих материалов, заработка и развлечений.">
     <meta name="keywords" content="VR, AR, 360, разработка, вирутальная реальность, ВР, АР">
     <link rel="stylesheet" href="{{ [
+      'assets/js/Glider.js/glider.css',
         'assets/dist/css/combined.css'
       ]|theme }}">
     {% styles %}
@@ -39,9 +40,9 @@ description = "Основной шаблон с хедером и футером
     {% partial "TheFooter" %}
     <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
     {% framework extras %}
-    <!-- <script src="{{ [
-      'assets/dist/js/combined.js'
-    ]|theme }}"></script> -->
+    <script src="{{ [
+      'assets/js/Popup.js'
+    ]|theme }}"></script>
     {% scripts %}
   </body>
 </html>
