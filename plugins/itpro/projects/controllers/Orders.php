@@ -17,8 +17,7 @@ class Orders extends Controller
     public function listExtendQuery($query, $definition)
     {
         $user = BackendAuth::getUser();
-        // dd($user->hasAccess('itpro.projects.assign_self_orders'));
-        if (BackendAuth::getUser()->hasAccess('itpro.projects.assign_self_orders')) {
+        if (BackendAuth::getUser()->hasPermission('assign_self_orders')) {
             $query->where('manager_id', null)->orWhere('manager_id', $user->id);
         }
     }
@@ -26,7 +25,7 @@ class Orders extends Controller
     public function __construct()
     {
         $user = BackendAuth::getUser();
-        if ($user->hasAccess('itpro.projects.assign_self_orders')) {
+        if ($user->hasPermission('assign_self_orders')) {
             $this->listConfig = 'manager_config_list.yaml';
         }
         parent::__construct();
@@ -44,7 +43,7 @@ class Orders extends Controller
         $user = BackendAuth::getUser();
         return $this->makePartial('assign_self');
 
-        if($user->hasPermission('itpro.projects.assign_self_orders')){
+        if($user->hasPermission('assign_self_orders')){
             if($order->manager_id === null){
 
             }
