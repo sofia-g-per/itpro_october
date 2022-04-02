@@ -26,7 +26,8 @@
           aria-label="Имя" 
           name="client_name" 
           placeholder="Имя" 
-          class="form__select basic-text {% if errors.first('client_name') %} form__field--error{% endif %}"
+          class="form__select basic-text"
+          autocomplete="off"
           />
         <p class="form__field__error-label text--small"></p>
       </div>
@@ -37,7 +38,8 @@
           aria-label="Почта" 
           name="email" 
           placeholder="Почта" 
-          class="{{ 'form__select basic-text '}}"
+          class="form__select basic-text"
+          autocomplete="off"
           />
         <p class="form__field__error-label text--small"></p>
       </div>
@@ -61,12 +63,13 @@
           aria-label="Название проекта" 
           name="project_title" 
           placeholder="Название проекта" 
-          class="{{ 'form__select basic-text '}}"
+          class="form__select basic-text"
+          autocomplete="off"
           />
         <p class="form__field__error-label text--small"></p>
       </div>
       <div class="form__field">
-        <div class="{{'form__file-wrapper'}}" >
+        <div class="form__file-wrapper" >
           <div class='form__file-label-wrapper'>
             <label for="file" class='basic-text'>Загрузить описание проекта</label>
           </div>
