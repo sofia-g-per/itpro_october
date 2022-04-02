@@ -13,10 +13,12 @@ fields:
         thumbOptions:
             mode: crop
             extension: auto
+        maxFilesize: '1'
+        maxFiles: '1'
         span: right
         required: 1
         type: fileupload
-        comment: 'Формат: svg'
+        comment: 'Формат: svg, Максимальный размер файла: 1Mb'
     technology:
         label: Технология
         nameFrom: title
@@ -45,9 +47,10 @@ fields:
         thumbOptions:
             mode: crop
             extension: auto
+        maxFilesize: '40'
         span: full
         type: fileupload
-        comment: 'Загрузите видео в формате mp4'
+        comment: 'Загрузите видео в формате mp4, не превышающее 40Mb'
     images:
         label: 'Фотографии и описание'
         prompt: 'Добавить фотография и описание'

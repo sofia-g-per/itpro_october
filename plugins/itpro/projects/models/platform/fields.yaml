@@ -1,7 +1,7 @@
 fields:
     title:
         label: Название
-        span: full
+        span: left
         required: 1
         type: text
     platform_icon:
@@ -13,7 +13,9 @@ fields:
         thumbOptions:
             mode: crop
             extension: auto
-        span: full
+        maxFilesize: '1'
+        maxFiles: '1'
+        span: auto
         required: 1
         type: fileupload
-        comment: 'Формат: svg'
+        comment: 'Формат: svg, максимальный размер: 1Mb'
