@@ -1,7 +1,8 @@
 html{
   font-size: 62.5%;
 
-  --font-family: Montserrat, sans-serif;
+  --font-family-heading: Montserrat, sans-serif;
+  --font-family-main: 'Exo 2', sans-serif;
   --text-font-size: 1.8rem;
   --section-title-font-size: 4rem;
   --text-title-font-size: 2.8rem;
@@ -24,7 +25,6 @@ html{
 
   /* 140px при экране 1920 */
   --padding-l: calc(1rem + 130 * (100vw / 1920)); 
-	/* font-size:  */
 
 }
 
@@ -43,12 +43,6 @@ body {
   height: 100%;
 }
 
-.App {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 .main {
   flex: 1 1 auto;
 }
@@ -56,12 +50,10 @@ body {
 *{
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--font-family);
+  font-family: var(--font-family-main);
   font-size: var(--text-font-size);
   color: var(--color-white);
   z-index: 0;
-
-  
 }
 
 .visually-hidden{
@@ -79,12 +71,14 @@ body {
  */
 .primary-heading{
   font-size: var(--page-title-font-size);
+  font-family: var(--font-family-heading);
   text-transform: uppercase;
   letter-spacing: .5rem;
 }
 
 .secondary-heading{
   font-size: var(--section-title-font-size);
+  font-family: var(--font-family-heading);
   font-weight: 600;
   line-height: 4.9rem;
 }
