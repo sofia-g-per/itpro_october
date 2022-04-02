@@ -1,7 +1,3 @@
-{% put styles %}
-  <link rel="stylesheet" href="{{'assets/css/partials/form-success.css'|theme}}"></link>
-{% endput %}
-
 {% put scripts %}
   <script src="{{'assets/js/formValidation.js'|theme}}"></script>
   <script src="fancyselect.min.js'|theme}}"></script>
@@ -26,7 +22,7 @@
           aria-label="Имя" 
           name="client_name" 
           placeholder="Имя" 
-          class="form__select basic-text"
+          class="form__select field basic-text"
           autocomplete="off"
           />
         <p class="form__field__error-label text--small"></p>
@@ -38,7 +34,7 @@
           aria-label="Почта" 
           name="email" 
           placeholder="Почта" 
-          class="form__select basic-text"
+          class="form__select field basic-text"
           autocomplete="off"
           />
         <p class="form__field__error-label text--small"></p>
@@ -46,7 +42,7 @@
 
       <div class="form__field">
         <select 
-          class="{{ 'form__select basic-text ' }}"
+          class="{{ 'form__select field basic-text ' }}"
           name="technology_id" aria-label="Технология"
         >
           <!-- {!fieldData.value && <option value={fieldData.title} selected class='visually-hidden'>{fieldData.title}</option>} -->
@@ -63,13 +59,13 @@
           aria-label="Название проекта" 
           name="project_title" 
           placeholder="Название проекта" 
-          class="form__select basic-text"
+          class="form__select field basic-text"
           autocomplete="off"
           />
         <p class="form__field__error-label text--small"></p>
       </div>
       <div class="form__field">
-        <div class="form__file-wrapper" >
+        <div class="form__file-wrapper field" >
           <div class='form__file-label-wrapper'>
             <label for="file" class='basic-text'>Загрузить описание проекта</label>
           </div>

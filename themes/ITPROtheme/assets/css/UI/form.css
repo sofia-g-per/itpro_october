@@ -79,9 +79,16 @@
 .form__file-label-wrapper::before{
     content: '';
     display: block;
-    background-image: url('../../img/upload-icon.svg');
+    background-color: var(--color-grey);
+    -webkit-mask-image: url('../../img/upload-icon.svg');
+    mask-image: url('../../img/upload-icon.svg');
     width: 2.4rem;
     height: 2.4rem;
+}
+
+
+.form__field--error .form__file-label-wrapper::before{
+    background-color: var(--color-accent-pink) !important;
 }
 
 .form__file-label-wrapper label{
@@ -97,7 +104,8 @@ input:-webkit-autofill:active {
 }
 
 .form__field--error,
-.form__field--error:active{
+.form__field--error:active,
+.form__field--error .form__file-label-wrapper label{
     color: var(--color-accent-pink) !important;
     border-color: var(--color-accent-pink) !important;
 }

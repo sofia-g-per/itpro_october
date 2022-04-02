@@ -37,6 +37,13 @@ class Orderform extends ComponentBase
     }
 
     public function onSend(){
+        Input::merge(array_map(function ($value) {
+            if (is_string($value)) {
+                return trim($value);
+            } else {
+                return $value;
+            }
+        }, Input::all()));
         $orderData = Input::all();
         $validator = Validator::make($orderData, [
             'client_name'=>'required',

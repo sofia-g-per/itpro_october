@@ -1,9 +1,10 @@
 $(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
-    $(fieldElement).closest('.form__select').addClass('form__field--error');
+    $(fieldElement).closest('.field').addClass('form__field--error');
+
 });
 
 $(document).on('ajaxPromise', '[data-request]', function() {
-    $(this).closest('form').find('.form__select.form__field--error').removeClass('form__field--error');
+    $(this).closest('form').find('.field.form__field--error').removeClass('form__field--error');
 });
 
 $(window).on('ajaxSuccess', function(event, form, data, status, object) {
