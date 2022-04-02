@@ -8,20 +8,20 @@ tabs:
             readOnly: 1
             type: relation
             comment: 'Вы не можете редактировать это поле'
-            tab: 'Информация о проекте'
+            tab: 'Заявка'
         status:
             label: Статус
             nameFrom: title
             descriptionFrom: description
             span: left
             type: relation
-            tab: 'Информация о проекте'
+            tab: 'Заявка'
         completed_at:
             label: 'Дата предоставления доступа к проекту'
             mode: datetime
             span: right
             type: datepicker
-            tab: 'Информация о проекте'
+            tab: 'Заявка'
         manager:
             label: Менеджер
             nameFrom: ''
@@ -29,4 +29,10 @@ tabs:
             select: 'concat(first_name, '' '', last_name)'
             span: full
             type: relation
-            tab: 'Информация о проекте'
+            tab: 'Заявка'
+        client:
+            label: Заказчик
+            span: auto
+            type: partial
+            tab: 'Заказчик'
+            path: ~/plugins/itpro/projects/controllers/orders/_client.htm
