@@ -81,8 +81,7 @@
     .project-page__cta{
         background-position: -20rem -42rem;
     }
-}
-@media (max-width: 800px){
+
     .project-info .primary-heading{
         word-break: break-word;
     }

@@ -170,10 +170,6 @@ body {
 ---------------------------------------------
  */
 
-.full-screen-container{
-  /* height: calc(100vh - 10rem); */
-}
-
 .split-middle-flex {
   display: flex;
   min-height: 100vh;
@@ -181,16 +177,6 @@ body {
 
 .split-middle-flex>* {
   width: 50vw;
-}
-
-@media (max-width: 800px){
-  .split-middle-flex {
-    flex-direction: column;
-  }
-  
-  .split-middle-flex>* {
-    width: 100vw;
-  }
 }
 
 .align-last-to-bottom{
@@ -201,6 +187,20 @@ body {
 
 .align-last-to-bottom:last-child{
   justify-self: end;
+}
+
+@media (max-width: 1000px){
+  .split-middle-flex {
+    flex-direction: column;
+  }
+  
+  .split-middle-flex>* {
+    width: 100vw;
+  }
+
+  .align-last-to-bottom{
+    gap: 4rem
+  }
 }
 
 /* 

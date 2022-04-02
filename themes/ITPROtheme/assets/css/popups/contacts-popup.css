@@ -49,3 +49,9 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 400px){
+    .contacts-popup__mail__link{
+        font-size: 2rem !important;
+    }
+}

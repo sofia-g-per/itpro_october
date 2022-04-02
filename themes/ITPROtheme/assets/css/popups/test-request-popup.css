@@ -44,3 +44,10 @@
         row-gap: 3rem;
     }
 }
+
+@media (max-width: 500px){
+    .test-request-popup__text{
+        display: none;
+    }
+
+}

@@ -26,6 +26,7 @@
 
     display: none;
     min-width: 80vw; 
+    max-width: 100vw;
     padding: var(--popup-padding);
     border-radius: 2rem;
     background-color: var(--color-black);

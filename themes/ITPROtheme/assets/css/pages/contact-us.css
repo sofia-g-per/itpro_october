@@ -1,5 +1,3 @@
-@import '../UI/form.css';
-
 .contact-us{
     background: 
         url('../../img/background/form-purple-left.png') 0% 10%  no-repeat,
@@ -15,6 +13,20 @@
     background: rgba(0, 0, 0, .3);
 }
 
+@media (max-width: 1000px){
+    .contact-us{
+        background: 
+        url('../../img/background/mobile-contact-us-bg.png') 0% 0% / cover  no-repeat;
+    }
 
+    .contact-us__text-container{
+        padding-bottom: 4rem;
+    }
+
+    .contact-us__form{
+        background: none;
+        padding-bottom: 18rem;
+    }
+}
 
 
