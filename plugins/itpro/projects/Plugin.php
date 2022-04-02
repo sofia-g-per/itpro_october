@@ -1,5 +1,6 @@
 <?php namespace Itpro\Projects;
 
+use Backend\Models\User;
 use System\Classes\PluginBase;
 use Backend\Facades\BackendAuth;
 use Itpro\Projects\Controllers\Orders;
@@ -20,19 +21,15 @@ class Plugin extends PluginBase
     {
     }
 
-    // public function boot(){
-    //     Orders::extendFormFields(function ($form, $model, $context) {
-        
-    //         if (BackendAuth::getUser()->hasPermission('assign_self_orders')) {
-    //             $form->removeField('manager');
-    //         }
-    //     });
+    public function boot()
+    {
 
-    //     TestRequests::extendFormFields(function ($form, $model, $context) {
-        
-    //         if (BackendAuth::getUser()->hasPermission('assign_self_orders')) {
-    //             $form->removeField('manager');
-    //         }
-    //     });
-    // }
+        User::extend(function($model) {
+            $model->addDynamicMethod('scopeManager', function($query) {
+                return $query->whereHas('role', function ($query) {
+                    $query->where('code', 'manager');
+                });
+            });
+        });
+    }
 }

@@ -27,7 +27,8 @@ tabs:
             label: Менеджер
             nameFrom: ''
             descriptionFrom: description
-            select: 'concat(first_name, '' '', last_name)'
+            select: 'id as user_id, concat(first_name, '' '', last_name)'
+            scope: manager
             span: auto
             type: relation
             tab: 'Информация о проекте'
