@@ -6,7 +6,12 @@
     
     <div class='project-card__text-container'>
         <h3 class='tertiary-heading'>{{project.title}}</h3>
-        {% partial "PlatformList" platforms=project.platforms %}
+        <div class='platform-list'>
+            <span>Платформы: </span>
+                {% for platform in project.platforms %}
+                    <img src="{{platform.platform_icon.path}}" alt="{{platform.title}}" />
+                {% endfor %}
+        </div>
         <p class='basic-text'>{{project.description}}</p>
         <a class='arrow-link arrow-link--blue' href="{{ 'Project'|page({ project: project.id}) }}">Подробнее</a>
     </div>
