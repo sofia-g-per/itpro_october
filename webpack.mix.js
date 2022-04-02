@@ -7,6 +7,14 @@ mix
     './themes/ITPROtheme/assets/css/popups/*.css',
     './themes/ITPROtheme/assets/css/pages/*.css',
     './themes/ITPROtheme/assets/css/UI/*.css'
-    ], 'css/combined.css'
+    ], './themes/ITPROtheme/assets/dist/css/combined.css'
 )
 .setPublicPath('./themes/ITPROtheme/assets/dist/');
+
+// mix.browserSync({
+//     proxy: 'itpro',
+//     host: 'localhost',
+//     files: [
+//         './themes/ITPROtheme/assets/dist/css/*.css'
+//     ]
+// })

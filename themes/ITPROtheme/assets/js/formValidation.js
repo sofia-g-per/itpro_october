@@ -1,5 +1,4 @@
 $(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
-     console.log(errorMsg);   
     $(fieldElement).closest('.form__select').addClass('form__field--error');
 });
 
@@ -8,10 +7,23 @@ $(document).on('ajaxPromise', '[data-request]', function() {
 });
 
 $(window).on('ajaxSuccess', function(event, form, data, status, object) {
-    console.log('success');
-    console.log(event.target, $(event.target).closest('form'), $(event.target).closest('form').className);
-    $(event.target).closest('form').addClass('visually-hidden');
+    const formEl = $(event.target.closest('form'));
+    const popupEl = formEl.closest('.popup--active')[0];
+    if(popupEl){
+        
+        if(popupEl.classList.contains('test-request-popup-wrapper')){
+            const popupContent = popupEl.querySelector('.test-request-popup');
+            if(popupContent){
+                popupContent.classList.add('visually-hidden');
+                popupEl.querySelector('.submitted-popup').classList.add('submitted-popup--active');
+                popupEl.classList.remove('test-request-popup-wrapper');
+                popupEl.classList.add('submitted-popup-wrapper');
+        
+            }
+        }
 
-    console.log($(event.target).closest('form').find('.submitted-popup'));
-    $(event.target).closest('form').parent().find('.submitted-popup').addClass('submitted-popup--active');
+    }else{
+        formEl.addClass('visually-hidden');
+        formEl.parent().find('.submitted-popup').addClass('submitted-popup--active');
+    }
 });
