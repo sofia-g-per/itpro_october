@@ -33,11 +33,10 @@ tabs:
             span: auto
             type: relation
             tab: 'Информация о проекте'
-        file:
+        order_file:
             label: 'Файл с описанием проекта'
             mode: file
             fileTypes: 'jpeg, png, pdf, doc, docx'
-            mimeTypes: 'jpeg, png, pdf, doc, docx'
             useCaption: true
             thumbOptions:
                 mode: crop
@@ -46,3 +45,9 @@ tabs:
             type: fileupload
             comment: 'Допустимые форматы: jpeg, png, pdf, doc, docx'
             tab: 'Информация о проекте'
+        client:
+            label: Заказчик
+            span: auto
+            type: partial
+            tab: 'Заказчик'
+            path: ~/plugins/itpro/projects/controllers/orders/_client.htm

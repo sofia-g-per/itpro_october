@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: Имя
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: Почта
+        type: text
+        searchable: true
+        sortable: true

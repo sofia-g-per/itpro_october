@@ -26,4 +26,9 @@ class Client extends Model
      */
     public $rules = [
     ];
+
+    public $hasMany = [
+        'orders' => 'itpro\projects\models\Order',
+        'test_requests' => 'itpro\projects\models\TestRequest',
+    ];
 }

@@ -21,6 +21,8 @@ class Order extends Model
     public $rules = [
     ];
 
+    protected $fillable = ['client'];
+
     //связи
     public $belongsTo = [
         'technology' => 'itpro\projects\models\Technology',

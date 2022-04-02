@@ -1,0 +1,8 @@
+client:
+    label: Заказчик
+    view:
+        form: $/itpro/projects/models/client/relation_fields.yaml
+        toolbarButtons: create|delete|link|unlink
+    manage:
+        form: $/itpro/projects/models/client/relation_fields.yaml
+        list: $/itpro/projects/models/client/realtion_columns.yaml
