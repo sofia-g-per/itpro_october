@@ -23,16 +23,15 @@ class Orders extends Controller
 
     public function listExtendQuery($query, $definition)
     {
-        $user = BackendAuth::getUser();
-        if ($user->hasPermission('assign_self_orders')) {
-            $query->where('manager_id', null)->orWhere('manager_id', $user->id);
+        if ($this->user->hasPermission('assign_self_orders')) {
+            $query->where('manager_id', null)->orWhere('manager_id', $this->user->id);
         }
     }
 
     public function __construct()
     {
-        $user = BackendAuth::getUser();
-        if ($user->hasPermission('assign_self_orders')) {
+        $this->user = BackendAuth::getUser();
+        if ($this->user->hasPermission('assign_self_orders')) {
             $this->listConfig = 'manager_config_list.yaml';
             $this->formConfig = 'manager_config_form.yaml';
         }
@@ -48,11 +47,10 @@ class Orders extends Controller
         $this->vars['order'] = $order;
         // если авторизированный пользователь имеет permissions (assign_self_orders) 
         // (присуще менеджерам)
-        $user = BackendAuth::getUser();
         if($order->manager_id === null){
             return $this->makePartial('assign_self');
         }
-        else if($order->manager_id === $user->id){
+        else if($order->manager_id === $this->user->id){
             //Загрузка дефолтной формы для заказов в попапе set_status
             //форма отличается от формы для админов благодаря
             // функции в файле Plugin.php
@@ -66,8 +64,7 @@ class Orders extends Controller
     // если менеджер нажал кнопку да на попапе _assign_self.htm
     public function onAssignSelf()
     {
-        $user =  BackendAuth::getUser();
-        Order::where('id', post('record_id'))->update(['manager_id'=> $user->id]);
+        Order::where('id', post('record_id'))->update(['manager_id'=> $this->user->id]);
         return $this->listRefresh();
     }
 

@@ -17,19 +17,19 @@ class TestRequests extends Controller
     public $formConfig = 'config_form.yaml';
     public $reorderConfig = 'config_reorder.yaml';
     public $relationConfig = 'config_relation.yaml';
+    public $user;
 
     public function listExtendQuery($query, $definition)
     {
-        $user = BackendAuth::getUser();
-        if ($user->hasPermission('assign_self_orders')) {
-            $query->where('manager_id', null)->orWhere('manager_id', $user->id);
+        if ($this->user->hasPermission('assign_self_orders')) {
+            $query->where('manager_id', null)->orWhere('manager_id', $this->user->id);
         }
     }
 
     public function __construct()
     {
-        $user = BackendAuth::getUser();
-        if ($user->hasPermission('assign_self_orders')) {
+        $this->user = BackendAuth::getUser();
+        if ($this->user->hasPermission('assign_self_orders')) {
             $this->listConfig = 'manager_config_list.yaml';
         }
 
@@ -42,31 +42,24 @@ class TestRequests extends Controller
         $this->vars['record_id'] = post('record_id');
         $order = TestRequest::find(post('record_id'));
         $this->vars['order'] = $order;
-        // если авторизированный пользователь имеет permissions (assign_self_orders) 
-        // (присуще менеджерам)
-        $user = BackendAuth::getUser();
-
-        if($user->hasPermission('assign_self_orders')){
-            if($order->manager_id === null){
-                return $this->makePartial('assign_self');
-            }
-            else if($order->manager_id === $user->id){
-                //Загрузка дефолтной формы для заказов в попапе set_status
-                //форма отличается от формы для админов благодаря
-                // функции в файле Plugin.php
-                $this->asExtension('FormController')->update(post('record_id'));
-                $this->vars['recordId'] = post('record_id');
-                return $this->makePartial('set_status');
-            }
-
+        if($order->manager_id === null){
+            return $this->makePartial('assign_self');
         }
+        else if($order->manager_id === $this->user->id){
+            //Загрузка дефолтной формы для заказов в попапе set_status
+            //форма отличается от формы для админов благодаря
+            // функции в файле Plugin.php
+            $this->asExtension('FormController')->update(post('record_id'));
+            $this->vars['recordId'] = post('record_id');
+            return $this->makePartial('set_status');
+        }
+
     }
 
     // если менеджер нажал кнопку да на попапе _assign_self.htm
     public function onAssignSelf()
     {
-        $user =  BackendAuth::getUser();
-        TestRequest::where('id', post('record_id'))->update(['manager_id'=> $user->id]);
+        TestRequest::where('id', post('record_id'))->update(['manager_id'=> $this->user->id]);
         return $this->listRefresh();
     }
 
