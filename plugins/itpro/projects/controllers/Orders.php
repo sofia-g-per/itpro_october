@@ -13,6 +13,7 @@ class Orders extends Controller
     public $listConfig = 'config_list.yaml';
     public $formConfig = 'config_form.yaml';
     public $reorderConfig = 'config_reorder.yaml';
+    public $user;
 
     public function listExtendQuery($query, $definition)
     {
@@ -27,6 +28,7 @@ class Orders extends Controller
         $user = BackendAuth::getUser();
         if ($user->hasPermission('assign_self_orders')) {
             $this->listConfig = 'manager_config_list.yaml';
+            $this->formConfig = 'manager_config_form.yaml';
         }
         parent::__construct();
         BackendMenu::setContext('Itpro.Projects', 'orders');
@@ -41,21 +43,18 @@ class Orders extends Controller
         // если авторизированный пользователь имеет permissions (assign_self_orders) 
         // (присуще менеджерам)
         $user = BackendAuth::getUser();
-
-        if($user->hasPermission('assign_self_orders')){
-            if($order->manager_id === null){
-                return $this->makePartial('assign_self');
-            }
-            else if($order->manager_id === $user->id){
-                //Загрузка дефолтной формы для заказов в попапе set_status
-                //форма отличается от формы для админов благодаря
-                // функции в файле Plugin.php
-                $this->asExtension('FormController')->update(post('record_id'));
-                $this->vars['recordId'] = post('record_id');
-                return $this->makePartial('set_status');
-            }
-
+        if($order->manager_id === null){
+            return $this->makePartial('assign_self');
         }
+        else if($order->manager_id === $user->id){
+            //Загрузка дефолтной формы для заказов в попапе set_status
+            //форма отличается от формы для админов благодаря
+            // функции в файле Plugin.php
+            $this->asExtension('FormController')->update(post('record_id'));
+            $this->vars['recordId'] = post('record_id');
+            return $this->makePartial('set_status');
+        }
+
     }
 
     // если менеджер нажал кнопку да на попапе _assign_self.htm
