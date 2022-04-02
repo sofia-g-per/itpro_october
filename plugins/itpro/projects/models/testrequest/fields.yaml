@@ -29,6 +29,7 @@ tabs:
             nameFrom: ''
             descriptionFrom: description
             select: 'concat(first_name, '' '', last_name)'
+            scope: manager
             span: full
             type: relation
             tab: Заявка
