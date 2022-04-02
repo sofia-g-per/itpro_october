@@ -1,5 +1,5 @@
 name: Orders
-form: $/itpro/projects/models/order/manager_columns.yaml
+form: $/itpro/projects/models/order/manager_fields.yaml
 modelClass: Itpro\Projects\Models\Order
 defaultRedirect: itpro/projects/orders
 create:

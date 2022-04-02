@@ -1,0 +1,27 @@
+tabs:
+    fields:
+        title:
+            label: Название
+            span: left
+            readOnly: 1
+            required: 0
+            type: text
+            comment: 'Вы не можете редактировать это поле'
+            tab: 'Информация о проекте'
+        technology:
+            label: 'Технология разработки'
+            nameFrom: title
+            descriptionFrom: description
+            span: auto
+            readOnly: 1
+            required: 0
+            type: relation
+            comment: 'Вы не можете редактировать это поле'
+            tab: 'Информация о проекте'
+        status:
+            label: Статус
+            nameFrom: title
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: 'Информация о проекте'

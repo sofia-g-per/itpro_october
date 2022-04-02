@@ -2,21 +2,21 @@ tabs:
     fields:
         title:
             label: Название
-            span: left
-            readOnly: 1
-            required: 0
+            oc.commentPosition: below
+            span: full
+            readOnly: 0
+            required: 1
             type: text
-            comment: 'Вы не можете редактировать это поле'
             tab: 'Информация о проекте'
         technology:
             label: 'Технология разработки'
+            oc.commentPosition: below
             nameFrom: title
             descriptionFrom: description
             span: auto
-            readOnly: 1
+            readOnly: 0
             required: 0
             type: relation
-            comment: 'Вы не можете редактировать это поле'
             tab: 'Информация о проекте'
         status:
             label: Статус
@@ -30,6 +30,19 @@ tabs:
             nameFrom: ''
             descriptionFrom: description
             select: 'concat(first_name, '' '', last_name)'
-            span: right
+            span: auto
             type: relation
+            tab: 'Информация о проекте'
+        file:
+            label: 'Файл с описанием проекта'
+            mode: file
+            fileTypes: 'jpeg, png, pdf, doc, docx'
+            mimeTypes: 'jpeg, png, pdf, doc, docx'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            comment: 'Допустимые форматы: jpeg, png, pdf, doc, docx'
             tab: 'Информация о проекте'
