@@ -119,3 +119,10 @@ input:-webkit-autofill:active {
     justify-content: flex-start !important;
 }
 
+@media( max-width: 800px){
+    .form{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+

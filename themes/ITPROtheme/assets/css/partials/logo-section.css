@@ -2,14 +2,20 @@
 	display: flex;
 	padding: 6rem 0 18rem 0;
 	overflow: hidden;
-	gap: 4.9vw;
+	gap: 8rem;
 }
 
 .row-of-logos {
 	display: flex;
-	gap: 4.9vw;
+	gap: 8rem;
 }
 
 .logo-section__item {
 	overflow: visible;
+}
+
+@media (max-width: 360px){
+	.logo-section{
+		padding-bottom: 12rem;
+	}
 }

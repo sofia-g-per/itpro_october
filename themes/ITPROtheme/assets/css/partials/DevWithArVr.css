@@ -13,7 +13,7 @@
 .dev-with__text-container{
    display: flex;
    flex-direction: column;
-   gap: 2rem;
+   gap: 4rem;
 }
 
 
@@ -21,7 +21,7 @@
    .dev-with-ar-vr {
       flex-direction: column;
       background: 
-         url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
+         url("../../img/background/landing-mobile-light.png") 100% 100% no-repeat
       ;
 
       justify-content: center;

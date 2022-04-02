@@ -15,10 +15,8 @@
 	flex-direction: column;
 	padding: 25.7rem 7vw 0 7vw;
 	justify-content: end;
-	/* min-width: calc(50ch); */
-
 	background: 
-	url('../../img/our_customers/213123 1.png') no-repeat top left / cover 
+		url('../../img/our_customers/213123 1.png') no-repeat top left / cover 
 	;
 }
 
@@ -31,8 +29,6 @@
 	min-height: 100%;
 	width: 100%; 
 	object-fit: cover;
-
-
 }
 
 @media (max-width: 1000px) {
@@ -42,4 +38,15 @@
 	.customers-text-container {
 		width: 100vw;
 	}
+
+	.customers-text-container {
+		padding-top: 18rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.customers-text-container {
+		padding-top: 31vw;
+	}
+	
 }

@@ -16,8 +16,8 @@
 .project-card__project-icon{
     width: auto;
     position: absolute;
-    bottom: 1%;
-    right: .5%;
+    bottom: 10%;
+    right: 3%;
 }
 
 .project-card__text-container{
@@ -29,10 +29,13 @@
 @media (max-width: 1000px){
     .project-card,
     .project-info__images .project-card:nth-child(2n) {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 6rem;
+        grid-template-columns: 1fr !important;
         padding: 4rem 0;
+    }
+
+/* для карточек с изображениями проекта */
+    .project-info__images .project-card:nth-child(2n) .project-card__text-container{
+        grid-row: 2;
     }
 
     .project-card__text-container{
