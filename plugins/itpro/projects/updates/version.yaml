@@ -105,3 +105,6 @@
 1.0.36:
     - 'Updated table itpro_projects_orders'
     - builder_table_update_itpro_projects_orders_9.php
+1.0.37:
+    - 'Updated table itpro_projects_requests'
+    - builder_table_update_itpro_projects_requests_4.php

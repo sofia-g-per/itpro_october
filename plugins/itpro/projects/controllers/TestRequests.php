@@ -31,6 +31,7 @@ class TestRequests extends Controller
         $this->user = BackendAuth::getUser();
         if ($this->user->hasPermission('assign_self_orders')) {
             $this->listConfig = 'manager_config_list.yaml';
+            $this->formConfig = 'manager_config_form.yaml';
         }
 
         parent::__construct();

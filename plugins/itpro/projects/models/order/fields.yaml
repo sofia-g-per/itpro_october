@@ -2,7 +2,6 @@ tabs:
     fields:
         title:
             label: Название
-            oc.commentPosition: below
             span: full
             readOnly: 0
             required: 1
@@ -10,7 +9,6 @@ tabs:
             tab: 'Информация о проекте'
         technology:
             label: 'Технология разработки'
-            oc.commentPosition: below
             nameFrom: title
             descriptionFrom: description
             span: auto
@@ -45,9 +43,17 @@ tabs:
             type: fileupload
             comment: 'Допустимые форматы: jpeg, png, pdf, doc, docx'
             tab: 'Информация о проекте'
+        completed_at:
+            label: 'Дата завершения проекта'
+            mode: datetime
+            span: auto
+            context:
+                - update
+            type: datepicker
+            tab: 'Информация о проекте'
         client:
             label: Заказчик
             span: auto
             type: partial
-            tab: 'Заказчик'
+            tab: Заказчик
             path: ~/plugins/itpro/projects/controllers/orders/_client.htm
