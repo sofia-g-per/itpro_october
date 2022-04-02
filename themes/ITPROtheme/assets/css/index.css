@@ -143,11 +143,11 @@ body {
 }
 
 .arrow-link--blue:after{
-  background: url('../img/arrow-right.png');
+  background: url('../../img/arrow-right.png');
 }
 
 .arrow-link--purple:after{
-  background: url("../img/background/Vector 85.svg");
+  background: url("../../img/background/Vector 85.svg");
 }
 
 .arrow-link--purple:hover{
