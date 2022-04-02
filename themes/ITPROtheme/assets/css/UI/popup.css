@@ -22,18 +22,24 @@
     z-index: 10;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    opacity: 0;
+    display: grid;
 
-    display: none;
     min-width: 80vw; 
     max-width: 100vw;
     padding: var(--popup-padding);
     border-radius: 2rem;
     background-color: var(--color-black);
+
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .6s;
 }
 
 .popup--active{
-    display: grid;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
 .x-button{

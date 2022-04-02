@@ -1,3 +1,7 @@
+.mobile-nav-popup{
+    left: 300% !important;
+}
+
 .mobile-nav-popup.popup--active{
     min-width: min-content !important;
     padding: 3rem 3rem 5rem 4rem;
@@ -5,6 +9,8 @@
     top: 11rem !important;
     left: 78% !important;
     transform: translate(-50%, 0) !important;
+
+    transition: left .5s !important;
 }
 
 .mobile-nav-icon{
