@@ -16,6 +16,13 @@
    gap: 4rem;
 }
 
+@media (max-width: 1400px){
+   .dev-with-ar-vr {
+      font-size: 6rem;
+      line-height: 1.15;
+      padding: 13vh 7vw;
+   }
+}
 
 @media (max-width: 1000px){
    .dev-with-ar-vr {
