@@ -1,5 +1,9 @@
 <div class="the-header">
     <img src="{{'assets/img/Logo.svg'|theme}}" alt="Logo" class="logo"/>
     {% partial "Navbar" containerClass="nav-bar-row" %}
-    <img src="{{'assets/img/burger-icon.png'|theme}}" alt="Открыть навгиацонное меню" class="mobile-nav-icon open-popup-btn" data-popup="mobile-nav"/>
+    
+    <button class="mobile-nav-btn" id="open-mobile-nav-btn">
+        <img class="mobile-nav-btn__menu-icon" src="{{'assets/img/burger-icon.png'|theme}}" alt="Открыть навгиацонное меню" />
+        <img class="mobile-nav-btn__close-icon visually-hidden" src="{{'assets/img/x-button.svg'|theme}}" alt="закрыть попап" />
+    </button>
 </div>

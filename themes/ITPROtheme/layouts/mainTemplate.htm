@@ -21,15 +21,16 @@ description = "Основной шаблон с хедером и футером
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ [
       'assets/js/Glider.js/glider.min.css',
-        'assets/dist/css/combined.css'
+      'assets/dist/css/combined.css'
       ]|theme }}">
     {% styles %}
   </head>
   <body>
       {% partial "TheHeader" %}
-      <dialog class="popup mobile-nav-popup" data-popup="mobile-nav">
+      <div class="mobile-nav" id="mobile-nav">
         {% partial "Navbar" containerClass="nav-bar-column" %}
-      </dialog>
+        {% partial "SocialLinks" %}
+      </div>
       <dialog class="popup contacts-popup" data-popup="contacts">
           <button class='x-button'>
               <img src="{{'assets/img/x-button.svg'|theme}}" alt="закрыть попап" />
@@ -44,7 +45,8 @@ description = "Основной шаблон с хедером и футером
     <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
     {% framework extras %}
     <script src="{{ [
-      'assets/js/Popup.js'
+      'assets/js/Popup.js',
+      'assets/js/mobileNav.js'
     ]|theme }}"></script>
     {% scripts %}
   </body>
