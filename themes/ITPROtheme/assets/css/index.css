@@ -260,12 +260,17 @@ body {
   gap: 2rem;
 }
 
+.nav-bar-column {
+  align-items: flex-end;
+}
+
 .nav-bar-link {
 	padding: 0.5rem 0;
 	justify-content: space-between;
 	text-decoration: none;
 	color: var(--color-grey);
-  cursor: pointer;
+
+  width: fit-content;
 
 	background-image: linear-gradient(currentColor, currentColor);
     background-position: 100% 100%;
@@ -279,6 +284,8 @@ body {
 	color: var(--color-white);
 	background-size: 100% 0.1rem;
 }
+
+
 
 /* 
 ---------------------------------------------

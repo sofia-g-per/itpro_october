@@ -11,7 +11,10 @@
     "watch": "mix watch",
     "watch-poll": "mix watch -- --watch-options-poll=1000",
     "hot": "mix watch --hot",
-    "production": "mix --production"
+    "production": "mix --production",
+
+    "start": "webpack-dev-server --env development",
+    "build": "webpack --env production"
   },
   "repository": {
     "type": "git",
@@ -39,13 +42,17 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "babel-plugin-module-resolver": "^3.2.0",
+    "browser-sync": "^2.27.9",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "chai": "^4.2.0",
     "cross-env": "^5.0.1",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
     "laravel-mix": "^6.0.43",
     "mocha": "^6.2.0",
-    "sinon": "^7.4.1"
+    "nodemon": "^2.0.15",
+    "sinon": "^7.4.1",
+    "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
     "custom-select": "^1.1.15"

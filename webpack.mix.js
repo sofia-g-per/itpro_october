@@ -18,3 +18,5 @@ mix
 //         './themes/ITPROtheme/assets/dist/css/*.css'
 //     ]
 // })
+
+mix.browserSync('index.css');
