@@ -1,6 +1,7 @@
  .dev-with-ar-vr {
    display: flex;
    justify-content: space-between;
+   gap: 2rem;
    padding: 16vh 7vw;
    min-height: 100vh;
 
@@ -13,14 +14,15 @@
 .dev-with__text-container{
    display: flex;
    flex-direction: column;
-   gap: 4rem;
+   gap: 2rem;
+   padding-right: 3vw;
 }
 
 @media (max-width: 1400px){
    .dev-with-ar-vr {
       font-size: 6rem;
       line-height: 1.15;
-      padding: 13vh 7vw;
+      /*padding: 13vh 7vw;*/ /*без этой настройки секция разработки выглядит более похожей на ориг*/
    }
 }
 

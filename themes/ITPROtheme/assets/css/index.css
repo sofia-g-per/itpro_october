@@ -3,10 +3,10 @@ html{
 
   --font-family-heading: Montserrat, sans-serif;
   --font-family-main: 'Exo 2', sans-serif;
-  --text-font-size: 1.8rem;
+  --text-font-size: calc(1.2rem + 0.6 * (100vw / 1920)); /*вот это текст*/
   --section-title-font-size: 4rem;
   --text-title-font-size: 2.8rem;
-  --page-title-font-size: 7rem;
+  --page-title-font-size: calc(6.5rem + 3 * (100vw / 1920)); /*вот это заголовок*/
 
   --color-black: rgb(0, 0, 0);
   --color-white: #fff;
@@ -74,6 +74,7 @@ body {
   font-family: var(--font-family-heading);
   text-transform: uppercase;
   letter-spacing: .5rem;
+  white-space: nowrap; /*новое 21:20*/
 }
 
 .secondary-heading{
