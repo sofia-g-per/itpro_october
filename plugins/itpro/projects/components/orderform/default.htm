@@ -54,6 +54,37 @@
       <p class="form__field__error-label text--small"></p>
       </div>
 
+    <!-- custom select -->
+    <div class="form__field">
+      <input 
+        type="text" 
+        aria-label="Почта" 
+        name="email" 
+        placeholder="Почта" 
+        class="form__select field basic-text"
+        autocomplete="off"
+        />
+      <p class="form__field__error-label text--small"></p>
+    </div>
+
+    <div class="form__field">
+      <select 
+        id="mounth" class="form__select field basic-text"
+        name="technology_id" aria-label="Технология"
+      >
+          <option value="hide">-- Технология --</option>
+          {% for option in technologies %} 
+            <option class='basic-text' value="{{option.id}}"> {{option.title}} </option>
+          {% endfor %}
+
+      </select> 
+      
+      <p class="form__field__error-label text--small"></p>
+    </div>
+     
+  
+    <!-- custom -->
+
       <div class="form__field">
         <input 
           type="text" 
