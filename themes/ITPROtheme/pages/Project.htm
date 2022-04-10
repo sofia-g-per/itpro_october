@@ -32,8 +32,9 @@ function onStart()
     </div>
     {% if project.project_video.path %}
       <div class='project-video'>
-        <video controls autoplay loop>
+        <video controls preload loop>
           <source src="{{project.project_video.path}}" type="video/mp4" />
+          <p>Ваш браузер не поддерживает показ видео.</p>
       </video>
       </div>
     {% endif %}
