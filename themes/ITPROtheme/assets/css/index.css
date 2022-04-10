@@ -6,7 +6,7 @@ html{
   --text-font-size: calc(1.2rem + 0.6 * (100vw / 1920)); /*вот это текст*/
   --section-title-font-size: 4rem;
   --text-title-font-size: 2.8rem;
-  --page-title-font-size: calc(3.5rem + 3 * (100vw / 1920)); /*вот это заголовок*/
+  --page-title-font-size: calc(4rem + 3 * (100vw / 1920)); /*вот это заголовок*/
 
   --color-black: rgb(0, 0, 0);
   --color-white: #fff;
@@ -270,6 +270,7 @@ body {
 	justify-content: space-between;
 	text-decoration: none;
 	color: var(--color-grey);
+  font-size: calc(1.4rem + 3 * (100vw / 1920));
 
   width: fit-content;
 
