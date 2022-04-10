@@ -95,6 +95,25 @@
     padding-left: 2.4rem;
 }
 
+.form__file-label-wrapper #file-uploaded-label{
+    display: none;
+}
+
+/* label styles for form file uploaded */
+.form__file-label-wrapper.js-file-uploaded #file-uploaded-label{
+    display: block;
+}
+
+.form__file-label-wrapper.js-file-uploaded #file-upload-label{
+    display: none;
+}
+
+.form__file-label-wrapper.js-file-uploaded::before{
+    display: none;
+    /* -webkit-mask-image: url('../../img/white-checkmark.png');
+    mask-image: url('../../img/white-checkmark.png'); */
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

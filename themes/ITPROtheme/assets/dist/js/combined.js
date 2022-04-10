@@ -662,6 +662,13 @@ popupBtns.forEach(function (popupBtn) {
   \*******************************************************/
 /***/ (() => {
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// on submit ajax validation
 $(window).on('ajaxInvalidField', function (event, fieldElement, fieldName, errorMsg, isFirst) {
   $(fieldElement).closest('.field').addClass('form__field--error');
 });
@@ -687,7 +694,91 @@ $(window).on('ajaxSuccess', function (event, form, data, status, object) {
     formEl.addClass('visually-hidden');
     formEl.parent().find('.submitted-popup').addClass('submitted-popup--active');
   }
-});
+}); // JS валидация
+
+var fields = document.querySelectorAll('.field');
+
+var validateEmail = function validateEmail(email) {
+  return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+};
+
+var jsValidation = function jsValidation(field) {
+  console.log(field.value);
+
+  if (field.value) {
+    if (field.classList.contains('form__field--error')) {
+      // дополнительная валидация для полей почты
+      if (field.name === 'email') {
+        if (validateEmail(field.value)) {
+          field.classList.remove('form__field--error');
+        }
+      } else {
+        field.classList.remove('form__field--error');
+      }
+    }
+  } else {
+    if (!field.classList.contains('form__field--error')) {
+      field.classList.add('form__field--error');
+    }
+  }
+};
+
+var _iterator = _createForOfIteratorHelper(fields),
+    _step;
+
+try {
+  for (_iterator.s(); !(_step = _iterator.n()).done;) {
+    var field = _step.value;
+    field.addEventListener('keydown', jsValidation.bind(null, field));
+  } // Изменение стилей поля для файла при прикреплении
+
+} catch (err) {
+  _iterator.e(err);
+} finally {
+  _iterator.f();
+}
+
+var fileInputs = document.querySelectorAll("input[name='file']");
+
+var fileUpload = function fileUpload(fileInput) {
+  var fileWrapper = fileInput.closest(".field");
+  var labelWrapper = fileWrapper.querySelector('.form__file-label-wrapper'); // const uploadedLabel = fileWrapper.querySelector('file-uploaded-label')
+  // const uploadLabel = fileWrapper.querySelector('file-upload-label')
+
+  console.log(fileInput.value, fileWrapper);
+
+  if (fileInput.value) {
+    if (fileWrapper.classList.contains("form__field--error")) {
+      fileWrapper.classList.remove("form__field--error");
+    }
+
+    if (!labelWrapper.classList.contains("js-file-uploaded")) {
+      !labelWrapper.classList.add("js-file-uploaded");
+    }
+  } else {
+    if (!fileWrapper.classList.contains("form__field--error")) {
+      fileWrapper.classList.add("form__field--error");
+    }
+
+    if (labelWrapper.classList.contains("js-file-uploaded")) {
+      !labelWrapper.classList.remove("js-file-uploaded");
+    }
+  }
+};
+
+var _iterator2 = _createForOfIteratorHelper(fileInputs),
+    _step2;
+
+try {
+  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+    var fileInput = _step2.value;
+    fileInput.addEventListener('change', fileUpload.bind(null, fileInput));
+  }
+} catch (err) {
+  _iterator2.e(err);
+} finally {
+  _iterator2.f();
+}
 
 /***/ }),
 

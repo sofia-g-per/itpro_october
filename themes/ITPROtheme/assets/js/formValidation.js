@@ -29,6 +29,7 @@ $(window).on('ajaxSuccess', function(event, form, data, status, object) {
     }
 });
 
+// JS валидация
 const fields = document.querySelectorAll('.field');
 const validateEmail = (email) => {
     return String(email)
@@ -59,4 +60,35 @@ const jsValidation = (field) => {
 
 for(const field of fields){
     field.addEventListener('keydown', jsValidation.bind(null, field));
+}
+
+// Изменение стилей поля для файла при прикреплении
+const fileInputs =  document.querySelectorAll("input[name='file']");
+const fileUpload = (fileInput) => {
+    const fileWrapper = fileInput.closest(".field");
+    const labelWrapper = fileWrapper.querySelector('.form__file-label-wrapper')
+    // const uploadedLabel = fileWrapper.querySelector('file-uploaded-label')
+    // const uploadLabel = fileWrapper.querySelector('file-upload-label')
+    console.log(fileInput.value, fileWrapper);
+    if(fileInput.value){
+        if(fileWrapper.classList.contains("form__field--error")){
+            fileWrapper.classList.remove("form__field--error")
+        }
+
+        if(!labelWrapper.classList.contains("js-file-uploaded")){
+            !labelWrapper.classList.add("js-file-uploaded")
+        }
+    }else{
+        if(!fileWrapper.classList.contains("form__field--error")){
+            fileWrapper.classList.add("form__field--error")
+        }
+
+        if(labelWrapper.classList.contains("js-file-uploaded")){
+            !labelWrapper.classList.remove("js-file-uploaded")
+        }
+    }
+}
+
+for(const fileInput of fileInputs){
+    fileInput.addEventListener('change', fileUpload.bind(null, fileInput));
 }
