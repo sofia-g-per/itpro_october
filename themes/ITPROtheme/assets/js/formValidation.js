@@ -1,6 +1,6 @@
+// on submit ajax validation
 $(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
     $(fieldElement).closest('.field').addClass('form__field--error');
-
 });
 
 $(document).on('ajaxPromise', '[data-request]', function() {
@@ -28,3 +28,21 @@ $(window).on('ajaxSuccess', function(event, form, data, status, object) {
         formEl.parent().find('.submitted-popup').addClass('submitted-popup--active');
     }
 });
+
+const fields = document.querySelectorAll('.field');
+const jsValidation = (field) => {
+
+    if(field.value){
+        if(field.classList.contains('form__field--error')){
+            field.classList.remove('form__field--error');
+        }
+    }else {
+        if(!field.classList.contains('form__field--error')){
+            field.classList.add('form__field--error');
+        }
+    }
+}
+
+for(const field of fields){
+    field.addEventListener('keydown', jsValidation.bind(null, field));
+}

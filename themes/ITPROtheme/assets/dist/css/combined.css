@@ -777,16 +777,16 @@ body {
     width: 100vw;
     height: calc(100vh - 10rem);
     padding: 4rem 0 7rem 2rem;
-    position: absolute;
+
     z-index: 10;
     background: 
         url('../../img/background/mobile-nav-bg.png') 100% 0 no-repeat,
         black;
-    /* transform: translate(-50%, 0) !important; */
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: right;
 
     transition: height visibility .3s;
 }
