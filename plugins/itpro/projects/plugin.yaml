@@ -68,13 +68,13 @@ navigation:
                     - manage_requests
     clients:
         label: Клиенты
-        url: /clients
+        url: itpro/projects/clients
         icon: icon-group
         permissions:
             - manage_clients
     test-keys:
         label: Ключи
-        url: /keys
+        url: itpro/projects/testkeys
         icon: icon-key
         permissions:
             - manage_keys
