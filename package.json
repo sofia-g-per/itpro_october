@@ -50,6 +50,9 @@
     "laravel-mix": "^6.0.43",
     "mocha": "^6.2.0",
     "nodemon": "^2.0.15",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.1.0",
     "sinon": "^7.4.1",
     "webpack-dev-server": "^4.8.1"
   },

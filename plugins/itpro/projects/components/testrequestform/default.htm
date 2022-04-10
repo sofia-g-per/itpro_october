@@ -11,13 +11,11 @@
     data-request-flash
     method='post'>
 
-    <div class="form__field">
-        <!--  ~ fieldData.error? 'form__field--error' : '' -->
+    <div class="form__field form__field--select">
         <select 
-          class="{{ 'form__select field basic-text ' }}"
+          class="form__select field basic-text"
           name="project_id" aria-label="Проект"
         >
-          <!-- {!fieldData.value && <option value={fieldData.title} selected class='visually-hidden'>{fieldData.title}</option>} -->
           {% for option in projects %} 
               <option class='basic-text' value="{{option.id}}"> {{option.title}} </option>
           {% endfor %}

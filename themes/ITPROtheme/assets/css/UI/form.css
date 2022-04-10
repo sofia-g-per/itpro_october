@@ -22,8 +22,14 @@
     padding-top: 1rem;
 }
 
+.form__input
+{
+    z-index: 1;
+}
+
+.form__select,
 .form__input,
-.form__select{
+.select-styled{
     background-color: transparent;
     border: none;
     border-bottom: solid 1px;
@@ -32,19 +38,19 @@
     transition: all .3s;
     padding: 1.1rem;
     line-height: 0;
-
 }
 
 .form__input:focus,
-.form__select:focus{
+.form__select:focus,
+.select-styled:active, .select-styled.active{
     line-height: 0;
     outline: none;
     border-color: var(--color-white);
 }
 
-.form__select *{
+/* .form__select *{
     background-color: transparent;
-}
+} */
 
 .form__input::placeholder{
     color: var(--color-grey);
@@ -136,11 +142,14 @@ input:-webkit-autofill:active {
 
 /* select */
 
+    .form__field--select{
+        z-index: 9;
+    }
+
   .select-hidden {
     display: none;
     visibility: hidden;
     padding-right: 10px;
-    -webkit-appearance: none;
   }
   
   .select {
@@ -151,11 +160,6 @@ input:-webkit-autofill:active {
     color: #fff;
     width: 220px;
     height: 40px;
-    /* background: rgb(30, 30, 30); */
-
-  }
-  option{
-    background: rgb(30, 30, 30);
   }
   
   .select-styled {
@@ -164,7 +168,6 @@ input:-webkit-autofill:active {
     right: 0;
     bottom: 0;
     left: 0;
-    /* background: rgb(30, 30, 30); */
 
     padding: 8px 15px;
     -moz-transition: all 0.2s ease-in;
@@ -173,26 +176,16 @@ input:-webkit-autofill:active {
     transition: all 0.2s ease-in;
   }
   .select-styled:after {
-    content: "";
+    content: "\142F";
     width: 0;
     height: 0;
-    border: 7px solid transparent;
-    border-color: #fff transparent transparent transparent;
     position: absolute;
     top: 16px;
-    right: 10px;
+    right: 5%;
   }
-  .select-styled:hover {
-    /* background: rgb(30, 30, 30); */
-    background-color: black;
-  }
-  .select-styled:active, .select-styled.active {
-    /* background: rgb(30, 30, 30); */
-    background-color: black;
-  }
+
   .select-styled:active:after, .select-styled.active:after {
     top: 9px;
-    border-color: transparent transparent #fff transparent;
   }
   
   .select-options {
@@ -201,18 +194,21 @@ input:-webkit-autofill:active {
     top: 100%;
     right: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9;
     margin: 0;
     padding: 0;
     list-style: none;
-    background: 
-    linear-gradient( rgba(255, 255, 255, .1), transparent)
-    rgb(30, 30, 30);
+    background: radial-gradient(at bottom right, rgb(72, 50, 85), rgb(58, 44, 67), rgb(40, 40, 40) );
+    background: -webkit-radial-gradient(bottom right, rgb(72, 50, 85), rgb(58, 44, 67), rgb(40, 40, 40));
+  }
+
+  .project-page__cta .select-options {
+    background: radial-gradient(at bottom right, rgb(73, 108, 127), rgb(45, 57, 64), rgb(40, 40, 40) );
+    background: -webkit-radial-gradient(bottom right, rgb(73, 108, 127), rgb(45, 57, 64), rgb(40, 40, 40));
   }
 
   .select-options li {
     margin: 0;
-    background: rgb(30, 30, 30);
     color: var(--color-grey);
     padding: 12px 0;
     text-indent: 15px;
