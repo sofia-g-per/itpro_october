@@ -158,8 +158,8 @@ input:-webkit-autofill:active {
     position: relative;
     font-size: 16px;
     color: #fff;
-    width: 220px;
-    height: 40px;
+    width: 22rem;
+    height: 3.5rem;
   }
   
   .select-styled {
@@ -168,8 +168,6 @@ input:-webkit-autofill:active {
     right: 0;
     bottom: 0;
     left: 0;
-
-    padding: 8px 15px;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
@@ -180,12 +178,12 @@ input:-webkit-autofill:active {
     width: 0;
     height: 0;
     position: absolute;
-    top: 16px;
     right: 5%;
+    transition: transform .2s;
   }
 
   .select-styled:active:after, .select-styled.active:after {
-    top: 9px;
+      transform: scale(-1);
   }
   
   .select-options {
