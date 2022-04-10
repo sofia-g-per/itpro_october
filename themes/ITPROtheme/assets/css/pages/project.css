@@ -25,6 +25,10 @@
 
 }
 
+.project-description{
+    color: var(--color-white);
+}
+
 .project-info__images{
     display: flex;
     flex-direction: column;
@@ -41,7 +45,6 @@
     grid-column: 1;
     grid-row: 1;
 }
-
 
 .project-video{
     width: 100%;

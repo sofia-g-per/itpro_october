@@ -21,9 +21,16 @@
 }
 
 .project-card__text-container{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     row-gap: 2rem;
+}
+
+.align-bottom{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4rem;
 }
 
 @media (max-width: 1000px){
@@ -35,11 +42,17 @@
 
 /* для карточек с изображениями проекта */
     .project-info__images .project-card:nth-child(2n) .project-card__text-container{
-        grid-row: 2;
+        grid-row: 2!important;
     }
 
     .project-card__text-container{
         padding: 0 2rem;
+    }
+
+    .align-bottom{
+        height: auto;
+        align-items: center;
+        padding-bottom: 0;
     }
 }
 
