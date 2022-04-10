@@ -17,6 +17,11 @@ function onStart()
 }
 ?>
 ==
+
+{% put scripts %}
+  <script src="{{'assets/js/playVideoOnScroll.js'|theme}}"></script>
+{% endput %}
+
 <div class='project-page-wrapper'>
     <div class='project-info'>
       <div class='project-info__header'>
@@ -32,7 +37,7 @@ function onStart()
     </div>
     {% if project.project_video.path %}
       <div class='project-video'>
-        <video controls preload loop>
+        <video controls preload loop muted>
           <source src="{{project.project_video.path}}" type="video/mp4" />
           <p>Ваш браузер не поддерживает показ видео.</p>
       </video>

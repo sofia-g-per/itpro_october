@@ -13,7 +13,7 @@ const onSuccess = async function(event, form, data, status, object) {
                 popupEl.classList.remove('test-request-popup-wrapper');
                 popupEl.classList.add('submitted-popup-wrapper');
 
-                await sleep(2000);
+                await sleep(5000);
 
                 popupContent.classList.remove('visually-hidden');
                 popupEl.querySelector('.submitted-popup').classList.remove('submitted-popup--active');
@@ -27,7 +27,7 @@ const onSuccess = async function(event, form, data, status, object) {
         const submittedPopup = formEl.parent().find('.submitted-popup');
         submittedPopup.addClass('submitted-popup--active');
 
-        await sleep(2000);
+        await sleep(5000);
 
         formEl.removeClass('visually-hidden');
         submittedPopup.removeClass('submitted-popup--active');
