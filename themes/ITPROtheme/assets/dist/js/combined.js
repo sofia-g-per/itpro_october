@@ -727,7 +727,7 @@ var onSuccess = /*#__PURE__*/function () {
             popupEl.classList.remove('test-request-popup-wrapper');
             popupEl.classList.add('submitted-popup-wrapper');
             _context.next = 12;
-            return sleep(2000);
+            return sleep(5000);
 
           case 12:
             popupContent.classList.remove('visually-hidden');
@@ -744,7 +744,7 @@ var onSuccess = /*#__PURE__*/function () {
             submittedPopup = formEl.parent().find('.submitted-popup');
             submittedPopup.addClass('submitted-popup--active');
             _context.next = 23;
-            return sleep(2000);
+            return sleep(5000);
 
           case 23:
             formEl.removeClass('visually-hidden');
@@ -4976,6 +4976,22 @@ openMobileNavBtn.addEventListener('click', toggleMobileNav);
 
 /***/ }),
 
+/***/ "./themes/ITPROtheme/assets/js/playVideoOnScroll.js":
+/*!**********************************************************!*\
+  !*** ./themes/ITPROtheme/assets/js/playVideoOnScroll.js ***!
+  \**********************************************************/
+/***/ (() => {
+
+var video = document.querySelector('.project-video video');
+
+window.onscroll = function () {
+  if (window.scrollY > video.offsetTop) {
+    video.play();
+  }
+};
+
+/***/ }),
+
 /***/ "./themes/ITPROtheme/assets/js/portfolio.js":
 /*!**************************************************!*\
   !*** ./themes/ITPROtheme/assets/js/portfolio.js ***!
@@ -5886,6 +5902,7 @@ try {
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/Glider.js/glider.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/jquery.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/mobileNav.js");
+/******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/playVideoOnScroll.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/Popup.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/portfolio.js");
 /******/ 	var __webpack_exports__ = __webpack_require__("./themes/ITPROtheme/assets/js/stagesOfDevScroll.js");

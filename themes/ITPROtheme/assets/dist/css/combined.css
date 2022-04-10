@@ -390,6 +390,62 @@ body {
         min-width:  85vw !important
     }
 }
+
+
+
+/* checkmark animation */
+#m-check-mark {
+    margin: 20px 0;
+    width: 150px;
+    height: auto;
+    display: inline;
+  }
+  
+  #checkmark {
+    stroke-dasharray: 640;
+      stroke-dashoffset: 0;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    -webkit-animation: draw-around 4s;
+        -ms-animation: draw-around 4s;
+            animation: draw-around 4s;
+  }
+  @-ms-keyframes draw-around {
+    0% {
+      stroke-dashoffset: 640;
+    }
+    10% {
+      stroke-dashoffset: 640;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @-webkit-keyframes draw-around {
+    0% {
+      stroke-dashoffset: 640;
+    }
+    10% {
+      stroke-dashoffset: 640;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes draw-around {
+    0% {
+      stroke-dashoffset: 640;
+    }
+    10% {
+      stroke-dashoffset: 640;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  
 .logo-section {
 	display: flex;
 	padding: 6rem 0 18rem 0;
