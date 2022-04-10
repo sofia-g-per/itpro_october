@@ -799,7 +799,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: right;
+    text-align: left;
+
 
     transition: height visibility .3s;
 }
@@ -810,6 +811,8 @@ body {
     font-family: var(--font-family-heading);
     gap: 4rem;
     width: min-content;
+
+    align-items: flex-start!important;
     text-align: left!important;
 }
 
