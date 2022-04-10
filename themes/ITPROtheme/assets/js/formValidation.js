@@ -1,13 +1,6 @@
-// on submit ajax validation
-$(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
-    $(fieldElement).closest('.field').addClass('form__field--error');
-});
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-$(document).on('ajaxPromise', '[data-request]', function() {
-    $(this).closest('form').find('.field.form__field--error').removeClass('form__field--error');
-});
-
-$(window).on('ajaxSuccess', function(event, form, data, status, object) {
+const onSuccess = async function(event, form, data, status, object) {
     const formEl = $(event.target.closest('form'));
     const popupEl = formEl.closest('.popup--active')[0];
     if(popupEl){
@@ -19,15 +12,40 @@ $(window).on('ajaxSuccess', function(event, form, data, status, object) {
                 popupEl.querySelector('.submitted-popup').classList.add('submitted-popup--active');
                 popupEl.classList.remove('test-request-popup-wrapper');
                 popupEl.classList.add('submitted-popup-wrapper');
-        
+
+                await sleep(2000);
+
+                popupContent.classList.remove('visually-hidden');
+                popupEl.querySelector('.submitted-popup').classList.remove('submitted-popup--active');
+                popupEl.classList.add('test-request-popup-wrapper');
+                popupEl.classList.remove('submitted-popup-wrapper');
             }
         }
 
     }else{
         formEl.addClass('visually-hidden');
-        formEl.parent().find('.submitted-popup').addClass('submitted-popup--active');
+        const submittedPopup = formEl.parent().find('.submitted-popup');
+        submittedPopup.addClass('submitted-popup--active');
+
+        await sleep(2000);
+
+        formEl.removeClass('visually-hidden');
+        submittedPopup.removeClass('submitted-popup--active');
+
     }
+
+}
+
+// on submit ajax validation
+$(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
+    $(fieldElement).closest('.field').addClass('form__field--error');
 });
+
+$(document).on('ajaxPromise', '[data-request]', function() {
+    $(this).closest('form').find('.field.form__field--error').removeClass('form__field--error');
+});
+
+$(window).on('ajaxSuccess', onSuccess);
 
 // JS валидация
 const fields = document.querySelectorAll('.field');
@@ -39,7 +57,6 @@ const validateEmail = (email) => {
     );
 }
 const jsValidation = (field) => {
-    console.log(field.value)
     if(field.value){
         if(field.classList.contains('form__field--error')){
             // дополнительная валидация для полей почты
@@ -69,7 +86,6 @@ const fileUpload = (fileInput) => {
     const labelWrapper = fileWrapper.querySelector('.form__file-label-wrapper')
     // const uploadedLabel = fileWrapper.querySelector('file-uploaded-label')
     // const uploadLabel = fileWrapper.querySelector('file-upload-label')
-    console.log(fileInput.value, fileWrapper);
     if(fileInput.value){
         if(fileWrapper.classList.contains("form__field--error")){
             fileWrapper.classList.remove("form__field--error")
@@ -133,7 +149,6 @@ $('select').each(function(){
         $styledSelect.text($(this).text()).removeClass('active');
         $this.val($(this).attr('rel'));
         $list.hide();
-        //console.log($this.val());
     });
   
     $(document).click(function() {

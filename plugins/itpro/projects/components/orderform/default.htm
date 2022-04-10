@@ -40,13 +40,14 @@
           />
         <p class="form__field__error-label text--small"></p>
       </div>
+    <!-- custom select -->
 
     <div class="form__field form__field--select">
       <select 
         class="form__select field basic-text"
         name="technology_id" aria-label="Технология"
       >
-          <option value="hide">Технология</option>
+          <option value="hide"> Технология</option>
           {% for option in technologies %} 
             <option class='basic-text' value="{{option.id}}"> {{option.title}} </option>
           {% endfor %}
@@ -56,6 +57,11 @@
       <p class="form__field__error-label text--small"></p>
     </div>
      
+  
+    <!-- custom -->
+
+
+
       <div class="form__field">
         <input 
           type="text" 
