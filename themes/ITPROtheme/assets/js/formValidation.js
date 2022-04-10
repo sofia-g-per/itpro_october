@@ -30,11 +30,25 @@ $(window).on('ajaxSuccess', function(event, form, data, status, object) {
 });
 
 const fields = document.querySelectorAll('.field');
+const validateEmail = (email) => {
+    return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+}
 const jsValidation = (field) => {
-
+    console.log(field.value)
     if(field.value){
         if(field.classList.contains('form__field--error')){
-            field.classList.remove('form__field--error');
+            // дополнительная валидация для полей почты
+            if(field.name === 'email'){
+                if(validateEmail(field.value)){
+                    field.classList.remove('form__field--error');
+                }
+            }else{
+                field.classList.remove('form__field--error');
+            }
         }
     }else {
         if(!field.classList.contains('form__field--error')){
