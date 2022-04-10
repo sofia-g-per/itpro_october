@@ -12,7 +12,6 @@
     "watch-poll": "mix watch -- --watch-options-poll=1000",
     "hot": "mix watch --hot",
     "production": "mix --production",
-
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production"
   },

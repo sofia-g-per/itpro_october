@@ -23,7 +23,7 @@
     left: 50%;
     top: 50%;
     opacity: 0;
-    display: grid;
+    display: none;
 
     min-width: 80vw; 
     max-width: 100vw;
@@ -31,14 +31,11 @@
     border-radius: 2rem;
     background-color: var(--color-black);
 
-    visibility: hidden;
-    transform: translate(-50%, -50%) scale(0);
-    transition: .6s;
+    transform: translate(-50%, -50%);
 }
 
 .popup--active{
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
+    display: grid;
     opacity: 1;
 }
 
