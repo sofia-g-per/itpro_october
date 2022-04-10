@@ -1,0 +1,12 @@
+list: $/itpro/projects/models/client/columns.yaml
+modelClass: Itpro\Projects\Models\Client
+title: Client
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'itpro/projects/client/update/:id'

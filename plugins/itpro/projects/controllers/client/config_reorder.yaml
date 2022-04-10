@@ -1,0 +1,4 @@
+title: Client
+modelClass: Itpro\Projects\Models\Client
+toolbar:
+    buttons: reorder_toolbar

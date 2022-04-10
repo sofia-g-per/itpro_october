@@ -9,3 +9,7 @@ columns:
         type: text
         searchable: true
         sortable: true
+    phone:
+        label: Телефон
+        type: number
+        searchable: true

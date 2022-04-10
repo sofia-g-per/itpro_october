@@ -1,0 +1,10 @@
+name: Client
+form: $/itpro/projects/models/client/fields.yaml
+modelClass: Itpro\Projects\Models\Client
+defaultRedirect: itpro/projects/client
+create:
+    redirect: 'itpro/projects/client/update/:id'
+    redirectClose: itpro/projects/client
+update:
+    redirect: itpro/projects/client
+    redirectClose: itpro/projects/client

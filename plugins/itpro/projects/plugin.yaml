@@ -66,6 +66,18 @@ navigation:
                 icon: icon-asterisk
                 permissions:
                     - manage_requests
+    clients:
+        label: Клиенты
+        url: /clients
+        icon: icon-group
+        permissions:
+            - manage_clients
+    test-keys:
+        label: Ключи
+        url: /keys
+        icon: icon-key
+        permissions:
+            - manage_keys
 permissions:
     manage_requests:
         tab: Project
@@ -88,3 +100,12 @@ permissions:
     assign_self_orders:
         tab: Project
         label: 'Назначение себя на заказы и  редактирование статуса своих заказов'
+    manage_clients:
+        tab: Project
+        label: 'Редактирование клиентов'
+    view_clients:
+        tab: Project
+        label: 'Просмотр клиентов'
+    manage_keys:
+        tab: Project
+        label: 'Редактирование информации о ключах без права их выдачи'

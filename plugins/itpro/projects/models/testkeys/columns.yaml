@@ -1,0 +1,18 @@
+columns:
+    key:
+        label: Ключ
+        type: text
+        searchable: true
+        sortable: true
+    requested_at:
+        label: 'Дата запроса ключа'
+        type: datetime
+        sortable: true
+    given_at:
+        label: 'Дата выдачи ключа'
+        type: date
+        sortable: true
+    expires_at:
+        label: 'Дата отключения'
+        type: date
+        sortable: true

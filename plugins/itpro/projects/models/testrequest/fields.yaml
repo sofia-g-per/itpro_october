@@ -2,7 +2,6 @@ tabs:
     fields:
         project:
             label: Проект
-            oc.commentPosition: below
             nameFrom: title
             descriptionFrom: description
             span: full
@@ -34,7 +33,7 @@ tabs:
             type: relation
             tab: Заявка
         description:
-            label: 'Причины для тестирования'
+            label: 'Цели тестирования'
             size: ''
             span: full
             required: 0

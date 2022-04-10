@@ -15,7 +15,6 @@
    display: flex;
    flex-direction: column;
    gap: 2rem;
-   padding-right: 3vw;
 }
 
 @media (max-width: 1400px){

@@ -1,0 +1,16 @@
+fields:
+    key:
+        label: Ключ
+        span: auto
+        readOnly: 1
+        type: text
+    given_at:
+        label: 'Дата выдачи ключа'
+        mode: date
+        span: left
+        type: datepicker
+    expires_at:
+        label: 'Дата отключения ключа'
+        mode: date
+        span: right
+        type: datepicker

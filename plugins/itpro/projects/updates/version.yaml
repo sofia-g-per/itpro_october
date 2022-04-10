@@ -108,3 +108,9 @@
 1.0.37:
     - 'Updated table itpro_projects_requests'
     - builder_table_update_itpro_projects_requests_4.php
+1.0.38:
+    - 'Updated table itpro_projects_clients'
+    - builder_table_update_itpro_projects_clients_3.php
+1.0.39:
+    - 'Created table itpro_projects_test_keys'
+    - builder_table_create_itpro_projects_test_keys.php

@@ -1,11 +1,22 @@
 fields:
-    name:
+    first_name:
         label: Имя
+        span: left
+        required: 0
+        type: text
+    patronymic:
+        label: Отчество
         span: auto
-        required: 1
+        type: text
+    last_name:
+        label: Фамилия
+        span: full
         type: text
     email:
         label: Почта
         span: auto
-        required: 1
+        type: text
+    phone:
+        label: 'Номер телефона'
+        span: auto
         type: text

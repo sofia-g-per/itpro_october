@@ -1,0 +1,12 @@
+list: $/itpro/projects/models/testkeys/columns.yaml
+modelClass: Itpro\Projects\Models\TestKeys
+title: TestKeys
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'itpro/projects/testkeys/update/:id'

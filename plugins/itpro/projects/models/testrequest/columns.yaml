@@ -7,7 +7,7 @@ columns:
         select: title
         relation: project
     description:
-        label: 'Описание целей тестирования'
+        label: 'Цели тестирования'
         type: text
     status:
         label: Статус
@@ -18,13 +18,13 @@ columns:
     client_name:
         relation: client
         valueFrom: name
-        label: Имя заказчика
+        label: 'Имя заказчика'
         type: text
         sortable: true
     client_email:
         relation: client
         valueFrom: email
-        label: Почта заказчика
+        label: 'Почта заказчика'
         type: text
         sortable: true
     created_at:
@@ -36,5 +36,5 @@ columns:
         type: text
         searchable: true
         sortable: true
-        select: concat(last_name, ' ', first_name)
+        select: 'concat(last_name, '' '', first_name)'
         relation: manager

@@ -1,0 +1,10 @@
+name: TestKeys
+form: $/itpro/projects/models/testkeys/fields.yaml
+modelClass: Itpro\Projects\Models\TestKeys
+defaultRedirect: itpro/projects/testkeys
+create:
+    redirect: 'itpro/projects/testkeys/update/:id'
+    redirectClose: itpro/projects/testkeys
+update:
+    redirect: itpro/projects/testkeys
+    redirectClose: itpro/projects/testkeys
