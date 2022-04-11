@@ -36,19 +36,33 @@ const onSuccess = async function(event, form, data, status, object) {
 
 }
 
+const selectFieldWrapper = document.querySelector('.form__field--select');
+
+
 // on submit ajax validation
+// adding errors to fields on error
 $(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
     $(fieldElement).closest('.field').addClass('form__field--error');
+    // console.log($(fieldElement).closest('.field').attr.name = "technology_id");
+    if($(fieldElement).closest('.field').attr.name == "technology_id"){
+        selectFieldWrapper.classList.add('form__field--error')
+    }
 });
 
+//removing all errors on a submit
 $(document).on('ajaxPromise', '[data-request]', function() {
     $(this).closest('form').find('.field.form__field--error').removeClass('form__field--error');
 });
 
+//on successful submit
 $(window).on('ajaxSuccess', onSuccess);
+
+
 
 // JS валидация
 const fields = document.querySelectorAll('.field');
+const technologySelectField = document.querySelector('select[name="technology_id"]');
+
 const validateEmail = (email) => {
     return String(email)
     .toLowerCase()
@@ -57,15 +71,37 @@ const validateEmail = (email) => {
     );
 }
 const jsValidation = (field) => {
+    console.log(field.value)
     if(field.value){
+        //removing errors
         if(field.classList.contains('form__field--error')){
             // дополнительная валидация для полей почты
             if(field.name === 'email'){
                 if(validateEmail(field.value)){
                     field.classList.remove('form__field--error');
                 }
-            }else{
+            //доп валидация для селекта технологий с дефолтным значением
+            }else if(field.name === 'technology_id'){
+                if(isNan(field.value)){
+                    console.log('is number')
+                    selectFieldWrapper.classList.remove('form__field--error');
+                }
+            }
+            else{
                 field.classList.remove('form__field--error');
+            }
+        //adding errors for fields that have values but contain errors
+        //доп валидация для селекта технологий с дефолтным значением
+        }else if(field.name === 'technology_id'){
+            if(!isNan(field.value)){
+                console.log('is not number')
+                selectFieldWrapper.classList.add('form__field--error');
+            }
+        }
+        // дополнительная валидация для полей почты
+        else if(field.name === 'email'){
+            if(!validateEmail(field.value)){
+                field.classList.add('form__field--error');
             }
         }
     }else {
@@ -77,15 +113,13 @@ const jsValidation = (field) => {
 
 for(const field of fields){
     field.addEventListener('keydown', jsValidation.bind(null, field));
-}
+} 
 
 // Изменение стилей поля для файла при прикреплении
 const fileInputs =  document.querySelectorAll("input[name='file']");
 const fileUpload = (fileInput) => {
     const fileWrapper = fileInput.closest(".field");
     const labelWrapper = fileWrapper.querySelector('.form__file-label-wrapper')
-    // const uploadedLabel = fileWrapper.querySelector('file-uploaded-label')
-    // const uploadLabel = fileWrapper.querySelector('file-upload-label')
     if(fileInput.value){
         if(fileWrapper.classList.contains("form__field--error")){
             fileWrapper.classList.remove("form__field--error")
@@ -110,7 +144,6 @@ for(const fileInput of fileInputs){
 }
 
 //Стилизация селекта
-
 $('select').each(function(){
     var $this = $(this), numberOfOptions = $(this).children('option').length;
   

@@ -31,7 +31,7 @@ class Order extends Model
         'manager' => 'backend\models\User'
     ];
 
-    public $attachOne = [
+    public $attachMany = [
         'order_file' => 'System\Models\File'
     ];
 

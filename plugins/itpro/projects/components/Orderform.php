@@ -48,10 +48,12 @@ class Orderform extends ComponentBase
         $validator = Validator::make($orderData, [
             'client_name'=>'required',
             'email'=>'required|email',
-            'technology_id'=>'required',
+            'technology_id'=>'required|numeric',
             'project_title'=>'required',
-            'file'=>'required|mimes:png,jpeg,docx,pdf',
+            'file'=> 'required',
+            'file.*'=>'mimes:png,jpeg,docx,pdf',
         ]);
+        // exists:itpro_projects_technologies,id
 
         if ( $validator->fails() ) {
             throw new ValidationException($validator);
