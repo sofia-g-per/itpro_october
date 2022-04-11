@@ -4949,6 +4949,24 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
 
 /***/ }),
 
+/***/ "./themes/ITPROtheme/assets/js/logoScroller.js":
+/*!*****************************************************!*\
+  !*** ./themes/ITPROtheme/assets/js/logoScroller.js ***!
+  \*****************************************************/
+/***/ (() => {
+
+window.addEventListener('load', function () {
+  new Glider(document.querySelector('.logo-glider'), {
+    slidesToShow: 'auto',
+    slidesToScroll: 'auto',
+    itemWidth: 100,
+    draggable: true,
+    rewind: true
+  });
+});
+
+/***/ }),
+
 /***/ "./themes/ITPROtheme/assets/js/mobileNav.js":
 /*!**************************************************!*\
   !*** ./themes/ITPROtheme/assets/js/mobileNav.js ***!
@@ -5901,6 +5919,7 @@ try {
 /******/ 	// This entry module used 'module' so it can't be inlined
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/Glider.js/glider.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/jquery.js");
+/******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/logoScroller.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/mobileNav.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/playVideoOnScroll.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/Popup.js");

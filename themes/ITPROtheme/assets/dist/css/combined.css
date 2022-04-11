@@ -446,22 +446,35 @@ body {
   }
   
   
-.logo-section {
+/* .logo-section {
 	display: flex;
 	padding: 6rem 0 18rem 0;
 	overflow: hidden;
 	gap: 8rem;
+} */
+
+/* .row-of-logos {
+	display: flex;
+	gap: 8rem;
+	padding: 0 8rem;
+} */
+
+/* .logo-section__item {
+	overflow: visible;
+} */
+
+.logo-section{
+	padding: 6rem 0rem 18rem 0rem;
+
 }
 
-.row-of-logos {
-	display: flex;
+.logo-section .glider-track{
 	gap: 8rem;
 }
 
-.logo-section__item {
-	overflow: visible;
-}
-
+/* .logo-section img{
+	padding: 0 8rem;
+} */
 @media (max-width: 360px){
 	.logo-section{
 		padding-bottom: 12rem;

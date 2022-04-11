@@ -8,12 +8,14 @@ fields:
         label: Иконка
         mode: image
         imageHeight: '100'
-        fileTypes: svg
+        fileTypes: 'svg, png'
         useCaption: true
         thumbOptions:
             mode: crop
             extension: auto
+        maxFilesize: '1'
+        maxFiles: '1'
         span: full
         required: 1
         type: fileupload
-        comment: 'Формат: svg'
+        comment: 'Формат: svg, png. Максимальный размер: 1Mb'

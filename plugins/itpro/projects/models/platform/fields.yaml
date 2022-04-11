@@ -8,7 +8,7 @@ fields:
         label: 'Иконка платформы'
         mode: image
         imageWidth: '200'
-        fileTypes: svg
+        fileTypes: 'svg, png'
         useCaption: true
         thumbOptions:
             mode: crop
@@ -18,4 +18,4 @@ fields:
         span: auto
         required: 1
         type: fileupload
-        comment: 'Формат: svg, максимальный размер: 1Mb'
+        comment: 'Формат: svg, png. Максимальный размер: 1Mb'

@@ -8,7 +8,7 @@ fields:
         label: 'Иконка проекта'
         mode: image
         imageWidth: '100'
-        fileTypes: svg
+        fileTypes: 'svg, png'
         useCaption: true
         thumbOptions:
             mode: crop
@@ -18,7 +18,7 @@ fields:
         span: right
         required: 1
         type: fileupload
-        comment: 'Формат: svg, Максимальный размер файла: 1Mb'
+        comment: 'Формат: svg, png. Максимальный размер файла: 1Mb'
     technology:
         label: Технология
         nameFrom: title

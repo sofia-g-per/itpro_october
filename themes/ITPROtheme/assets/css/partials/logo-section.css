@@ -1,17 +1,10 @@
-.logo-section {
-	display: flex;
-	padding: 6rem 0 18rem 0;
-	overflow: hidden;
-	gap: 8rem;
+.logo-section{
+	padding: 6rem 0rem 18rem 0rem;
+
 }
 
-.row-of-logos {
-	display: flex;
+.logo-section .glider-track{
 	gap: 8rem;
-}
-
-.logo-section__item {
-	overflow: visible;
 }
 
 @media (max-width: 360px){
