@@ -762,32 +762,62 @@ var onSuccess = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }(); // on submit ajax validation
+// adding errors to fields on error
 
 
 $(window).on('ajaxInvalidField', function (event, fieldElement, fieldName, errorMsg, isFirst) {
-  $(fieldElement).closest('.field').addClass('form__field--error');
-});
+  $(fieldElement).closest('.field').addClass('form__field--error'); // console.log($(fieldElement).closest('.field').attr.name = "technology_id");
+  // if($(fieldElement).closest('.field').attr.name == "technology_id"){
+  //     selectFieldWrapper.classList.add('form__field--error')
+  // }
+}); //removing all errors on a submit
+
 $(document).on('ajaxPromise', '[data-request]', function () {
   $(this).closest('form').find('.field.form__field--error').removeClass('form__field--error');
-});
+}); //on successful submit
+
 $(window).on('ajaxSuccess', onSuccess); // JS валидация
 
 var fields = document.querySelectorAll('.field');
+var technologySelectField = document.querySelector('select[name="technology_id"]');
+var selectFieldWrapper = technologySelectField.closest('.form__field--select');
+var styledSelect = technologySelectField.querySelector('.styled-select');
 
 var validateEmail = function validateEmail(email) {
   return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 };
 
 var jsValidation = function jsValidation(field) {
+  console.log(field.value);
+
   if (field.value) {
+    //removing errors
     if (field.classList.contains('form__field--error')) {
       // дополнительная валидация для полей почты
       if (field.name === 'email') {
         if (validateEmail(field.value)) {
           field.classList.remove('form__field--error');
+        } //доп валидация для селекта технологий с дефолтным значением
+
+      } else if (field.name === 'technology_id') {
+        if (isNan(field.value)) {
+          console.log('is number');
+          selectFieldWrapper.classList.remove('form__field--error');
         }
       } else {
         field.classList.remove('form__field--error');
+      } //adding errors for fields that have values but contain errors
+      //доп валидация для селекта технологий с дефолтным значением
+
+    } else if (field.name === 'technology_id') {
+      if (!isNan(field.value)) {
+        console.log('is not number');
+        selectFieldWrapper.classList.add('form__field--error');
+      }
+    } // дополнительная валидация для полей почты
+    else if (field.name === 'email') {
+      if (!validateEmail(field.value)) {
+        field.classList.add('form__field--error');
       }
     }
   } else {
@@ -802,8 +832,9 @@ var _iterator = _createForOfIteratorHelper(fields),
 
 try {
   for (_iterator.s(); !(_step = _iterator.n()).done;) {
-    var field = _step.value;
-    field.addEventListener('keydown', jsValidation.bind(null, field));
+    var _field = _step.value;
+
+    _field.addEventListener('keydown', jsValidation.bind(null, _field));
   } // Изменение стилей поля для файла при прикреплении
 
 } catch (err) {
@@ -816,8 +847,7 @@ var fileInputs = document.querySelectorAll("input[name='file']");
 
 var fileUpload = function fileUpload(fileInput) {
   var fileWrapper = fileInput.closest(".field");
-  var labelWrapper = fileWrapper.querySelector('.form__file-label-wrapper'); // const uploadedLabel = fileWrapper.querySelector('file-uploaded-label')
-  // const uploadLabel = fileWrapper.querySelector('file-upload-label')
+  var labelWrapper = fileWrapper.querySelector('.form__file-label-wrapper');
 
   if (fileInput.value) {
     if (fileWrapper.classList.contains("form__field--error")) {
@@ -845,13 +875,40 @@ try {
   for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
     var fileInput = _step2.value;
     fileInput.addEventListener('change', fileUpload.bind(null, fileInput));
-  } //Стилизация селекта
+  } // наложения стилей ошибки на селект 
 
 } catch (err) {
   _iterator2.e(err);
 } finally {
   _iterator2.f();
 }
+
+console.log(technologySelectField, 'select field found');
+console.log(selectFieldWrapper, 'select wrapper');
+console.log(styledSelect, 'select styled');
+
+if (styledSelect) {
+  styledSelect.addEventListener('focus', function (e) {
+    console.log('select changed');
+
+    if (selectFieldWrapper.classList.contains('form__field--error')) {
+      console.log('select error');
+
+      if (isNan(field.value)) {
+        console.log('is number');
+        selectFieldWrapper.classList.remove('form__field--error');
+      }
+    } else {
+      console.log('select no error');
+
+      if (!isNan(field.value)) {
+        console.log('is number');
+        selectFieldWrapper.classList.add('form__field--error');
+      }
+    }
+  });
+} //Стилизация селекта
+
 
 $('select').each(function () {
   var $this = $(this),
@@ -885,7 +942,18 @@ $('select').each(function () {
   $listItems.click(function (e) {
     e.stopPropagation();
     $styledSelect.text($(this).text()).removeClass('active');
-    $this.val($(this).attr('rel'));
+    $this.val($(this).attr('rel')); //валидация селекта
+
+    if ($styledSelect.hasClass('form-field--error')) {
+      if (isNan($this.value)) {
+        $styledSelect.removeClass('form-field--error');
+      }
+    } else {
+      if (!isNan($this.value)) {
+        $styledSelect.addClass('form-field--error');
+      }
+    }
+
     $list.hide();
   });
   $(document).click(function () {

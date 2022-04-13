@@ -36,17 +36,15 @@ const onSuccess = async function(event, form, data, status, object) {
 
 }
 
-const selectFieldWrapper = document.querySelector('.form__field--select');
-
 
 // on submit ajax validation
 // adding errors to fields on error
 $(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
     $(fieldElement).closest('.field').addClass('form__field--error');
     // console.log($(fieldElement).closest('.field').attr.name = "technology_id");
-    if($(fieldElement).closest('.field').attr.name == "technology_id"){
-        selectFieldWrapper.classList.add('form__field--error')
-    }
+    // if($(fieldElement).closest('.field').attr.name == "technology_id"){
+    //     selectFieldWrapper.classList.add('form__field--error')
+    // }
 });
 
 //removing all errors on a submit
@@ -58,10 +56,11 @@ $(document).on('ajaxPromise', '[data-request]', function() {
 $(window).on('ajaxSuccess', onSuccess);
 
 
-
 // JS валидация
 const fields = document.querySelectorAll('.field');
 const technologySelectField = document.querySelector('select[name="technology_id"]');
+let selectFieldWrapper = technologySelectField.closest('.form__field--select');
+const styledSelect = technologySelectField.querySelector('.styled-select');
 
 const validateEmail = (email) => {
     return String(email)
@@ -143,13 +142,13 @@ for(const fileInput of fileInputs){
     fileInput.addEventListener('change', fileUpload.bind(null, fileInput));
 }
 
-//Стилизация селекта
+//Стилизация + валидация селекта
 $('select').each(function(){
     var $this = $(this), numberOfOptions = $(this).children('option').length;
   
     $this.addClass('select-hidden'); 
     $this.wrap('<div class="select"></div>');
-    $this.after('<div class="select-styled"></div>');
+    $this.after('<div class="select-styled "></div>');
 
     var $styledSelect = $this.next('div.select-styled');
     $styledSelect.text($this.children('option').eq(0).text());
@@ -181,6 +180,18 @@ $('select').each(function(){
         e.stopPropagation();
         $styledSelect.text($(this).text()).removeClass('active');
         $this.val($(this).attr('rel'));
+
+        //валидация селекта
+        if(selectFieldWrapper && selectFieldWrapper.classList.contains('form__field--error')){
+            if($.isNumeric($(this).attr('rel')) ){
+                selectFieldWrapper.classList.remove('form__field--error');
+            }
+        }else{
+            if(!$.isNumeric($(this).attr('rel')) ){
+                selectFieldWrapper.classList.add('form__field--error');
+            }
+        }
+
         $list.hide();
     });
   
