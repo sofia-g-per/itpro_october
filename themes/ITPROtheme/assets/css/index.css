@@ -129,6 +129,14 @@ body {
   height: 1rem;
 }
 
+.arrow-link:hover{
+  opacity: .7;
+}
+
+.arrow-link:active{
+  opacity: .5;
+}
+
 .arrow-link--blue{
   color: var(--color-accent-blue);
 }
@@ -143,22 +151,6 @@ body {
 
 .arrow-link--purple:after{
   background: url("../../img/background/Vector 85.svg");
-}
-
-.arrow-link--purple:hover{
-  color: var(--color-purple--dark);
-}
-
-.arrow-link--blue:hover{
-  color: var(--color--blue-dark);
-}
-
-.arrow-link--purple:active{
-  color: var(--color-purple--darker);
-}
-
-.arrow-link--blue:active{
-  color: var(--color--blue-darker);
 }
 
 .white-text {
@@ -219,6 +211,19 @@ body {
 	gap: 5rem;
   align-items: center;
 }
+
+.social-logo{
+  transition: all .4s;
+}
+
+.social-logo:hover{
+  transform: scale(.9);
+}
+
+.social-logo:active{
+  transform: scale(.8);
+}
+
 
 
 .basic-button{

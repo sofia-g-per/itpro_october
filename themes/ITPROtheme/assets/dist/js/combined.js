@@ -832,9 +832,8 @@ var _iterator = _createForOfIteratorHelper(fields),
 
 try {
   for (_iterator.s(); !(_step = _iterator.n()).done;) {
-    var _field = _step.value;
-
-    _field.addEventListener('keydown', jsValidation.bind(null, _field));
+    var field = _step.value;
+    field.addEventListener('keydown', jsValidation.bind(null, field));
   } // Изменение стилей поля для файла при прикреплении
 
 } catch (err) {
@@ -875,7 +874,7 @@ try {
   for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
     var fileInput = _step2.value;
     fileInput.addEventListener('change', fileUpload.bind(null, fileInput));
-  } // наложения стилей ошибки на селект 
+  } //Стилизация + валидация селекта
 
 } catch (err) {
   _iterator2.e(err);
@@ -883,39 +882,12 @@ try {
   _iterator2.f();
 }
 
-console.log(technologySelectField, 'select field found');
-console.log(selectFieldWrapper, 'select wrapper');
-console.log(styledSelect, 'select styled');
-
-if (styledSelect) {
-  styledSelect.addEventListener('focus', function (e) {
-    console.log('select changed');
-
-    if (selectFieldWrapper.classList.contains('form__field--error')) {
-      console.log('select error');
-
-      if (isNan(field.value)) {
-        console.log('is number');
-        selectFieldWrapper.classList.remove('form__field--error');
-      }
-    } else {
-      console.log('select no error');
-
-      if (!isNan(field.value)) {
-        console.log('is number');
-        selectFieldWrapper.classList.add('form__field--error');
-      }
-    }
-  });
-} //Стилизация селекта
-
-
 $('select').each(function () {
   var $this = $(this),
       numberOfOptions = $(this).children('option').length;
   $this.addClass('select-hidden');
   $this.wrap('<div class="select"></div>');
-  $this.after('<div class="select-styled"></div>');
+  $this.after('<div class="select-styled "></div>');
   var $styledSelect = $this.next('div.select-styled');
   $styledSelect.text($this.children('option').eq(0).text());
   var $list = $('<ul />', {
@@ -944,13 +916,13 @@ $('select').each(function () {
     $styledSelect.text($(this).text()).removeClass('active');
     $this.val($(this).attr('rel')); //валидация селекта
 
-    if ($styledSelect.hasClass('form-field--error')) {
-      if (isNan($this.value)) {
-        $styledSelect.removeClass('form-field--error');
+    if (selectFieldWrapper && selectFieldWrapper.classList.contains('form__field--error')) {
+      if ($.isNumeric($(this).attr('rel'))) {
+        selectFieldWrapper.classList.remove('form__field--error');
       }
     } else {
-      if (!isNan($this.value)) {
-        $styledSelect.addClass('form-field--error');
+      if (!$.isNumeric($(this).attr('rel'))) {
+        selectFieldWrapper.classList.add('form__field--error');
       }
     }
 
