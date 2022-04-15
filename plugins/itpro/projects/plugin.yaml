@@ -78,6 +78,11 @@ navigation:
         icon: icon-key
         permissions:
             - manage_keys
+        sideMenu:
+            test-keys-statuses:
+                label: Статусы
+                url: /
+                icon: icon-asterisk
 permissions:
     manage_requests:
         tab: Project

@@ -1,0 +1,4 @@
+title: TestKeysStatuses
+modelClass: Itpro\Projects\Models\TestKeysStatuses
+toolbar:
+    buttons: reorder_toolbar

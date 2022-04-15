@@ -1,0 +1,15 @@
+fields:
+    key:
+        label: Ключ
+        span: auto
+        type: text
+    given_at:
+        label: 'Дата выдачи ключа'
+        mode: date
+        span: left
+        type: datepicker
+    expires_at:
+        label: 'Дата отключения ключа'
+        mode: date
+        span: right
+        type: datepicker

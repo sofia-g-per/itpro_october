@@ -1,0 +1,6 @@
+columns:
+    title:
+        label: 'Название стаутса'
+        type: text
+        searchable: true
+        sortable: true
