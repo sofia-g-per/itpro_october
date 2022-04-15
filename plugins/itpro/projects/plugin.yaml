@@ -66,12 +66,6 @@ navigation:
                 icon: icon-asterisk
                 permissions:
                     - manage_requests
-    clients:
-        label: Клиенты
-        url: itpro/projects/clients
-        icon: icon-group
-        permissions:
-            - manage_clients
     test-keys:
         label: Ключи
         url: itpro/projects/testkeys
@@ -83,6 +77,12 @@ navigation:
                 label: Статусы
                 url: /
                 icon: icon-asterisk
+    clients:
+        label: Клиенты
+        url: itpro/projects/client
+        icon: icon-group
+        permissions:
+            - manage_clients
 permissions:
     manage_requests:
         tab: Project
