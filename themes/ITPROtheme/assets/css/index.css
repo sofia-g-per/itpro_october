@@ -6,7 +6,7 @@ html{
   --text-font-size: 1.8rem; /*вот это текст*/
   --section-title-font-size: 4rem;
   --text-title-font-size: 2.8rem;
-  --page-title-font-size: calc(6.5rem + 3 * (100vw / 1920)); /*вот это заголовок*/
+  --page-title-font-size: calc(4.5rem + 3 * (100vw / 1920)); /*вот это заголовок*/
 
   --color-black: rgb(0, 0, 0);
   --color-white: #fff;
@@ -267,7 +267,7 @@ body {
 }
 
 .nav-bar-column {
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .nav-bar-link {

@@ -35,7 +35,7 @@
 }
 
 .stages-of-dev__scroller .glider-track{
-    background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / 100vw auto repeat-x;
+    background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / 100vw auto no-repeat;
     background-attachment: scroll;
 }
 
