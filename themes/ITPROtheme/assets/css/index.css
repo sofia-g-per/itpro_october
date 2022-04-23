@@ -251,11 +251,11 @@ body {
 }
 
 .basic-button--blue:hover{
-  background-color: var(--color-blue-dark);
+  background-color: var(--color--blue-dark);
 }
 
 .basic-button--blue:active{
-  background-color: var(--color-blue-darker);
+  background-color: var(--color--blue-darker);
 }
 
 .nav-bar-column,
