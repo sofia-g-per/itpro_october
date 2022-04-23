@@ -276,7 +276,7 @@ body {
 	text-decoration: none;
 	color: var(--color-grey);
   font-size: calc(1.4rem + 3 * (100vw / 1920));
-
+  
   width: fit-content;
 
 	background-image: linear-gradient(currentColor, currentColor);
@@ -290,6 +290,7 @@ body {
 .nav-bar-link--active {
 	color: var(--color-white);
 	background-size: 100% 0.1rem;
+  cursor: pointer;
 }
 
 
