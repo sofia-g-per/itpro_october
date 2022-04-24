@@ -9,6 +9,7 @@
 
 .portfolio__video{
     width: 100%;
+    margin-bottom: -5px;
 }
 
 .portfolio__video video{
