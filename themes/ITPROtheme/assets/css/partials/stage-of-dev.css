@@ -1,12 +1,12 @@
 .stages-of-dev{
-	padding: 6rem 0 18rem 0;
+    padding: 6rem 0 18rem 0;
 
-	background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
 
-	backdrop-filter: blur(140px);
-	background: -webkit-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
-	background: -moz-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
-	background: linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+    backdrop-filter: blur(140px);
+    background: -webkit-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+    background: -moz-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+    background: linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
 }
 
 .stages-of-dev__heading{
@@ -15,11 +15,16 @@
 
 .stage-of-dev{
     padding: .6rem calc(1rem + 130 * (100vw / 1920)) 0 calc(1rem + 130 * (100vw / 1920));
-    min-width: 33vw;
+    min-width: 634px;
+    max-width: 634px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start !important;
     position: relative;
+}
+
+.stage-of-dev .basic-text {
+    max-width: 354px;
 }
 
 .stage-of-dev__circle{
@@ -35,73 +40,31 @@
 }
 
 .stages-of-dev__scroller .glider-track{
-    background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / 100vw auto no-repeat;
+    background: url('../../img/stages-of-dev-wave2.svg') -50px 0 / 1930px auto repeat-x;
     background-attachment: scroll;
 }
-
-.stages-of-dev__scroller .stage-of-dev:nth-child(3n-1){
-    margin-top: 5.3vw;
+.stage-of-dev-1 {
+    margin-top: 105px;
+}
+.stage-of-dev-2 {
+    margin-top: 50px;
 }
 
-.stages-of-dev__scroller .stage-of-dev:nth-child(3n){
-    margin-top: 2.3vw;
+@media screen and (max-width: 1400px) {
+    .stage-of-dev-2 {
+        padding-top: 20px;
+    }
 }
-
-
-@media (max-width: 1000px){
-    .stages-of-dev__scroller .glider-track{
-        background-size: 200vw;
+@media screen and (max-width: 568px) {
+    .stage-of-dev-0,
+    .stage-of-dev-1 {
+        padding-top: 0;
     }
-
-    .stage-of-dev__circle{
-        margin-bottom: 4rem;
-    }
-
-    .stage-of-dev{
-        padding-top: 0rem;
-    }
-
-    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
-        margin-top: 8vw;
+    .stage-of-dev-2 {
+        padding-top: 30px;
     }
     
-    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
-        margin-top: 11vw;
-    }
 }
-
-@media (max-width: 769px){
-    .stages-of-dev__scroller .glider-track{
-        background-size: 300vw;
-    }
-
-    .stage-of-dev__circle{
-        margin-bottom: 4rem;
-    }
-
-    .stage-of-dev{
-        padding-top: 0rem;
-    }
-
-    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
-        margin-top: 19vw;
-    }
-    
-    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
-        margin-top: 12vw;
-    }
-}
-
-@media (max-width: 500px){
-    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
-        margin-top: 15vw;
-    }
-    
-    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
-        margin-top: 10vw;
-    }
-}
-
 
 
 

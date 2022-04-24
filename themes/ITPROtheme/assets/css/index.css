@@ -267,7 +267,13 @@ body {
 }
 
 .nav-bar-column {
-  align-items: flex-start;
+  align-items: flex-end;
+}
+
+@media (max-width: 480px) {
+  .nav-bar-column{
+    align-items: flex-start;
+  }
 }
 
 .nav-bar-link {
