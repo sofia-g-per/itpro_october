@@ -27,6 +27,7 @@
 
 .contacts-popup__mail__link{
     text-decoration: none;
+    font-family: var(--font-family-heading);
 }
 
 .contacts-popup__mail__text{

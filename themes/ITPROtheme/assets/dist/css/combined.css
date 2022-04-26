@@ -120,6 +120,7 @@ body {
   gap: 2rem;
   cursor: pointer;
   transition: all .4s;
+  
 }
 
 .arrow-link:after{
@@ -139,10 +140,12 @@ body {
 
 .arrow-link--blue{
   color: var(--color-accent-blue);
+  font-family: var(--font-family-main);
 }
 
 .arrow-link--purple{
   color: var(--color-accent-purple);
+  font-family: var(--font-family-heading);
 }
 
 .arrow-link--blue:after{
@@ -276,7 +279,8 @@ body {
 	text-decoration: none;
 	color: var(--color-grey);
   font-size: calc(1.4rem + 3 * (100vw / 1920));
-  
+  font-family: var(--font-family-heading);
+
   width: fit-content;
 
 	background-image: linear-gradient(currentColor, currentColor);
@@ -713,7 +717,9 @@ body {
 	border-bottom: 1px solid var(--color-white);
 	margin-bottom: 6rem;
 }
-
+.the-footer a {
+	font-family: var(--font-family-main);
+}
 .footer-text{
 	grid-column: 1;
 	max-width: 60vw;
@@ -807,6 +813,7 @@ body {
 
 .contacts-popup__mail__link{
     text-decoration: none;
+    font-family: var(--font-family-heading);
 }
 
 .contacts-popup__mail__text{
@@ -1449,9 +1456,13 @@ display: none;
     padding: .7rem 2rem;
     display: flex;
     gap: 1rem;
+    align-items:center;
     
     cursor: pointer;
-    transition: all .4s;
+    transition: all .4s;  
+}
+.tab-button span {
+    font-family: var(--font-family-heading);
 }
 
 .tab-button:hover{

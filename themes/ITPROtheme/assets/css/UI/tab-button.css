@@ -7,9 +7,13 @@
     padding: .7rem 2rem;
     display: flex;
     gap: 1rem;
+    align-items:center;
     
     cursor: pointer;
-    transition: all .4s;
+    transition: all .4s;  
+}
+.tab-button span {
+    font-family: var(--font-family-heading);
 }
 
 .tab-button:hover{
