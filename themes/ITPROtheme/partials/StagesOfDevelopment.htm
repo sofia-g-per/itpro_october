@@ -25,8 +25,8 @@
 		Этапы разработки
 	</h2>
 	<div class="stages-of-dev__scroller glider">
-		{% for stage in stages %}
-				<div class="stage-of-dev">
+		{% for index, stage in stages %}
+				<div class="stage-of-dev stage-of-dev-{{index}}">
 					<div class="stage-of-dev__circle"></div>
 					<h2 class="tertiary-heading">
 						{{stage.title}}
