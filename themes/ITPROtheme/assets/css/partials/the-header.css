@@ -11,7 +11,6 @@
 .nav-bar-row {
 	display: flex;
 	align-items: center;
-	min-width: 27vw;
 	gap: 6rem;
 }
 

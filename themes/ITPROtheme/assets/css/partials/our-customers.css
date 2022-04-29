@@ -20,6 +20,13 @@
 	;
 }
 
+
+@media screen and (min-width:2560px) and (min-height:1506px) {
+	.our-customers {
+		grid-template-columns: 4fr 1fr;
+	}
+}
+
 .our-customers__img{
 	max-width: 100%;
 	object-fit: cover;

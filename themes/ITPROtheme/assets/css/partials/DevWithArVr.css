@@ -10,6 +10,23 @@
       url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
    ;
 }
+@media screen and (min-width:2560px) and (min-height:1506px) {
+   .dev-with-ar-vr {
+      padding: 9vh 27vw 9vh 7vw;
+      min-height: 52vh;
+      background: 
+         url("../../img/background/Video.jpg") 100% 17vh/53vw auto no-repeat,
+         url("../../img/background/devVrAr_bgLight.png") 0% 0% no-repeat;
+
+   }
+}
+
+@media screen and (min-width:2560px) and (min-height:1506px) {
+   .nav-bar-row {
+      justify-content: space-between;
+      max-width: 27vw;
+   }
+}
 
 .dev-with__text-container{
    display: flex;
