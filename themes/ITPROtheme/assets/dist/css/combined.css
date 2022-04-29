@@ -6,7 +6,7 @@ html{
   --text-font-size: 1.8rem; /*вот это текст*/
   --section-title-font-size: 4rem;
   --text-title-font-size: 2.8rem;
-  --page-title-font-size: calc(6.5rem + 3 * (100vw / 1920)); /*вот это заголовок*/
+  --page-title-font-size: calc(4.5rem + 3 * (100vw / 1920)); /*вот это заголовок*/
 
   --color-black: rgb(0, 0, 0);
   --color-white: #fff;
@@ -120,6 +120,7 @@ body {
   gap: 2rem;
   cursor: pointer;
   transition: all .4s;
+  
 }
 
 .arrow-link:after{
@@ -139,10 +140,12 @@ body {
 
 .arrow-link--blue{
   color: var(--color-accent-blue);
+  font-family: var(--font-family-main);
 }
 
 .arrow-link--purple{
   color: var(--color-accent-purple);
+  font-family: var(--font-family-heading);
 }
 
 .arrow-link--blue:after{
@@ -251,11 +254,11 @@ body {
 }
 
 .basic-button--blue:hover{
-  background-color: var(--color-blue-dark);
+  background-color: var(--color--blue-dark);
 }
 
 .basic-button--blue:active{
-  background-color: var(--color-blue-darker);
+  background-color: var(--color--blue-darker);
 }
 
 .nav-bar-column,
@@ -270,12 +273,19 @@ body {
   align-items: flex-end;
 }
 
+@media (max-width: 480px) {
+  .nav-bar-column{
+    align-items: flex-start;
+  }
+}
+
 .nav-bar-link {
 	padding: 0.5rem 0;
 	justify-content: space-between;
 	text-decoration: none;
 	color: var(--color-grey);
   font-size: calc(1.4rem + 3 * (100vw / 1920));
+  font-family: var(--font-family-heading);
 
   width: fit-content;
 
@@ -290,6 +300,7 @@ body {
 .nav-bar-link--active {
 	color: var(--color-white);
 	background-size: 100% 0.1rem;
+  cursor: pointer;
 }
 
 
@@ -329,7 +340,7 @@ body {
    min-height: 100vh;
 
    background: 
-      url("../../img/background/Video.png") 100% 34vh / 83vw auto no-repeat,
+      url("../../img/background/Video.jpg") 100% 34vh / 83vw auto no-repeat,
       url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
    ;
 }
@@ -592,14 +603,14 @@ body {
 	overflow: visible;
 }
 .stages-of-dev{
-	padding: 6rem 0 18rem 0;
+    padding: 6rem 0 18rem 0;
 
-	background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
 
-	backdrop-filter: blur(140px);
-	background: -webkit-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
-	background: -moz-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
-	background: linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+    backdrop-filter: blur(140px);
+    background: -webkit-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+    background: -moz-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+    background: linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
 }
 
 .stages-of-dev__heading{
@@ -608,11 +619,16 @@ body {
 
 .stage-of-dev{
     padding: .6rem calc(1rem + 130 * (100vw / 1920)) 0 calc(1rem + 130 * (100vw / 1920));
-    min-width: 33vw;
+    min-width: 634px;
+    max-width: 634px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start !important;
     position: relative;
+}
+
+.stage-of-dev .basic-text {
+    max-width: 354px;
 }
 
 .stage-of-dev__circle{
@@ -628,73 +644,31 @@ body {
 }
 
 .stages-of-dev__scroller .glider-track{
-    background: url('../../img/stages-of-dev-wave2.svg') -3rem 0 / 100vw auto repeat-x;
+    background: url('../../img/stages-of-dev-wave2.svg') -50px 0 / 1930px auto repeat-x;
     background-attachment: scroll;
 }
-
-.stages-of-dev__scroller .stage-of-dev:nth-child(3n-1){
-    margin-top: 5.3vw;
+.stage-of-dev-1 {
+    margin-top: 105px;
+}
+.stage-of-dev-2 {
+    margin-top: 50px;
 }
 
-.stages-of-dev__scroller .stage-of-dev:nth-child(3n){
-    margin-top: 2.3vw;
+@media screen and (max-width: 1400px) {
+    .stage-of-dev-2 {
+        padding-top: 20px;
+    }
 }
-
-
-@media (max-width: 1000px){
-    .stages-of-dev__scroller .glider-track{
-        background-size: 200vw;
+@media screen and (max-width: 568px) {
+    .stage-of-dev-0,
+    .stage-of-dev-1 {
+        padding-top: 0;
     }
-
-    .stage-of-dev__circle{
-        margin-bottom: 4rem;
-    }
-
-    .stage-of-dev{
-        padding-top: 0rem;
-    }
-
-    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
-        margin-top: 8vw;
+    .stage-of-dev-2 {
+        padding-top: 30px;
     }
     
-    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
-        margin-top: 11vw;
-    }
 }
-
-@media (max-width: 769px){
-    .stages-of-dev__scroller .glider-track{
-        background-size: 300vw;
-    }
-
-    .stage-of-dev__circle{
-        margin-bottom: 4rem;
-    }
-
-    .stage-of-dev{
-        padding-top: 0rem;
-    }
-
-    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
-        margin-top: 19vw;
-    }
-    
-    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
-        margin-top: 12vw;
-    }
-}
-
-@media (max-width: 500px){
-    .stages-of-dev__scroller .stage-of-dev:nth-child(2n){
-        margin-top: 15vw;
-    }
-    
-    .stages-of-dev__scroller .stage-of-dev:nth-child(3n){
-        margin-top: 10vw;
-    }
-}
-
 
 
 
@@ -712,7 +686,9 @@ body {
 	border-bottom: 1px solid var(--color-white);
 	margin-bottom: 6rem;
 }
-
+.the-footer a {
+	font-family: var(--font-family-main);
+}
 .footer-text{
 	grid-column: 1;
 	max-width: 60vw;
@@ -806,6 +782,7 @@ body {
 
 .contacts-popup__mail__link{
     text-decoration: none;
+    font-family: var(--font-family-heading);
 }
 
 .contacts-popup__mail__text{
@@ -1005,6 +982,7 @@ body {
 
 .portfolio__video{
     width: 100%;
+    margin-bottom: -5px;
 }
 
 .portfolio__video video{
@@ -1231,6 +1209,12 @@ body {
     padding-left: 2.4rem;
 }
 
+@media (max-width: 329px) {
+    .form__file-label-wrapper label{
+        padding-left: 1.0rem;
+    }
+}
+
 .form__file-label-wrapper #file-uploaded-label{
     display: none;
 }
@@ -1447,9 +1431,13 @@ display: none;
     padding: .7rem 2rem;
     display: flex;
     gap: 1rem;
+    align-items:center;
     
     cursor: pointer;
-    transition: all .4s;
+    transition: all .4s;  
+}
+.tab-button span {
+    font-family: var(--font-family-heading);
 }
 
 .tab-button:hover{

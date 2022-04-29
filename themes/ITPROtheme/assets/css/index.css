@@ -6,7 +6,7 @@ html{
   --text-font-size: 1.8rem; /*вот это текст*/
   --section-title-font-size: 4rem;
   --text-title-font-size: 2.8rem;
-  --page-title-font-size: calc(6.5rem + 3 * (100vw / 1920)); /*вот это заголовок*/
+  --page-title-font-size: calc(4.5rem + 3 * (100vw / 1920)); /*вот это заголовок*/
 
   --color-black: rgb(0, 0, 0);
   --color-white: #fff;
@@ -120,6 +120,7 @@ body {
   gap: 2rem;
   cursor: pointer;
   transition: all .4s;
+  
 }
 
 .arrow-link:after{
@@ -139,10 +140,12 @@ body {
 
 .arrow-link--blue{
   color: var(--color-accent-blue);
+  font-family: var(--font-family-main);
 }
 
 .arrow-link--purple{
   color: var(--color-accent-purple);
+  font-family: var(--font-family-heading);
 }
 
 .arrow-link--blue:after{
@@ -251,11 +254,11 @@ body {
 }
 
 .basic-button--blue:hover{
-  background-color: var(--color-blue-dark);
+  background-color: var(--color--blue-dark);
 }
 
 .basic-button--blue:active{
-  background-color: var(--color-blue-darker);
+  background-color: var(--color--blue-darker);
 }
 
 .nav-bar-column,
@@ -270,12 +273,19 @@ body {
   align-items: flex-end;
 }
 
+@media (max-width: 480px) {
+  .nav-bar-column{
+    align-items: flex-start;
+  }
+}
+
 .nav-bar-link {
 	padding: 0.5rem 0;
 	justify-content: space-between;
 	text-decoration: none;
 	color: var(--color-grey);
   font-size: calc(1.4rem + 3 * (100vw / 1920));
+  font-family: var(--font-family-heading);
 
   width: fit-content;
 
@@ -290,6 +300,7 @@ body {
 .nav-bar-link--active {
 	color: var(--color-white);
 	background-size: 100% 0.1rem;
+  cursor: pointer;
 }
 
 
