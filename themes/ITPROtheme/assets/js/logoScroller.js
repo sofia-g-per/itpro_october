@@ -4,7 +4,6 @@ window.addEventListener('load', function(){
         slidesToScroll: 'auto',
         itemWidth: 100,
         draggable: true,
-        rewind: true,
-        
+        rewind: true, 
     })
   })

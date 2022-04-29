@@ -275,6 +275,7 @@ body {
 	justify-content: space-between;
 	text-decoration: none;
 	color: var(--color-grey);
+  font-size: calc(1.4rem + 3 * (100vw / 1920));
 
   width: fit-content;
 
@@ -336,7 +337,7 @@ body {
 .dev-with__text-container{
    display: flex;
    flex-direction: column;
-   gap: 2rem;
+   gap: 4rem;
 }
 
 @media (max-width: 1400px){
