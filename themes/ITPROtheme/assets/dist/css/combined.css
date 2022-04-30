@@ -1353,13 +1353,13 @@ z-index: 9;
 margin: 0;
 padding: 0;
 list-style: none;
-background: radial-gradient(at bottom right, rgb(72, 50, 85), rgb(58, 44, 67), rgb(40, 40, 40) );
-background: -webkit-radial-gradient(bottom right, rgb(72, 50, 85), rgb(58, 44, 67), rgb(40, 40, 40));
+background: radial-gradient(at bottom right, rgb(84, 0, 132), rgb(35, 12, 51), rgb(20, 20, 20) );
+background: -webkit-radial-gradient(bottom right, rgb(84, 0, 132), rgb(35, 12, 51), rgb(20, 20, 20) );
 }
 
 .project-page__cta .select-options {
-background: radial-gradient(at bottom right, rgb(73, 108, 127), rgb(45, 57, 64), rgb(40, 40, 40) );
-background: -webkit-radial-gradient(bottom right, rgb(73, 108, 127), rgb(45, 57, 64), rgb(40, 40, 40));
+background: radial-gradient(at bottom right, rgb(4, 105, 132), rgb(6, 46, 52), rgb(20, 20, 20)  );
+background: -webkit-radial-gradient(bottom right, rgb(4, 105, 132), rgb(6, 46, 52), rgb(20, 20, 20));
 }
 
 .select-options li {
