@@ -751,6 +751,12 @@ var onSuccess = /*#__PURE__*/function () {
             submittedPopup.removeClass('submitted-popup--active');
 
           case 25:
+            console.log(formEl);
+            formEl.querySelectorAll('input').forEach(function (input) {
+              return input.value = '';
+            });
+
+          case 27:
           case "end":
             return _context.stop();
         }
@@ -5002,7 +5008,7 @@ window.addEventListener('load', function () {
     slidesToScroll: 'auto',
     itemWidth: 100,
     draggable: true
-  });
+  }).scrollItem(32);
 });
 
 /***/ }),
@@ -5089,7 +5095,8 @@ window.addEventListener('load', function () {
 /***/ (() => {
 
 window.addEventListener('load', function () {
-  new Glider(document.querySelector('.glider'), {
+  new Glider(document.querySelector('.stages-of-dev-glider'), {
+    rewind: true,
     slidesToShow: 'auto',
     draggable: true,
     itemWidth: 634,
