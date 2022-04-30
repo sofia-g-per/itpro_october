@@ -74,7 +74,7 @@ body {
   font-family: var(--font-family-heading);
   text-transform: uppercase;
   letter-spacing: .5rem;
-  white-space: nowrap; /*новое 21:20*/
+  /* white-space: nowrap; новое 21:20 */
 }
 
 .secondary-heading{
@@ -88,6 +88,7 @@ body {
   font-size: var(--text-title-font-size);
   font-weight: 500;
   line-height: 3.3rem;
+  word-wrap: break-word;
 }
 
 .popup-heading{
@@ -330,5 +331,11 @@ body {
 @media (max-width: 360px){
   :root{
     ---section-title-font-size: 2.8rem
+  }
+}
+
+@media(max-width: 270px){
+  :root{
+    --page-title-font-size: calc(3rem + 3 * (100vw / 1920));
   }
 }

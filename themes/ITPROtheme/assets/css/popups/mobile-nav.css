@@ -1,11 +1,19 @@
 .mobile-nav{
     height: 0;
     z-index: 0;
+    display: none;
+
+}
+
+.mobile-nav *{
     visibility: hidden;
 }
 
-.mobile-nav.mobile-nav--active{
+.mobile-nav.mobile-nav--active *{
     visibility: visible;
+}
+
+.mobile-nav.mobile-nav--active{
     position: absolute;
     width: 100vw;
     height: calc(100vh - 10rem);
@@ -22,7 +30,7 @@
     text-align: left;
 
 
-    transition: height visibility .3s;
+    /* transition: height visibility 1s; */
 }
 
 .mobile-nav.mobile-nav--active .nav-bar-column{

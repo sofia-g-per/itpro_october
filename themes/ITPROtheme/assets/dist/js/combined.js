@@ -4997,11 +4997,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
 
 window.addEventListener('load', function () {
   new Glider(document.querySelector('.logo-glider'), {
+    rewind: true,
     slidesToShow: 'auto',
     slidesToScroll: 'auto',
     itemWidth: 100,
-    draggable: true,
-    rewind: true
+    draggable: true
   });
 });
 

@@ -74,7 +74,7 @@ body {
   font-family: var(--font-family-heading);
   text-transform: uppercase;
   letter-spacing: .5rem;
-  white-space: nowrap; /*новое 21:20*/
+  /* white-space: nowrap; новое 21:20 */
 }
 
 .secondary-heading{
@@ -88,6 +88,7 @@ body {
   font-size: var(--text-title-font-size);
   font-weight: 500;
   line-height: 3.3rem;
+  word-wrap: break-word;
 }
 
 .popup-heading{
@@ -330,6 +331,12 @@ body {
 @media (max-width: 360px){
   :root{
     ---section-title-font-size: 2.8rem
+  }
+}
+
+@media(max-width: 270px){
+  :root{
+    --page-title-font-size: calc(3rem + 3 * (100vw / 1920));
   }
 }
  .dev-with-ar-vr {
@@ -815,11 +822,19 @@ body {
 .mobile-nav{
     height: 0;
     z-index: 0;
+    display: none;
+
+}
+
+.mobile-nav *{
     visibility: hidden;
 }
 
-.mobile-nav.mobile-nav--active{
+.mobile-nav.mobile-nav--active *{
     visibility: visible;
+}
+
+.mobile-nav.mobile-nav--active{
     position: absolute;
     width: 100vw;
     height: calc(100vh - 10rem);
@@ -836,7 +851,7 @@ body {
     text-align: left;
 
 
-    transition: height visibility .3s;
+    /* transition: height visibility 1s; */
 }
 
 .mobile-nav.mobile-nav--active .nav-bar-column{
@@ -1020,6 +1035,14 @@ body {
 
     .portfolio__projects{
         padding-bottom: 12rem;
+    }
+}
+
+@media(max-width: 300px){
+    .tab-buttons{
+        display: flex;
+        gap: 0;
+        justify-content: space-evenly;
     }
 }
 @import '../partials/project-card.css';
