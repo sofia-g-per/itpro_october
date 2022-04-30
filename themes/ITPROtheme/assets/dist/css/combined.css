@@ -161,6 +161,14 @@ body {
   color: var(--color-white);
 }
 
+.in-text-link{
+  color: var(--color-accent-purple);
+}
+
+.in-text-link:hover{
+  color: var(--color-purple--dark);
+}
+
 /* 
 ---------------------------------------------
   CONTAINERS
