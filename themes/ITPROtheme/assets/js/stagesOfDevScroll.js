@@ -7,3 +7,16 @@ window.addEventListener('load', function(){
         exactWidth: true,
     })
   })
+
+
+
+// document.addEventListener( 'DOMContentLoaded', function() {
+
+//     new Splide( '.splide', {
+//             drag: 'free',
+//             fixedWidth: '634px',
+//             gap: '90px',
+//             pagination: false,
+//             arrows: false,
+//         }).mount();
+// } );

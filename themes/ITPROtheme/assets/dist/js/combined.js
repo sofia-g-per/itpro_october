@@ -6418,41 +6418,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
   \*****************************************************/
 /***/ (() => {
 
-// window.addEventListener('load', function(){
-//     new Glider(document.querySelector('.logo-glider'), {
-//         rewind: true, 
-//         slidesToShow: 'auto',
-//         slidesToScroll: 'auto',
-//         itemWidth: 100,
-//         draggable: true,
-//     }).scrollItem(32);
-//   })
-// import Glide from '@glidejs/glide'
-// new Glide('.glide',{
-//     type: 'carousel',
-//     startAt: 0,
-//     perView: 4,
-//     rewind: true,
-//     // breakpoints:{
-//     //     4000: {
-//     //         perView: 12
-//     //     }
-//     // }
-// }).mount()
-// import Splide from '@/splidejs/splide';
 document.addEventListener('DOMContentLoaded', function () {
-  // new Splide('.splide').mount({
-  //     rewind: true,
-  //     fixedWidth: '100px',
-  //     fixedHeight: '100px',
-  //     gap: '10px'
-  // });
   new Splide('.splide', {
-    rewind: true,
-    drag: true,
-    fixedWidth: '100px',
-    fixedHeight: '100px',
-    gap: '10px'
+    type: 'loop',
+    drag: 'free',
+    fixedWidth: '90px',
+    gap: '90px',
+    pagination: false,
+    arrows: false
   }).mount();
 });
 
@@ -6547,7 +6520,15 @@ window.addEventListener('load', function () {
     itemWidth: 634,
     exactWidth: true
   });
-});
+}); // document.addEventListener( 'DOMContentLoaded', function() {
+//     new Splide( '.splide', {
+//             drag: 'free',
+//             fixedWidth: '634px',
+//             gap: '90px',
+//             pagination: false,
+//             arrows: false,
+//         }).mount();
+// } );
 
 /***/ }),
 
