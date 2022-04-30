@@ -1,12 +1,12 @@
 .stages-of-dev{
-    padding: 6rem 0 18rem 0;
+	padding: 6rem 0 18rem 0;
 
-    background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
 
-    backdrop-filter: blur(140px);
-    background: -webkit-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
-    background: -moz-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
-    background: linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+	backdrop-filter: blur(140px);
+	background: -webkit-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+	background: -moz-linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
+	background: linear-gradient(225deg, rgb(0, 0, 0) 42%, rgb(61, 6, 85) 100%);
 }
 
 .stages-of-dev__heading{
