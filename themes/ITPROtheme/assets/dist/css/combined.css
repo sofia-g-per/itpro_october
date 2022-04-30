@@ -428,7 +428,8 @@ body {
 /* checkmark animation */
 #m-check-mark {
     margin: 20px 0;
-    width: 150px;
+    /* width="" height="399.537" */
+    width: 452px;
     height: auto;
     display: inline;
   }
@@ -683,6 +684,7 @@ body {
 }
 
 
+
 @media screen and (max-width: 1400px) {
     .stage-of-dev-2 {
         padding-top: 20px;
@@ -705,7 +707,11 @@ body {
     }
 }
 
-
+@media screen and (min-width:569px ) {
+    .stage-of-dev:nth-child(6) {
+        margin-top:45px;
+    }
+}
 
 
 .footer{
