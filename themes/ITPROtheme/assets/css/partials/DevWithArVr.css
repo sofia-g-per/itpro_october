@@ -6,8 +6,11 @@
    min-height: 100vh;
 
    background: 
+      url("../../img/background/main-img.jpg") 100% 34vh / 83vw auto no-repeat,
+      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat 
+   /* background: 
       url("../../img/background/video.jpg") 100% 34vh / 83vw auto no-repeat,
-      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
+      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat */
    ;
 }
 

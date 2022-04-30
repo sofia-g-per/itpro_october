@@ -355,8 +355,11 @@ body {
    min-height: 100vh;
 
    background: 
-      url("../../img/background/Video.jpg") 100% 34vh / 83vw auto no-repeat,
-      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
+      url("../../img/background/main-img.jpg") 100% 34vh / 83vw auto no-repeat,
+      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat 
+   /* background: 
+      url("../../img/background/video.jpg") 100% 34vh / 83vw auto no-repeat,
+      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat */
    ;
 }
 
@@ -872,8 +875,10 @@ body {
 }
 
 .mobile-nav.mobile-nav--active .nav-bar-column{
-    text-transform: uppercase;
+    text-transform: capitalize;
+    letter-spacing: 2px;
     font-size: 4rem;
+    font-weight: 600;
     font-family: var(--font-family-heading);
     gap: 4rem;
     width: min-content;

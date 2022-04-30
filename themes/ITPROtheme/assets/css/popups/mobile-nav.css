@@ -34,8 +34,10 @@
 }
 
 .mobile-nav.mobile-nav--active .nav-bar-column{
-    text-transform: uppercase;
+    text-transform: capitalize;
+    letter-spacing: 2px;
     font-size: 4rem;
+    font-weight: 600;
     font-family: var(--font-family-heading);
     gap: 4rem;
     width: min-content;
