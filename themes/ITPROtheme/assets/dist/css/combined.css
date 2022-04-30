@@ -669,7 +669,7 @@ body {
 .stage-of-dev-2 {
     margin-top: 50px;
 } */
-.stage-of-dev:first-child(),
+.stage-of-dev:first-child,
 .stage-of-dev:nth-child(4n){
     margin-top: 10px;
 }
