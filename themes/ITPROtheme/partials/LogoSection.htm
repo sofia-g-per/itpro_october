@@ -1,8 +1,13 @@
-<div class="logo-section logo-glider">
+<div class="logo-section glide">
+	<!-- logo-glider -->
+	<div class="glide__track" data-glide-el="track">
+		<ul class="glide__slides">
 	{%for i in 0..10 %}
-		<img src="{{'assets/img/logo_section/box.svg'|theme}}" alt="логотип 26КАДР" class="logo-section__item"/>
-		<img src="{{'assets/img/logo_section/box-1.svg'|theme}}" alt="логотип Ростех" class="logo-section__item"/>
-		<img src="{{'assets/img/logo_section/box-2.svg'|theme}}" alt="логотип Р-ФАРМ" class="logo-section__item"/>
-		<img src="{{'assets/img/logo_section/box-3.svg'|theme}}" alt="логотип МГОК" class="logo-section__item"/>
+		<img src="{{'assets/img/logo_section/box.svg'|theme}}" alt="логотип 26КАДР" class="logo-section__item glide__slide"/>
+		<img src="{{'assets/img/logo_section/box-1.svg'|theme}}" alt="логотип Ростех" class="logo-section__item glide__slide"/>
+		<img src="{{'assets/img/logo_section/box-2.svg'|theme}}" alt="логотип Р-ФАРМ" class="logo-section__item glide__slide"/>
+		<img src="{{'assets/img/logo_section/box-3.svg'|theme}}" alt="логотип МГОК" class="logo-section__item glide__slide"/>
 	{% endfor %}
+	</ul>	
+	</div>	
 </div>
