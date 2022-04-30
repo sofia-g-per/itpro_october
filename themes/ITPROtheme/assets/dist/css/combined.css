@@ -1218,7 +1218,7 @@ body {
 }
 
 .form__file-wrapper,
-.form__file-label-wrapper label{
+.form__file-label-wrapper .file-upload-label {
     cursor: pointer;
 }
 
@@ -1236,12 +1236,12 @@ body {
     height: 2.4rem;
 }
 
-.form__file-label-wrapper label{
+.form__file-label-wrapper .file-upload-label{
     padding-left: 2.4rem;
 }
 
 @media (max-width: 329px) {
-    .form__file-label-wrapper label{
+    .form__file-label-wrapper .file-upload-label{
         padding-left: 1.0rem;
     }
 }
@@ -1278,7 +1278,7 @@ input:-webkit-autofill:active {
 .form__field--error:active,
 .form__field--error .select-styled,
 .form__field--error.select-styled,
-.form__field--error .form__file-label-wrapper label{
+.form__field--error .form__file-label-wrapper .file-upload-label {
     color: var(--color-accent-pink) !important;
     border-color: var(--color-accent-pink) !important;
 }

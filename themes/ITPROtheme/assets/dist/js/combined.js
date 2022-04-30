@@ -697,7 +697,7 @@ var sleep = function sleep(ms) {
 
 var onSuccess = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(event, form, data, status, object) {
-    var formEl, popupEl, popupContent, submittedPopup;
+    var formEl, popupEl, popupContent, submittedPopup, formElement;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -751,8 +751,8 @@ var onSuccess = /*#__PURE__*/function () {
             submittedPopup.removeClass('submitted-popup--active');
 
           case 25:
-            console.log(formEl);
-            formEl.querySelectorAll('input').forEach(function (input) {
+            formElement = event.target.closest('form');
+            formElement.querySelectorAll('input').forEach(function (input) {
               return input.value = '';
             });
 
@@ -772,10 +772,7 @@ var onSuccess = /*#__PURE__*/function () {
 
 
 $(window).on('ajaxInvalidField', function (event, fieldElement, fieldName, errorMsg, isFirst) {
-  $(fieldElement).closest('.field').addClass('form__field--error'); // console.log($(fieldElement).closest('.field').attr.name = "technology_id");
-  // if($(fieldElement).closest('.field').attr.name == "technology_id"){
-  //     selectFieldWrapper.classList.add('form__field--error')
-  // }
+  $(fieldElement).closest('.field').addClass('form__field--error');
 }); //removing all errors on a submit
 
 $(document).on('ajaxPromise', '[data-request]', function () {
@@ -790,7 +787,8 @@ var selectFieldWrapper = technologySelectField.closest('.form__field--select');
 var styledSelect = technologySelectField.querySelector('.styled-select');
 
 var validateEmail = function validateEmail(email) {
-  return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
 };
 
 var jsValidation = function jsValidation(field) {
@@ -799,8 +797,12 @@ var jsValidation = function jsValidation(field) {
   if (field.value) {
     //removing errors
     if (field.classList.contains('form__field--error')) {
-      // дополнительная валидация для полей почты
+      console.log('contains'); // дополнительная валидация для полей почты
+
       if (field.name === 'email') {
+        console.log('email');
+        console.log('valid', validateEmail(field.value));
+
         if (validateEmail(field.value)) {
           field.classList.remove('form__field--error');
         } //доп валидация для селекта технологий с дефолтным значением

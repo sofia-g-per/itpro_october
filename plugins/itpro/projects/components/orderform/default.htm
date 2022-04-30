@@ -72,13 +72,13 @@
         <p class="form__field__error-label text--small"></p>
       </div>
       <div class="form__field">
-        <div class="form__file-wrapper field" >
+        <label for="file" class="form__file-wrapper field" >
           <div class='form__file-label-wrapper'>
-            <label for="file" id="file-upload-label" class='basic-text'>Загрузить описание проекта</label>
-            <label for="file" id="file-uploaded-label" class='basic-text'>Файл прикреплён</label>
+            <div id="file-upload-label" class='file-upload-label basic-text'>Загрузить описание проекта</div>
+            <div id="file-uploaded-label" class='file-upload-label basic-text'>Файл прикреплён</div>
           </div>
           <input  id="file" name="file" class='visually-hidden' type="file" multiple/>
-        </div>
+        </label>
         <p class="form__field__error-label text--small">Поддерживаемые форматы: PDF, DOCX, PNG, JPEG</p>
       </div>
       <div>
