@@ -1,7 +1,7 @@
 
 document.addEventListener( 'DOMContentLoaded', function() {
 
-    new Splide( '.splide', {
+    new Splide( '#logos-splide', {
             type   : 'loop',
             drag: 'free',
             whee: true,

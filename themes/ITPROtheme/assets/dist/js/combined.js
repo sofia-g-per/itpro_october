@@ -6419,7 +6419,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
 /***/ (() => {
 
 document.addEventListener('DOMContentLoaded', function () {
-  new Splide('.splide', {
+  new Splide('#logos-splide', {
     type: 'loop',
     drag: 'free',
     whee: true,
@@ -6518,14 +6518,15 @@ window.addEventListener('load', function () {
     rewind: true,
     slidesToShow: 'auto',
     draggable: true,
-    itemWidth: 634,
+    itemWidth: 650,
     exactWidth: true
   });
 }); // document.addEventListener( 'DOMContentLoaded', function() {
-//     new Splide( '.splide', {
+//     new Splide( '#stages-splide', {
 //             drag: 'free',
 //             fixedWidth: '634px',
-//             gap: '90px',
+//             padding: '140px',
+//             gap: '155px',
 //             pagination: false,
 //             arrows: false,
 //         }).mount();

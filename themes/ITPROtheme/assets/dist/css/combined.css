@@ -338,15 +338,12 @@ body {
 
 @media (max-width: 360px){
   :root{
-    ---section-title-font-size: 2.8rem
+    --section-title-font-size: calc(3rem + 3 * (100vw / 1920));
+    --page-title-font-size: calc(2.5rem + 3 * (100vw / 1920));
+  
   }
 }
 
-@media(max-width: 270px){
-  :root{
-    --page-title-font-size: calc(3rem + 3 * (100vw / 1920));
-  }
-}
  .dev-with-ar-vr {
    display: flex;
    justify-content: space-between;
@@ -355,16 +352,11 @@ body {
    min-height: 100vh;
 
    background: 
-<<<<<<< HEAD
       url("../../img/background/main-img.jpg") 100% 34vh / 83vw auto no-repeat,
       url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat 
    /* background: 
       url("../../img/background/video.jpg") 100% 34vh / 83vw auto no-repeat,
       url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat */
-=======
-      url("../../img/background/video.jpg") 100% 34vh / 83vw auto no-repeat,
-      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
->>>>>>> 1b109b255edce260801a2fcc667949a3cb4634c8
    ;
 }
 
@@ -671,13 +663,24 @@ body {
     background: url('../../img/stages-of-dev-wave2.svg') -50px 0 / 1930px auto repeat-x;
     background-attachment: scroll;
 }
-.stage-of-dev-1 {
-    margin-top: 105px;
-}
+ .stage-of-dev-0 {
+    margin-LEFT: 100px;
+}/*
 .stage-of-dev-2 {
     margin-top: 50px;
+} */
+.stage-of-dev:first-child(),
+.stage-of-dev:nth-child(4n){
+    margin-top: 10px;
 }
 
+.stage-of-dev:nth-child(3n -1){
+    margin-top: 105px;
+}
+
+.stage-of-dev:nth-child(3n){
+    margin-top: 30px;
+}
 
 
 @media screen and (max-width: 1400px) {
@@ -686,11 +689,11 @@ body {
     }
 }
 @media screen and (max-width: 568px) {
-    .stage-of-dev-0,
-    .stage-of-dev-1 {
+    .stage-of-dev:nth-child(2n+2),
+    .stage-of-dev:nth-child(3n -1) {
         padding-top: 0;
     }
-    .stage-of-dev-2 {
+    .stage-of-dev:nth-child(3n){
         padding-top: 30px;
     }
     
@@ -1259,11 +1262,7 @@ body {
     padding-left: 2.4rem;
 }
 
-@media (max-width: 329px) {
-    .form__file-label-wrapper .file-upload-label{
-        padding-left: 1.0rem;
-    }
-}
+
 
 .form__file-label-wrapper #file-uploaded-label{
     display: none;
@@ -1413,6 +1412,20 @@ display: none;
     .form{
         padding-top: 4rem;
         padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 329px) {
+    .form__file-label-wrapper .file-upload-label{
+        padding-left: 1.0rem;
+    }
+
+    .file-upload-label{
+        font-size: calc(1rem + 0.4 * (100vw / 1920));
+    }
+
+    .select{
+        width: 10rem;
     }
 }
 

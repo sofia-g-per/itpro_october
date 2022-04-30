@@ -91,11 +91,7 @@
     padding-left: 2.4rem;
 }
 
-@media (max-width: 329px) {
-    .form__file-label-wrapper .file-upload-label{
-        padding-left: 1.0rem;
-    }
-}
+
 
 .form__file-label-wrapper #file-uploaded-label{
     display: none;
@@ -245,6 +241,20 @@ display: none;
     .form{
         padding-top: 4rem;
         padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 329px) {
+    .form__file-label-wrapper .file-upload-label{
+        padding-left: 1.0rem;
+    }
+
+    .file-upload-label{
+        font-size: calc(1rem + 0.4 * (100vw / 1920));
+    }
+
+    .select{
+        width: 10rem;
     }
 }
 

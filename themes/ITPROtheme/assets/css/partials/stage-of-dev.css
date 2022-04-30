@@ -43,13 +43,24 @@
     background: url('../../img/stages-of-dev-wave2.svg') -50px 0 / 1930px auto repeat-x;
     background-attachment: scroll;
 }
-.stage-of-dev-1 {
-    margin-top: 105px;
-}
+ .stage-of-dev-0 {
+    margin-LEFT: 100px;
+}/*
 .stage-of-dev-2 {
     margin-top: 50px;
+} */
+.stage-of-dev:first-child(),
+.stage-of-dev:nth-child(4n){
+    margin-top: 10px;
 }
 
+.stage-of-dev:nth-child(3n -1){
+    margin-top: 105px;
+}
+
+.stage-of-dev:nth-child(3n){
+    margin-top: 30px;
+}
 
 
 @media screen and (max-width: 1400px) {
@@ -58,11 +69,11 @@
     }
 }
 @media screen and (max-width: 568px) {
-    .stage-of-dev-0,
-    .stage-of-dev-1 {
+    .stage-of-dev:nth-child(2n+2),
+    .stage-of-dev:nth-child(3n -1) {
         padding-top: 0;
     }
-    .stage-of-dev-2 {
+    .stage-of-dev:nth-child(3n){
         padding-top: 30px;
     }
     
