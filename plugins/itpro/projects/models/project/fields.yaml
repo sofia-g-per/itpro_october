@@ -39,16 +39,11 @@ fields:
         span: full
         required: 1
         type: textarea
-    project_cover_img:
+    cover_img:
         label: 'Обложка проекта'
-        mode: image
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: full
-        required: 0
-        type: fileupload
+        mode: file
+        span: auto
+        type: mediafinder
     project_video:
         label: 'Видео проекта'
         mode: file

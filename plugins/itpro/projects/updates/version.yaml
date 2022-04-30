@@ -120,3 +120,9 @@
 1.0.41:
     - 'Created table itpro_projects_test_keys_projects'
     - builder_table_create_itpro_projects_test_keys_projects.php
+1.0.42:
+    - 'Updated table itpro_projects_'
+    - builder_table_update_itpro_projects__7.php
+1.0.43:
+    - 'Updated table itpro_projects_'
+    - builder_table_update_itpro_projects__8.php

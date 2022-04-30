@@ -1,8 +1,8 @@
 <div class='project-card'>
     <div class='project-card__image-container'>
-     {% if project.project_cover_img %}
+     {% if project.cover_img %}
         <img class='project-card__image' 
-            src="{{project.project_cover_img|media}}" 
+            src="{{project.cover_img|media}}" 
             alt="Скриншот проекта" />
     {% else %}
         <img class='project-card__image' 

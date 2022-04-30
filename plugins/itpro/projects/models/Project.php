@@ -44,7 +44,6 @@ class Project extends Model
 
     public $attachOne = [
         'project_icon' => 'System\Models\File',
-        'project_cover_img' => 'System\Models\File',
         'project_video' => 'System\Models\File'
     ];
 
