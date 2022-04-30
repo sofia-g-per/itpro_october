@@ -1,26 +1,15 @@
-// window.addEventListener('load', function(){
-//     new Glider(document.querySelector('.logo-glider'), {
-//         rewind: true, 
-//         slidesToShow: 'auto',
-//         slidesToScroll: 'auto',
-//         itemWidth: 100,
-//         draggable: true,
 
-//     }).scrollItem(32);
+document.addEventListener( 'DOMContentLoaded', function() {
 
-//   })
-// import Glide from '@glidejs/glide'
+    new Splide( '.splide', {
+            type   : 'loop',
+            drag: 'free',
+            fixedWidth: '90px',
+            gap: '90px',
+            pagination: false,
+            arrows: false,
+        }).mount();
+} );
 
-// new Glide('.glide',{
-//     type: 'carousel',
-//     startAt: 0,
-//     perView: 4,
-//     rewind: true,
-//     // breakpoints:{
-//     //     4000: {
-//     //         perView: 12
-//     //     }
-        
-//     // }
-// }).mount()
+
 

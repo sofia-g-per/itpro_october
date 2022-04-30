@@ -486,6 +486,10 @@ body {
 .logo-section .glider-track{
 	gap: 8rem;
 }
+.splide__arrow,
+.splide__pagination{
+	display: none;
+}
 
 @media (max-width: 360px){
 	.logo-section{
