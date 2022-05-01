@@ -766,31 +766,10 @@ body {
     
 }
 
-<<<<<<< HEAD
-@media screen and (min-width: 2000px) {
-    .stage-of-dev{
-        padding: .6rem 6rem 0 6rem;
-    }
-}
 
-@media screen and (min-width:569px) {
-    .stage-of-dev:nth-child(6) {
-        margin-top:45px;
-    }
-}
-@media screen and (min-width:1301px) and (max-width: 1999px) {
-    .stage-of-dev:nth-child(6) {
-        margin-top:30px;
-    }
-}
-=======
-/* @media screen and (min-width:569px ) {
-    .stage-of-dev:nth-child(6) {
-        margin-top:45px;
-    }
-} */
 
->>>>>>> 60a3e9fdc8a795e0d112188b30d3f9baa76580f4
+
+
 
 .footer{
 	padding: 6rem var(--padding-l);
