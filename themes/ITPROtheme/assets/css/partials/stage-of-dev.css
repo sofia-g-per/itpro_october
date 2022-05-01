@@ -49,9 +49,13 @@
 .stage-of-dev-2 {
     margin-top: 50px;
 } */
-.stage-of-dev:first-child,
-.stage-of-dev:nth-child(4n){
-    margin-top: 10px;
+.stage-of-dev-0,
+.stage-of-dev-3{
+    margin-top: 15px;
+}
+
+.stage-of-dev-5{
+    margin-top: 5px;
 }
 
 .stage-of-dev:nth-child(3n -1){
@@ -63,14 +67,35 @@
 }
 
 
+@media screen and (min-width: 2000px) {
+    .stage-of-dev{
+        padding: .6rem 6rem 0 6rem;
+    }
+
+    .stage-of-dev:nth-child(3n){
+        padding-top: 35px;
+    }
+}
+
+
 
 @media screen and (max-width: 1400px) {
     .stage-of-dev-2 {
-        padding-top: 20px;
+        padding-top: 10px;
+    }
+
+     .stage-of-dev-3 {
+        padding-top: 10px;
+    } 
+
+    .stage-of-dev-5{
+        padding-top: 18px;
     }
 }
-@media screen and (max-width: 568px) {
-    .stage-of-dev:nth-child(2n+2),
+
+@media screen and (max-width: 700px) {
+    .stage-of-dev-0,
+    .stage-of-dev-3,
     .stage-of-dev:nth-child(3n -1) {
         padding-top: 0;
     }
@@ -80,19 +105,7 @@
     
 }
 
-@media screen and (min-width: 2000px) {
-    .stage-of-dev{
-        padding: .6rem 6rem 0 6rem;
-    }
-}
 
-@media screen and (min-width:569px) {
-    .stage-of-dev:nth-child(6) {
-        margin-top:45px;
-    }
-}
-@media screen and (min-width:1301px) and (max-width: 1999px) {
-    .stage-of-dev:nth-child(6) {
-        margin-top:30px;
-    }
-}
+
+
+

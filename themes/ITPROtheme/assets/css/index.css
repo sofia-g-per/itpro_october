@@ -113,6 +113,10 @@ body {
 	color: var(--color-grey);
 }
 
+.text-blue{
+  color: var(--color-accent-blue);
+}
+
 .arrow-link{
   display: flex;
   align-items: center;
@@ -126,7 +130,8 @@ body {
 
 .arrow-link:after{
   content: '';
-  display: block;
+  display: inline-flex;
+  align-content: center;
   width: 3rem;
   height: 1rem;
 }

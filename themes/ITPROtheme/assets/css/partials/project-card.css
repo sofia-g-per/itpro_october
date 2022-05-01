@@ -26,6 +26,10 @@
     row-gap: 2rem;
 }
 
+.project-card__text{
+    padding-right: 2rem;
+}
+
 .align-bottom{
     height: 100%;
     display: flex;
@@ -46,8 +50,9 @@
     }
 
     .project-card__text-container{
-        padding: 0 2rem;
+        padding: 0  2rem;
     }
+
 
     .align-bottom{
         height: auto;

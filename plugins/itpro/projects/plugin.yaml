@@ -24,6 +24,12 @@ navigation:
                 label: Платформы
                 url: itpro/projects/platforms
                 icon: icon-android
+            vr-headsets:
+                label: 'Шлемы VR'
+                url: itpro/projects/vrheadsets
+                icon: icon-simplybuilt
+                permissions:
+                    - manage_portfolio
     orders:
         label: Заказы
         url: itpro/projects/orders

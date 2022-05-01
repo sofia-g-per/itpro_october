@@ -113,6 +113,10 @@ body {
 	color: var(--color-grey);
 }
 
+.text-blue{
+  color: var(--color-accent-blue);
+}
+
 .arrow-link{
   display: flex;
   align-items: center;
@@ -126,7 +130,8 @@ body {
 
 .arrow-link:after{
   content: '';
-  display: block;
+  display: inline-flex;
+  align-content: center;
   width: 3rem;
   height: 1rem;
 }
@@ -580,6 +585,10 @@ body {
     row-gap: 2rem;
 }
 
+.project-card__text{
+    padding-right: 2rem;
+}
+
 .align-bottom{
     height: 100%;
     display: flex;
@@ -600,8 +609,9 @@ body {
     }
 
     .project-card__text-container{
-        padding: 0 2rem;
+        padding: 0  2rem;
     }
+
 
     .align-bottom{
         height: auto;
@@ -670,9 +680,13 @@ body {
 .stage-of-dev-2 {
     margin-top: 50px;
 } */
-.stage-of-dev:first-child,
-.stage-of-dev:nth-child(4n){
-    margin-top: 10px;
+.stage-of-dev-0,
+.stage-of-dev-3{
+    margin-top: 15px;
+}
+
+.stage-of-dev-5{
+    margin-top: 5px;
 }
 
 .stage-of-dev:nth-child(3n -1){
@@ -684,14 +698,35 @@ body {
 }
 
 
+@media screen and (min-width: 2000px) {
+    .stage-of-dev{
+        padding: .6rem 6rem 0 6rem;
+    }
+
+    .stage-of-dev:nth-child(3n){
+        padding-top: 35px;
+    }
+}
+
+
 
 @media screen and (max-width: 1400px) {
     .stage-of-dev-2 {
-        padding-top: 20px;
+        padding-top: 10px;
+    }
+
+     .stage-of-dev-3 {
+        padding-top: 10px;
+    } 
+
+    .stage-of-dev-5{
+        padding-top: 18px;
     }
 }
-@media screen and (max-width: 568px) {
-    .stage-of-dev:nth-child(2n+2),
+
+@media screen and (max-width: 700px) {
+    .stage-of-dev-0,
+    .stage-of-dev-3,
     .stage-of-dev:nth-child(3n -1) {
         padding-top: 0;
     }
@@ -701,6 +736,7 @@ body {
     
 }
 
+<<<<<<< HEAD
 @media screen and (min-width: 2000px) {
     .stage-of-dev{
         padding: .6rem 6rem 0 6rem;
@@ -717,6 +753,14 @@ body {
         margin-top:30px;
     }
 }
+=======
+/* @media screen and (min-width:569px ) {
+    .stage-of-dev:nth-child(6) {
+        margin-top:45px;
+    }
+} */
+
+>>>>>>> 60a3e9fdc8a795e0d112188b30d3f9baa76580f4
 
 .footer{
 	padding: 6rem var(--padding-l);

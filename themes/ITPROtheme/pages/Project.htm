@@ -27,7 +27,7 @@ function onStart()
       <div class='project-info__header'>
         <h1 class='primary-heading'>{{project.title}}</h1>
         <p class='project-description basic-text'>{{project.description}}</p>
-        {% partial "PlatformList" platforms=project.platforms %}
+        {% partial "PlatformList" platforms=project.platforms vrheadsets=project.vrheadsets %}
       </div>
       <div class='project-info__images'>
         {% for image in project.images %}
