@@ -693,6 +693,10 @@ body {
     padding-top: 10px;
 }
 
+.stage-of-dev-6{
+    padding-top: 15px
+}
+
 .stage-of-dev:nth-child(3n -1){
     margin-top: 105px;
 }
@@ -713,8 +717,9 @@ body {
     }
 
     .stage-of-dev-6{
-        padding-top: 5px
+        padding-top: 10px
     }
+
 
     .stage-of-dev:nth-child(3n){
         margin-top: 50px;
