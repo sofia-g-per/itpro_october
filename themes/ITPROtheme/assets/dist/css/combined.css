@@ -375,7 +375,7 @@ body {
    .dev-with-ar-vr {
       font-size: 6rem;
       line-height: 1.15;
-      /*padding: 13vh 7vw;*/ /*без этой настройки секция разработки выглядит более похожей на ориг*/
+      padding: 10vh 7vw; /*без этой настройки секция разработки выглядит более похожей на ориг*/
    }
 }
 
@@ -684,7 +684,9 @@ body {
 .stage-of-dev-2 {
     margin-top: 50px;
 } */
-.stage-of-dev-0,
+.stage-of-dev-0{
+    margin-top: 18px;
+}
 .stage-of-dev-3{
     margin-top: 15px;
 }
