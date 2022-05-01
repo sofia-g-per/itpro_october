@@ -125,7 +125,6 @@ body {
   gap: 2rem;
   cursor: pointer;
   transition: all .4s;
-  
 }
 
 .arrow-link:after{
@@ -133,6 +132,7 @@ body {
   display: inline-flex;
   align-content: center;
   width: 3rem;
+  min-height: 2rem;
   height: 100%;
 }
 
@@ -517,7 +517,7 @@ body {
 	padding: 25.7rem 7vw 0 7vw;
 	justify-content: end;
 	background: 
-		url('../../img/our_customers/213123 1.png') no-repeat top left / cover 
+		url('../../img/background/our_customers_mobile_bg.jpg') no-repeat top left / cover 
 	;
 }
 
@@ -591,9 +591,13 @@ body {
 
 .align-bottom{
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 4rem;
+}
+
+.align-bottom>*{
+    width: 100%;
 }
 
 @media (max-width: 1000px){
@@ -706,6 +710,10 @@ body {
     .stage-of-dev-0,
     .stage-of-dev-3{
         margin-top: 10px;
+    }
+
+    .stage-of-dev-6{
+        padding-top: 5px
     }
 
     .stage-of-dev:nth-child(3n){

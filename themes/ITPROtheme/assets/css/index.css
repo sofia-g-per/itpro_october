@@ -125,7 +125,6 @@ body {
   gap: 2rem;
   cursor: pointer;
   transition: all .4s;
-  
 }
 
 .arrow-link:after{
@@ -133,6 +132,7 @@ body {
   display: inline-flex;
   align-content: center;
   width: 3rem;
+  min-height: 2rem;
   height: 100%;
 }
 
