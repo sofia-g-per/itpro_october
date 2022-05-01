@@ -113,6 +113,10 @@ body {
 	color: var(--color-grey);
 }
 
+.text-blue{
+  color: var(--color-accent-blue);
+}
+
 .arrow-link{
   display: flex;
   align-items: center;
@@ -428,7 +432,8 @@ body {
 /* checkmark animation */
 #m-check-mark {
     margin: 20px 0;
-    width: 150px;
+    /* width="" height="399.537" */
+    width: 452px;
     height: auto;
     display: inline;
   }

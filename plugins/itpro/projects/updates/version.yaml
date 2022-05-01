@@ -132,3 +132,12 @@
 1.0.45:
     - 'Created table itpro_projects_vr_headsets_projects'
     - builder_table_create_itpro_projects_vr_headsets_projects.php
+1.0.46:
+    - 'Updated table itpro_projects_vr_headsets_projects'
+    - builder_table_update_itpro_projects_vr_headsets_projects.php
+1.0.47:
+    - 'Updated table itpro_projects_vr_headsets'
+    - builder_table_update_itpro_projects_vrheadsets.php
+1.0.48:
+    - 'Updated table itpro_projects_vr_headsets_projects'
+    - builder_table_update_itpro_projects_vrheadsets_projects.php

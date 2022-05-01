@@ -33,9 +33,9 @@ fields:
         span: auto
         required: 0
         type: relation
-    vr_headsets:
+    vrheadsets:
         label: 'VR шлемы'
-        nameFrom: name
+        nameFrom: title
         descriptionFrom: description
         span: auto
         type: relation

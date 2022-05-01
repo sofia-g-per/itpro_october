@@ -19,7 +19,7 @@ class VRHeadsets extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'itpro_projects_vr_headsets';
+    public $table = 'itpro_projects_vrheadsets';
 
     /**
      * @var array Validation rules

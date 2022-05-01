@@ -113,6 +113,10 @@ body {
 	color: var(--color-grey);
 }
 
+.text-blue{
+  color: var(--color-accent-blue);
+}
+
 .arrow-link{
   display: flex;
   align-items: center;
