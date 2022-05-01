@@ -86,9 +86,13 @@
     }
 }
 
-@media screen and (min-width:569px ) {
+@media screen and (min-width:569px) {
     .stage-of-dev:nth-child(6) {
         margin-top:45px;
     }
 }
-
+@media screen and (min-width:1301px) and (max-width: 1999px) {
+    .stage-of-dev:nth-child(6) {
+        margin-top:30px;
+    }
+}
