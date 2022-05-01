@@ -133,7 +133,7 @@ body {
   display: inline-flex;
   align-content: center;
   width: 3rem;
-  height: 1rem;
+  height: 100%;
 }
 
 .arrow-link:hover{
@@ -155,11 +155,11 @@ body {
 }
 
 .arrow-link--blue:after{
-  background: url('../../img/arrow-right.png');
+  background: url('../../img/arrow-right.png') center no-repeat;
 }
 
 .arrow-link--purple:after{
-  background: url("../../img/background/Vector 85.svg");
+  background: url("../../img/background/Vector 85.svg") center no-repeat;
 }
 
 .white-text {
