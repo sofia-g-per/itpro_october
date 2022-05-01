@@ -688,6 +688,7 @@ body {
 }
 
 
+
 @media screen and (max-width: 1400px) {
     .stage-of-dev-2 {
         padding-top: 20px;
@@ -710,7 +711,11 @@ body {
     }
 }
 
-
+@media screen and (min-width:569px ) {
+    .stage-of-dev:nth-child(6) {
+        margin-top:45px;
+    }
+}
 
 
 .footer{
