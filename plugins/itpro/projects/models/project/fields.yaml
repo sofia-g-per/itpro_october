@@ -33,12 +33,14 @@ fields:
         span: auto
         required: 0
         type: relation
+        comment: 'Для проектов категорий кроме VR'
     vrheadsets:
         label: 'VR шлемы'
         nameFrom: title
         descriptionFrom: description
         span: auto
         type: relation
+        comment: 'Для проектов в категории VR'
     description:
         label: 'Описание проекта'
         size: ''
