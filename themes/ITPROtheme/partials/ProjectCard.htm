@@ -28,7 +28,7 @@
                 <span >Шлемы : </span><span class="text-blue">{{ headsetArray|join(', ') }}</span>
             {% endif %}
         </div>
-        <p class='basic-text'>{{project.description}}</p>
+        <p class='basic-text project-card__text'>{{project.description}}</p>
         <a class='arrow-link arrow-link--blue' href="{{ 'Project'|page({ project: project.id}) }}">Подробнее</a>
     </div>
 </div>

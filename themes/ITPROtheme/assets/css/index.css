@@ -130,7 +130,8 @@ body {
 
 .arrow-link:after{
   content: '';
-  display: block;
+  display: inline-flex;
+  align-content: center;
   width: 3rem;
   height: 1rem;
 }
