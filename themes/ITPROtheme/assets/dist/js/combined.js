@@ -6484,7 +6484,9 @@ window.onscroll = function () {
 window.addEventListener('load', function () {
   var glider = new Glider(document.querySelector('.glider'), {
     slidesToShow: 1,
-    duration: 1
+    scrollPropogate: false,
+    scrollLock: true,
+    scrollLockDelay: 0
   });
   var categoryBtns = document.querySelectorAll(".tab-button");
   categoryBtns[0].classList.add('tab-button--active');

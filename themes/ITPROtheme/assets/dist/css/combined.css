@@ -685,9 +685,9 @@ body {
     margin-top: 15px;
 }
 
-/* .stage-of-dev-5{
-    margin-top: 8px;
-} */
+.stage-of-dev-5{
+    margin-top: 5px;
+}
 
 .stage-of-dev:nth-child(3n -1){
     margin-top: 105px;
@@ -720,7 +720,7 @@ body {
     } 
 
     .stage-of-dev-5{
-        padding-top: 15px;
+        padding-top: 18px;
     }
 }
 
