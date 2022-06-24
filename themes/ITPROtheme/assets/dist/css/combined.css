@@ -895,9 +895,24 @@ body {
 
 .contacts-popup__mail__link{
     text-decoration: none;
+    display: inline-block;
     font-family: var(--font-family-heading);
 }
-
+.contacts-popup__mail__link.popup-heading::after{
+    display: block; 
+    content: "";
+    height: 1.5px; 
+    width: 0%; 
+    background-color: #ffffff; 
+    transition: width 0.4s ease-in-out;
+}
+.contacts-popup__mail__link.popup-heading:hover:after,
+.contacts-popup__mail__link.popup-heading:focus:after{
+    width: 100%;
+}
+.contacts-popup__mail__link.popup-heading:hover{
+    color: #ffffff;
+}
 .contacts-popup__mail__text{
     font-size: 2.8rem;
 }
@@ -1071,7 +1086,25 @@ body {
 .contact-us__text-container{
     padding: 20vh 4vw 20vh 7vw;
 }
-
+.contact-us__text-container__email{
+    text-decoration:none; /*Убираем стандартное подчёркивание ссылки если оно ещё не убрано*/
+    display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный */
+}
+.contact-us__text-container__email::after{
+        display: block; /*превращаем его в блочный элемент*/
+        content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+        height: 1.5px; /*задаём высоту линии*/
+        width: 0%; /*задаём начальную ширину элемента (линии)*/
+        background-color: #ffffff; /*цвет фона элемента*/
+        transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+}
+.contact-us__text-container__email:hover:after,
+.contact-us__text-container__email:focus:after {
+    width: 100%;
+}
+.contact-us__text-container__email:hover{
+color:#fff;
+} 
 .contact-us__form{
     background: rgba(0, 0, 0, .3);
 }
