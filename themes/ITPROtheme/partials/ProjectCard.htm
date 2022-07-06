@@ -1,18 +1,34 @@
 <div class='project-card'>
     <div class='project-card__image-container'>
-        <img class='project-card__image' src="{{project.images[0].photo|media}}" alt="Скриншот проекта" />
+     {% if project.cover_img %}
+        <img class='project-card__image' 
+            src="{{project.cover_img|media}}" 
+            alt="Скриншот проекта" />
+    {% else %}
+        <img class='project-card__image' 
+            src="{{ project.images[0].photo|media}}" 
+            alt="Скриншот проекта" />
+    {% endif %}
         <img class='project-card__project-icon' src="{{project.project_icon.path}}" />
     </div>
     
     <div class='project-card__text-container'>
         <h3 class='tertiary-heading'>{{project.title}}</h3>
         <div class='platform-list'>
-            <span>Платформы: </span>
-                {% for platform in project.platforms %}
-                    <img src="{{platform.platform_icon.path}}" alt="{{platform.title}}" />
+            {% if not project.vrheadsets %}
+                <span>Платформы: </span>
+                    {% for platform in project.platforms %}
+                        <img src="{{platform.platform_icon.path}}" alt="{{platform.title}}" />
+                    {% endfor %}
+            {% else %}
+                {% set headsetArray = [] %}
+                {% for headset in project.vrheadsets %}
+                    {% set headsetArray = headsetArray|merge([headset.title]) %}   
                 {% endfor %}
+                <span >Шлемы : </span><span class="text-blue">{{ headsetArray|join(', ') }}</span>
+            {% endif %}
         </div>
-        <p class='basic-text'>{{project.description}}</p>
+        <p class='basic-text project-card__text'>{{project.description}}</p>
         <a class='arrow-link arrow-link--blue' href="{{ 'Project'|page({ project: project.id}) }}">Подробнее</a>
     </div>
 </div>

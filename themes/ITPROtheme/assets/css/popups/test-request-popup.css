@@ -26,8 +26,23 @@
 
 .test-request-popup__text a{
     text-decoration: none;
+    display: inline-block;
 }
-
+.test-request-popup__text a::after{
+    display: block; 
+    content: "";
+    height: 1.5px; 
+    width: 0%; 
+    background-color: #ffffff; 
+    transition: width 0.4s ease-in-out;
+}
+.test-request-popup__text a:hover:after,
+.test-request-popup__text a:focus:after{
+    width: 100%;
+}
+.test-request-popup__text a:hover{
+    color: #ffffff;
+}
 .test-request-popup__form{
     padding-left: var(--popup-padding);
 }

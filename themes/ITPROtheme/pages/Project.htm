@@ -27,7 +27,7 @@ function onStart()
       <div class='project-info__header'>
         <h1 class='primary-heading'>{{project.title}}</h1>
         <p class='project-description basic-text'>{{project.description}}</p>
-        {% partial "PlatformList" platforms=project.platforms %}
+        {% partial "PlatformList" platforms=project.platforms vrheadsets=project.vrheadsets %}
       </div>
       <div class='project-info__images'>
         {% for image in project.images %}
@@ -64,11 +64,9 @@ function onStart()
         <div class='test-request-popup'>
           <div class='test-request-popup__text'>
               <h2 class='popup-heading'>
-                  Вместе, мы сможем превратить идею в реальность!
+                Вместе, мы сможем превратить идею в реальность и сделать невозможное - возможным!
               </h2>
-              <a class='popup-text--small' href="mailto:info@itpro.moscow ">
-                  info@itpro.moscow 
-              </a>
+              <span><a class='popup-text--small' href="mailto:info@itpro.moscow ">info@itpro.moscow </a></span>
           </div>
             {% component "testrequestform"
               projectId=project.id

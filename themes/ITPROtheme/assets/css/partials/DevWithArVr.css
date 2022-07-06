@@ -6,8 +6,11 @@
    min-height: 100vh;
 
    background: 
-      url("../../img/background/Video.jpg") 100% 34vh / 83vw auto no-repeat,
-      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat
+      url("../../img/background/main-img.jpg") 100% 34vh / 83vw auto no-repeat,
+      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat 
+   /* background: 
+      url("../../img/background/video.jpg") 100% 34vh / 83vw auto no-repeat,
+      url("../../img/background/devVrAr_bgLight.png") 50% 0% no-repeat */
    ;
 }
 @media screen and (min-width:2560px) and (min-height:1506px) {
@@ -38,7 +41,7 @@
    .dev-with-ar-vr {
       font-size: 6rem;
       line-height: 1.15;
-      /*padding: 13vh 7vw;*/ /*без этой настройки секция разработки выглядит более похожей на ориг*/
+      padding: 10vh 7vw; /*без этой настройки секция разработки выглядит более похожей на ориг*/
    }
 }
 
