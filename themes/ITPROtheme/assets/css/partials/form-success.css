@@ -41,8 +41,7 @@
 /* checkmark animation */
 #m-check-mark {
     margin: 20px 0;
-    /* width="" height="399.537" */
-    width: 452px;
+    width: 150px;
     height: auto;
     display: inline;
   }

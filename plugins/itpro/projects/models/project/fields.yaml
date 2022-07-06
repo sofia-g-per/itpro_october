@@ -23,7 +23,7 @@ fields:
         label: Технология
         nameFrom: title
         descriptionFrom: description
-        span: full
+        span: left
         required: 1
         type: relation
     platforms:
@@ -31,27 +31,14 @@ fields:
         nameFrom: title
         descriptionFrom: description
         span: auto
-        required: 0
+        required: 1
         type: relation
-        comment: 'Для проектов категорий кроме VR'
-    vrheadsets:
-        label: 'VR шлемы'
-        nameFrom: title
-        descriptionFrom: description
-        span: auto
-        type: relation
-        comment: 'Для проектов в категории VR'
     description:
         label: 'Описание проекта'
         size: ''
         span: full
         required: 1
         type: textarea
-    cover_img:
-        label: 'Обложка проекта'
-        mode: file
-        span: auto
-        type: mediafinder
     project_video:
         label: 'Видео проекта'
         mode: file
@@ -61,7 +48,7 @@ fields:
             mode: crop
             extension: auto
         maxFilesize: '40'
-        span: right
+        span: full
         type: fileupload
         comment: 'Загрузите видео в формате mp4, не превышающее 40Mb'
     images:

@@ -27,24 +27,9 @@
 
 .contacts-popup__mail__link{
     text-decoration: none;
-    display: inline-block;
     font-family: var(--font-family-heading);
 }
-.contacts-popup__mail__link.popup-heading::after{
-    display: block; 
-    content: "";
-    height: 1.5px; 
-    width: 0%; 
-    background-color: #ffffff; 
-    transition: width 0.4s ease-in-out;
-}
-.contacts-popup__mail__link.popup-heading:hover:after,
-.contacts-popup__mail__link.popup-heading:focus:after{
-    width: 100%;
-}
-.contacts-popup__mail__link.popup-heading:hover{
-    color: #ffffff;
-}
+
 .contacts-popup__mail__text{
     font-size: 2.8rem;
 }

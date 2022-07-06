@@ -74,7 +74,7 @@ body {
   font-family: var(--font-family-heading);
   text-transform: uppercase;
   letter-spacing: .5rem;
-  /* white-space: nowrap; новое 21:20 */
+  white-space: nowrap; /*новое 21:20*/
 }
 
 .secondary-heading{
@@ -88,7 +88,6 @@ body {
   font-size: var(--text-title-font-size);
   font-weight: 500;
   line-height: 3.3rem;
-  word-wrap: break-word;
 }
 
 .popup-heading{
@@ -113,10 +112,6 @@ body {
 	color: var(--color-grey);
 }
 
-.text-blue{
-  color: var(--color-accent-blue);
-}
-
 .arrow-link{
   display: flex;
   align-items: center;
@@ -125,15 +120,14 @@ body {
   gap: 2rem;
   cursor: pointer;
   transition: all .4s;
+  
 }
 
 .arrow-link:after{
   content: '';
-  display: inline-flex;
-  align-content: center;
+  display: block;
   width: 3rem;
-  min-height: 2rem;
-  height: 100%;
+  height: 1rem;
 }
 
 .arrow-link:hover{
@@ -155,23 +149,15 @@ body {
 }
 
 .arrow-link--blue:after{
-  background: url('../../img/arrow-right.png') center no-repeat;
+  background: url('../../img/arrow-right.png');
 }
 
 .arrow-link--purple:after{
-  background: url("../../img/background/Vector 85.svg") center no-repeat;
+  background: url("../../img/background/Vector 85.svg");
 }
 
 .white-text {
   color: var(--color-white);
-}
-
-.in-text-link{
-  color: var(--color-accent-purple);
-}
-
-.in-text-link:hover{
-  color: var(--color-purple--dark);
 }
 
 /* 
@@ -343,8 +329,6 @@ body {
 
 @media (max-width: 360px){
   :root{
-    --section-title-font-size: calc(3rem + 3 * (100vw / 1920));
-    --page-title-font-size: calc(2.5rem + 3 * (100vw / 1920));
-  
+    ---section-title-font-size: 2.8rem
   }
 }

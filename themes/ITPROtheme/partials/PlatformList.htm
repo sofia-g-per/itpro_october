@@ -1,14 +1,6 @@
 <div class='platform-list'>
-  {% if not vrheadsets %}
-      <span>Платформы: </span>
-          {% for platform in project.platforms %}
-              <img src="{{platform.platform_icon.path}}" alt="{{platform.title}}" />
-          {% endfor %}
-  {% else %}
-    {% set headsetArray = [] %}
-    {% for headset in vrheadsets %}
-      {% set headsetArray = headsetArray|merge([headset.title]) %}   
-    {% endfor %}
-    <span>Шлемы : </span><span class="text-blue">{{ headsetArray|join(', ') }}</span>
-  {% endif %}
+    <span>Платформы: </span>
+        {% for platform in platforms %}
+          <img src="{{platform.platform_icon.path}}" alt="{{platform.title}}" />
+        {% endfor %}
 </div>

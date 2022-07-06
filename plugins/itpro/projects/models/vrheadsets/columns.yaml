@@ -1,6 +1,0 @@
-columns:
-    title:
-        label: 'Название шлема'
-        type: text
-        searchable: true
-        sortable: true
