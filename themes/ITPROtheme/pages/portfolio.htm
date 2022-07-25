@@ -38,11 +38,13 @@ is_hidden = 0
         </div>
         <div class="glider">
             {% for technology in technologies %}
-                <div class='portfolio__projects' id="{{technology.title}}">
-                    {% for project in technology.projects %}
-                        {% partial "ProjectCard" project=project %}
-                    {% endfor %}
-                </div>
+                {% if technology.projects|length %}
+                    <div class='portfolio__projects' id="{{technology.title}}">
+                        {% for project in technology.projects %}
+                            {% partial "ProjectCard" project=project %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>

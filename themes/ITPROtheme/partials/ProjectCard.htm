@@ -1,7 +1,9 @@
 <div class='project-card'>
     <div class='project-card__image-container'>
         <img class='project-card__image' src="{{project.images[0].photo|media}}" alt="Скриншот проекта" />
+        {% if project.project_icon.path %}
         <img class='project-card__project-icon' src="{{project.project_icon.path}}" />
+        {% endif %}
     </div>
     
     <div class='project-card__text-container'>
