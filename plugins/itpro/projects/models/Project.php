@@ -39,6 +39,13 @@ class Project extends Model
             'itpro\projects\models\Platform',
             'table' => 'itpro_projects_platforms_projects',
             'order' => 'title'
+        ],
+        'vrheadsets' => [
+            'itpro\projects\models\VRHeadsets',
+            'table' => 'itpro_projects_vrheadsets_projects',
+            'key'      => 'project_id',
+            'otherKey' => 'vrheadset_id',
+            'order' => 'title'
         ]
     ];
 

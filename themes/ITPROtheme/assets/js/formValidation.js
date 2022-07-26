@@ -34,6 +34,11 @@ const onSuccess = async function(event, form, data, status, object) {
 
     }
 
+    const formElement = event.target.closest('form');
+    formElement.querySelectorAll('input').forEach((input)=>
+        input.value = ''
+    );
+
 }
 
 
@@ -41,10 +46,6 @@ const onSuccess = async function(event, form, data, status, object) {
 // adding errors to fields on error
 $(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
     $(fieldElement).closest('.field').addClass('form__field--error');
-    // console.log($(fieldElement).closest('.field').attr.name = "technology_id");
-    // if($(fieldElement).closest('.field').attr.name == "technology_id"){
-    //     selectFieldWrapper.classList.add('form__field--error')
-    // }
 });
 
 //removing all errors on a submit
@@ -63,19 +64,19 @@ let selectFieldWrapper = technologySelectField.closest('.form__field--select');
 const styledSelect = technologySelectField.querySelector('.styled-select');
 
 const validateEmail = (email) => {
-    return String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
 }
 const jsValidation = (field) => {
     console.log(field.value)
     if(field.value){
         //removing errors
         if(field.classList.contains('form__field--error')){
+            console.log('contains')
             // дополнительная валидация для полей почты
             if(field.name === 'email'){
+                console.log('email')
+                console.log('valid', validateEmail(field.value))
                 if(validateEmail(field.value)){
                     field.classList.remove('form__field--error');
                 }

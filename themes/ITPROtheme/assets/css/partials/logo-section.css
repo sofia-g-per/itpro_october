@@ -1,6 +1,7 @@
 .logo-section{
 	padding: 6rem 0rem 18rem 0rem;
-
+	cursor: move; 
+    cursor: grab;
 }
 
 .logo-section .glider-track{

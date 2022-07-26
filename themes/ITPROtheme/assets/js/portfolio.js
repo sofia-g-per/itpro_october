@@ -3,7 +3,9 @@
 window.addEventListener('load', function(){
     let glider = new Glider(document.querySelector('.glider'), {
         slidesToShow: 1,
-        duration: 1
+        scrollPropogate: false,
+        scrollLock: true,
+        scrollLockDelay: 0
     })
 
     const categoryBtns = document.querySelectorAll(".tab-button");

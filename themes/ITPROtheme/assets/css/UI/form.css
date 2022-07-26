@@ -69,7 +69,7 @@
 }
 
 .form__file-wrapper,
-.form__file-label-wrapper label{
+.form__file-label-wrapper .file-upload-label {
     cursor: pointer;
 }
 
@@ -87,15 +87,11 @@
     height: 2.4rem;
 }
 
-.form__file-label-wrapper label{
+.form__file-label-wrapper .file-upload-label{
     padding-left: 2.4rem;
 }
 
-@media (max-width: 329px) {
-    .form__file-label-wrapper label{
-        padding-left: 1.0rem;
-    }
-}
+
 
 .form__file-label-wrapper #file-uploaded-label{
     display: none;
@@ -129,7 +125,7 @@ input:-webkit-autofill:active {
 .form__field--error:active,
 .form__field--error .select-styled,
 .form__field--error.select-styled,
-.form__field--error .form__file-label-wrapper label{
+.form__field--error .form__file-label-wrapper .file-upload-label {
     color: var(--color-accent-pink) !important;
     border-color: var(--color-accent-pink) !important;
 }
@@ -204,13 +200,13 @@ z-index: 9;
 margin: 0;
 padding: 0;
 list-style: none;
-background: radial-gradient(at bottom right, rgb(72, 50, 85), rgb(58, 44, 67), rgb(40, 40, 40) );
-background: -webkit-radial-gradient(bottom right, rgb(72, 50, 85), rgb(58, 44, 67), rgb(40, 40, 40));
+background: radial-gradient(at bottom right, rgb(84, 0, 132), rgb(35, 12, 51), rgb(20, 20, 20) );
+background: -webkit-radial-gradient(bottom right, rgb(84, 0, 132), rgb(35, 12, 51), rgb(20, 20, 20) );
 }
 
 .project-page__cta .select-options {
-background: radial-gradient(at bottom right, rgb(73, 108, 127), rgb(45, 57, 64), rgb(40, 40, 40) );
-background: -webkit-radial-gradient(bottom right, rgb(73, 108, 127), rgb(45, 57, 64), rgb(40, 40, 40));
+background: radial-gradient(at bottom right, rgb(4, 105, 132), rgb(6, 46, 52), rgb(20, 20, 20)  );
+background: -webkit-radial-gradient(bottom right, rgb(4, 105, 132), rgb(6, 46, 52), rgb(20, 20, 20));
 }
 
 .select-options li {
@@ -245,6 +241,20 @@ display: none;
     .form{
         padding-top: 4rem;
         padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 329px) {
+    .form__file-label-wrapper .file-upload-label{
+        padding-left: 1.0rem;
+    }
+
+    .file-upload-label{
+        font-size: calc(1rem + 0.4 * (100vw / 1920));
+    }
+
+    .select{
+        width: 10rem;
     }
 }
 
