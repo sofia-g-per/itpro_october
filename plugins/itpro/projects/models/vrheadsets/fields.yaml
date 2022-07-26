@@ -1,0 +1,6 @@
+fields:
+    title:
+        label: 'Название шлема'
+        span: auto
+        required: 1
+        type: text

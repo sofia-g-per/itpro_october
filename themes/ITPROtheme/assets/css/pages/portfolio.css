@@ -49,3 +49,11 @@
         padding-bottom: 12rem;
     }
 }
+
+@media(max-width: 300px){
+    .tab-buttons{
+        display: flex;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}
