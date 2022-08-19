@@ -611,6 +611,20 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _type
 
 /***/ }),
 
+/***/ "./themes/ITPROtheme/assets/js/OurCustomers.js":
+/*!*****************************************************!*\
+  !*** ./themes/ITPROtheme/assets/js/OurCustomers.js ***!
+  \*****************************************************/
+/***/ (() => {
+
+var imgContainer = document.querySelector('.our-customers__img');
+var width = window.innerWidth;
+var height = window.innerHeight;
+var domain = window.location.href;
+if (width > 2560 && height > 1506) imgContainer.innerHTML = "<img src=\"".concat(domain, "themes/ITPROtheme/assets/img/our_customers/contacts-bg4k.jpg\">");
+
+/***/ }),
+
 /***/ "./themes/ITPROtheme/assets/js/Popup.js":
 /*!**********************************************!*\
   !*** ./themes/ITPROtheme/assets/js/Popup.js ***!
@@ -622,15 +636,31 @@ var _this = this;
 var pageOverlay = document.querySelector(".page-overlay");
 var popups = document.querySelectorAll(".popup");
 var popupBtns = document.querySelectorAll(".open-popup-btn");
+var popupContent = document.querySelector(".contacts-popup__content");
+var popupImage = document.querySelector(".contacts-image");
+
+function sleep(ms) {
+  return new Promise(function (resolve) {
+    return setTimeout(resolve, ms);
+  });
+}
 
 var openPopup = function openPopup(popup) {
   pageOverlay.classList.add("page-overlay--active");
   popup.classList.add('popup--active');
+  sleep(400).then(function () {
+    popupContent.classList.add('contacts-popup__content--active');
+    popupImage.classList.add('contacts-image--active');
+  });
 };
 
 var closePopup = function closePopup(popup) {
-  pageOverlay.classList.remove("page-overlay--active");
-  popup.classList.remove('popup--active');
+  popupContent.classList.remove('contacts-popup__content--active');
+  popupImage.classList.remove('contacts-image--active');
+  sleep(400).then(function () {
+    pageOverlay.classList.remove("page-overlay--active");
+    popup.classList.remove('popup--active');
+  });
 };
 
 var togglePopup = function togglePopup(popup) {
@@ -639,7 +669,13 @@ var togglePopup = function togglePopup(popup) {
   } else {
     popup.classList.add('popup--active');
   }
-};
+}; // if (document.documentElement.clientWidth <  1348) {
+//     popupImage.innerHTML.remove()
+// } else {
+//     if(document.innerHTML.contains(popupImage)){
+//     }
+// };
+
 
 popups.forEach(function (popup) {
   var xBtn = popup.querySelector(".x-button");
@@ -7390,6 +7426,7 @@ try {
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/jquery.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/logoScroller.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/mobileNav.js");
+/******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/OurCustomers.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/playVideoOnScroll.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/Popup.js");
 /******/ 	__webpack_require__("./themes/ITPROtheme/assets/js/portfolio.js");
